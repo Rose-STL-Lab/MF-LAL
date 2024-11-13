@@ -1,0 +1,17 @@
+source leaprc.protein.ff14SB
+source leaprc.gaff
+
+# Load the dummy atom parameters
+loadamberparams dum.frcmod
+DUM = loadmol2 dum.mol2
+
+# Load the ligand parameters
+loadamberparams lig.frcmod
+LIG = loadmol2 lig.mol2
+
+model = loadpdb lig.pdb
+
+check model
+savepdb model vac_ligand.pdb
+saveamberparm model vac_ligand.prmtop vac_ligand.inpcrd
+quit

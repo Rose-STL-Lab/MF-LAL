@@ -1,0 +1,5 @@
+result -7.84 C/C(=N\NC(=O)CCCCCCCC(=O)N/N=C(/C)\c1ccc(cc1)Br)/c2ccc(cc2)Br
+result -1.31 Cc1c(n2ccccc2n1)/C(=N/C[C@H](c3cccn3C)[NH+]4CCCCCC4)/[O-]
+result -6.16 C[C@@H]1CCc2c(cc(c(n2)SCc3nnc(n3N)CSc4c(cc5c(n4)CC[C@@H](C5)C)C#N)C#N)C1
+result -2.41 c1ccc(c(c1)NC(=O)c2cc3c([nH]c2=O)CCCC3=O)OC(F)(F)F
+result -1.13 COc1ccc(cc1)Oc2coc3c(c2=O)ccc(c3C[NH+]4CCCC4)[O-]

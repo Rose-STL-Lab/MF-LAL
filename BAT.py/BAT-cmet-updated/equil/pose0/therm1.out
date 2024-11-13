@@ -1,0 +1,570 @@
+
+          -------------------------------------------------------
+          Amber 22 PMEMD                              2022
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 22
+
+|  Compiled date/time: Thu Apr 28 15:09:04 2022
+| Run on 08/12/2023 at 02:18:35
+
+|   Executable path: pmemd.cuda
+| Working directory: /home/ubuntu/BAT.py/BAT-brd4/equil/pose0
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: therm1.in                                                             
+|  MDOUT: therm1.out                                                            
+| INPCRD: mini.rst7                                                             
+|   PARM: full.hmr.prmtop                                                       
+| RESTRT: therm1.rst7                                                           
+|   REFC: full.inpcrd                                                           
+|  MDVEL: mdvel                                                                 
+|   MDEN: mden                                                                  
+|  MDCRD: therm1.nc                                                             
+| MDINFO: mdinfo                                                                
+|  MDFRC: mdfrc                                                                 
+
+
+ Here is the input file:
+
+*******************************************************                        
+*****************************       therm1.in                                  
+*******************************************************                        
+Thermalizing, NVT.                                                             
+ &cntrl                                                                        
+  imin = 0,                                                                    
+  ntx = 1,                                                                     
+  irest = 0,                                                                   
+  ntpr = 500,                                                                  
+  ntwr = 500,                                                                  
+  ntwx = 0,                                                                    
+  ioutfm = 1,                                                                  
+  iwrap = 1,                                                                   
+  ntf = 2,                                                                     
+  ntc = 2,                                                                     
+  cut = 9.0,                                                                   
+  ntt = 3,                                                                     
+  tempi = 10.0,                                                                
+  temp0 = 10.0,                                                                
+  gamma_ln = 1.0,                                                              
+  ig = -1,                                                                     
+  ntp = 0,                                                                     
+  nstlim = 500,                                                                
+  dt = 0.004,                                                                  
+  nmropt = 1,                                                                  
+  pencut = -1,                                                                 
+  ntr = 1,                                                                     
+  restraint_wt = 50.0,                                                         
+  restraintmask = ':1',                                                        
+  infe = 1,                                                                    
+ /                                                                             
+ &pmd                                                                          
+ output_file = 'cmass.txt'                                                     
+ output_freq = 1000                                                            
+ cv_file = 'cv.in'                                                             
+ /                                                                             
+ &wt type = 'END', /                                                           
+DISANG=disang.rest                                                             
+LISTOUT=POUT                                                                   
+                                                                               
+
+
+Note: ig = -1. Setting random seed to   354213 based on wallclock time in 
+      microseconds.
+| irandom = 1, using AMBER's internal random number generator (default).
+ 
+|--------------------- INFORMATION ----------------------
+| GPU (CUDA) Version of PMEMD in use: NVIDIA GPU IN USE.
+|                    Version 18.0.0
+| 
+|                      03/25/2018
+| 
+| Implementation by:
+|                    Ross C. Walker     (SDSC)
+|                    Scott Le Grand     (nVIDIA)
+| 
+| Version 18 performance extensions by:
+|                    David Cerutti     (Rutgers)
+| 
+| Precision model in use:
+|      [SPFP] - Single Precision Forces, 64-bit Fixed Point
+|               Accumulation. (Default)
+| 
+|--------------------------------------------------------
+ 
+|----------------- CITATION INFORMATION -----------------
+|
+|    When publishing work that utilized the CUDA version
+|    of AMBER, please cite the following in addition to
+|    the regular AMBER citations:
+|
+|  - Romelia Salomon-Ferrer; Andreas W. Goetz; Duncan
+|    Poole; Scott Le Grand; Ross C. Walker "Routine
+|    microsecond molecular dynamics simulations with
+|    AMBER - Part II: Particle Mesh Ewald", J. Chem.
+|    Theory Comput., 2013, 9 (9), pp3878-3888,
+|    DOI: 10.1021/ct400314y.
+|
+|  - Andreas W. Goetz; Mark J. Williamson; Dong Xu;
+|    Duncan Poole; Scott Le Grand; Ross C. Walker
+|    "Routine microsecond molecular dynamics simulations
+|    with AMBER - Part I: Generalized Born", J. Chem.
+|    Theory Comput., 2012, 8 (5), pp1542-1555.
+|
+|  - Scott Le Grand; Andreas W. Goetz; Ross C. Walker
+|    "SPFP: Speed without compromise - a mixed precision
+|    model for GPU accelerated molecular dynamics
+|    simulations.", Comp. Phys. Comm., 2013, 184
+|    pp374-380, DOI: 10.1016/j.cpc.2012.09.022
+|
+|--------------------------------------------------------
+ 
+|------------------- GPU DEVICE INFO --------------------
+|
+|            CUDA_VISIBLE_DEVICES: 2,
+|   CUDA Capable Devices Detected:      1
+|           CUDA Device ID in use:      0
+|                CUDA Device Name: NVIDIA GeForce RTX 2080 Ti
+|     CUDA Device Global Mem Size:  11011 MB
+| CUDA Device Num Multiprocessors:     68
+|           CUDA Device Core Freq:   1.54 GHz
+|
+|--------------------------------------------------------
+ 
+ 
+| Conditional Compilation Defines Used:
+| PUBFFT
+| BINTRAJ
+| CUDA
+| EMIL
+
+| Largest sphere to fit in unit cell has radius =    31.928
+
+| New format PARM file being parsed.
+| Version =    1.000 Date = 08/12/23 Time = 02:18:31
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+ getting box info from netcdf restart file
+ NATOM  =   26089 NTYPES =      19 NBONH =   25130 MBONA  =     935
+ NTHETH =    2034 MTHETA =    1256 NPHIH =    3990 MPHIA  =    3868
+ NHPARM =       0 NPARM  =       0 NNB   =   42277 NRES   =    8240
+ NBONA  =     935 NTHETA =    1256 NPHIA =    3868 NUMBND =      81
+ NUMANG =     179 NPTRA  =     199 NATYP =      50 NPHB   =       0
+ IFBOX  =       1 NMXRS  =      27 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+| Coordinate Index Table dimensions:    13   12   15
+| Direct force subcell size =     5.2711    5.3214    5.0777
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       0, nmropt  =       1
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =     500, ntrx    =       1, ntwr    =     500
+     iwrap   =       1, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       2, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =   9.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       1
+     restraint_wt =  50.00000
+
+Molecular dynamics:
+     nstlim  =       500, nscm    =         0, nrespa  =         1
+     t       =   0.00000, dt      =   0.00400, vlimit  =  -1.00000
+
+Langevin dynamics temperature regulation:
+     ig      =  354213
+     temp0   =  10.00000, tempi   =  10.00000, gamma_ln=   1.00000
+
+SHAKE:
+     ntc     =       2, jfastw  =       0
+     tol     =   0.00001
+
+NMR refinement options:
+     iscale  =       0, noeskp  =       1, ipnlty  =       1, mxsub   =       1
+     scalm   = 100.00000, pencut  =  -1.00000, tausw   =   0.10000
+
+| Intermolecular bonds treatment:
+|     no_intermolecular_bonds =       1
+
+| Energy averages sample interval:
+|     ene_avg_sampling =     500
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       1
+     Box X =   68.524   Box Y =   63.857   Box Z =   76.165
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =   72       NFFT2 =   64       NFFT3 =   80
+     Cutoff=    9.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.30768
+     Interpolation order =    4
+
+    LOADING THE CONSTRAINED ATOMS AS GROUPS
+
+
+   5.  REFERENCE ATOM COORDINATES
+
+  default_name                                                                    
+     Mask :1; matches     1 atoms
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+ begin time read from input coords =     0.000 ps
+
+
+
+           Begin reading energy term weight changes/NMR restraints
+ WEIGHT CHANGES:
+                         ** No weight changes given **
+
+ RESTRAINTS:
+ Requested file redirections:
+  DISANG    = disang.rest
+  LISTOUT   = POUT
+ Restraints will be read from file: disang.rest
+Here are comments from the DISANG input file:
+# Anchor atoms  :78@CA  :100@CA  :16@CA  :111@C13  :111@O11  :111@C3  stage = eq
+
+                       Number of restraints read =    48
+
+                  Done reading weight changes/NMR restraints
+
+
+ 
+ Number of triangulated 3-point waters found:     8081
+
+     Sum of charges from parm topology file =  -0.00000006
+     Forcing neutrality...
+
+| Dynamic Memory, Types Used:
+| Reals              893918
+| Integers           997623
+
+| Nonbonded Pairs Initial Allocation:     5948292
+
+| GPU memory information (estimate):
+| KB of GPU memory in use:    171310
+| KB of CPU memory in use:     50638
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+ NFE : ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ P I N N E D  M.D. ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
+ NFE : 
+ NFE : output_file = cmass.txt
+ NFE : output_freq = 500 (2.0000 ps)
+ NFE : 
+ NFE : CV #1 << anchor : position = 0.000000, 0.000000, 0.000000, 999.000000
+ NFE :                   strength = 10.000000, 10.000000 >>
+ NFE :   type = 'COM_DISTANCE'
+ NFE :   group #1 = (1 [Pb])
+ NFE :   group #2 = (2 [N], 6 [CA], 13 [C], 14 [O], 15 [N],
+ NFE :               17 [CA], 30 [C], 31 [O], 32 [N], 34 [CA],
+ NFE :               47 [C], 48 [O], 49 [N], 51 [CA], 62 [C],
+ NFE :               63 [O], 64 [N], 66 [CA], 79 [C], 80 [O],
+ NFE :               81 [N], 83 [CA], 98 [C], 99 [O], 100 [N],
+ NFE :               102 [CA], 120 [C], 121 [O], 122 [N], 124 [CA],
+ NFE :               131 [C], 132 [O], 133 [N], 135 [CA], 142 [C],
+ NFE :               143 [O], 144 [N], 146 [CA], 153 [C], 154 [O],
+ NFE :               155 [N], 157 [CA], 160 [C], 161 [O], 162 [N],
+ NFE :               164 [CA], 179 [C], 180 [O], 181 [N], 183 [CA],
+ NFE :               198 [C], 199 [O], 200 [N], 202 [CA], 220 [C],
+ NFE :               221 [O], 222 [N], 224 [CA], 235 [C], 236 [O],
+ NFE :               237 [N], 239 [CA], 252 [C], 253 [O], 254 [N],
+ NFE :               256 [CA], 272 [C], 273 [O], 274 [N], 276 [CA],
+ NFE :               282 [C], 283 [O], 284 [N], 286 [CA], 304 [C],
+ NFE :               305 [O], 306 [N], 308 [CA], 326 [C], 327 [O],
+ NFE :               328 [N], 330 [CA], 343 [C], 344 [O], 345 [N],
+ NFE :               347 [CA], 353 [C], 354 [O], 355 [N], 357 [CA],
+ NFE :               363 [C], 364 [O], 365 [N], 367 [CA], 384 [C],
+ NFE :               385 [O], 386 [N], 388 [CA], 394 [C], 395 [O],
+ NFE :               396 [N], 398 [CA], 418 [C], 419 [O], 420 [N],
+ NFE :               430 [CA], 432 [C], 433 [O], 434 [N], 436 [CA],
+ NFE :               452 [C], 453 [O], 454 [N], 456 [CA], 473 [C],
+ NFE :               474 [O], 475 [N], 477 [CA], 495 [C], 496 [O],
+ NFE :               497 [N], 507 [CA], 509 [C], 510 [O], 511 [N],
+ NFE :               513 [CA], 525 [C], 526 [O], 527 [N], 529 [CA],
+ NFE :               537 [C], 538 [O], 539 [N], 541 [CA], 553 [C],
+ NFE :               554 [O], 555 [N], 557 [CA], 568 [C], 569 [O],
+ NFE :               570 [N], 572 [CA], 578 [C], 579 [O], 580 [N],
+ NFE :               582 [CA], 597 [C], 598 [O], 599 [N], 601 [CA],
+ NFE :               604 [C], 605 [O], 606 [N], 608 [CA], 623 [C],
+ NFE :               624 [O], 625 [N], 627 [CA], 640 [C], 641 [O],
+ NFE :               642 [N], 644 [CA], 652 [C], 653 [O], 654 [N],
+ NFE :               656 [CA], 673 [C], 674 [O], 675 [N], 677 [CA],
+ NFE :               684 [C], 685 [O], 686 [N], 688 [CA], 696 [C],
+ NFE :               697 [O], 698 [N], 700 [CA], 715 [C], 716 [O],
+ NFE :               717 [N], 719 [CA], 734 [C], 735 [O], 736 [N],
+ NFE :               738 [CA], 756 [C], 757 [O], 758 [N], 760 [CA],
+ NFE :               773 [C], 774 [O], 775 [N], 785 [CA], 787 [C],
+ NFE :               788 [O], 789 [N], 791 [CA], 804 [C], 805 [O],
+ NFE :               806 [N], 808 [CA], 816 [C], 817 [O], 818 [N],
+ NFE :               820 [CA], 833 [C], 834 [O], 835 [N], 837 [CA],
+ NFE :               844 [C], 845 [O], 846 [N], 848 [CA], 858 [C],
+ NFE :               859 [O], 860 [N], 862 [CA], 877 [C], 878 [O],
+ NFE :               879 [N], 881 [CA], 899 [C], 900 [O], 901 [N],
+ NFE :               903 [CA], 910 [C], 911 [O], 912 [N], 914 [CA],
+ NFE :               932 [C], 933 [O], 934 [N], 936 [CA], 951 [C],
+ NFE :               952 [O], 953 [N], 955 [CA], 966 [C], 967 [O],
+ NFE :               968 [N], 970 [CA], 976 [C], 977 [O], 978 [N],
+ NFE :               980 [CA], 1000 [C], 1001 [O], 1002 [N], 1004 [CA],
+ NFE :               1015 [C], 1016 [O], 1017 [N], 1019 [CA], 1036 [C],
+ NFE :               1037 [O], 1038 [N], 1040 [CA], 1060 [C], 1061 [O],
+ NFE :               1062 [N], 1064 [CA], 1072 [C], 1073 [O], 1074 [N],
+ NFE :               1076 [CA], 1082 [C], 1083 [O], 1084 [N], 1086 [CA],
+ NFE :               1099 [C], 1100 [O], 1101 [N], 1103 [CA], 1114 [C],
+ NFE :               1115 [O], 1116 [N], 1118 [CA], 1134 [C], 1135 [O],
+ NFE :               1136 [N], 1138 [CA], 1141 [C], 1142 [O], 1143 [N],
+ NFE :               1145 [CA], 1151 [C], 1152 [O], 1153 [N], 1155 [CA],
+ NFE :               1163 [C], 1164 [O], 1165 [N], 1167 [CA], 1179 [C],
+ NFE :               1180 [O], 1181 [N], 1183 [CA], 1203 [C], 1204 [O],
+ NFE :               1205 [N], 1207 [CA], 1222 [C], 1223 [O], 1224 [N],
+ NFE :               1226 [CA], 1239 [C], 1240 [O], 1241 [N], 1243 [CA],
+ NFE :               1259 [C], 1260 [O], 1261 [N], 1263 [CA], 1270 [C],
+ NFE :               1271 [O], 1272 [N], 1274 [CA], 1284 [C], 1285 [O],
+ NFE :               1286 [N], 1288 [CA], 1295 [C], 1296 [O], 1297 [N],
+ NFE :               1299 [CA], 1316 [C], 1317 [O], 1318 [N], 1320 [CA],
+ NFE :               1338 [C], 1339 [O], 1340 [N], 1342 [CA], 1359 [C],
+ NFE :               1360 [O], 1361 [N], 1363 [CA], 1373 [C], 1374 [O],
+ NFE :               1375 [N], 1385 [CA], 1387 [C], 1388 [O], 1389 [N],
+ NFE :               1399 [CA], 1401 [C], 1402 [O], 1403 [N], 1405 [CA],
+ NFE :               1413 [C], 1414 [O], 1415 [N], 1417 [CA], 1430 [C],
+ NFE :               1431 [O], 1432 [N], 1434 [CA], 1445 [C], 1446 [O],
+ NFE :               1447 [N], 1449 [CA], 1461 [C], 1462 [O], 1463 [N],
+ NFE :               1465 [CA], 1477 [C], 1478 [O], 1479 [N], 1481 [CA],
+ NFE :               1487 [C], 1488 [O], 1489 [N], 1491 [CA], 1504 [C],
+ NFE :               1505 [O], 1506 [N], 1508 [CA], 1514 [C], 1515 [O],
+ NFE :               1516 [N], 1518 [CA], 1538 [C], 1539 [O], 1540 [N],
+ NFE :               1542 [CA], 1560 [C], 1561 [O], 1562 [N], 1564 [CA],
+ NFE :               1579 [C], 1580 [O], 1581 [N], 1583 [CA], 1596 [C],
+ NFE :               1597 [O], 1598 [N], 1600 [CA], 1608 [C], 1609 [O],
+ NFE :               1610 [N], 1612 [CA], 1624 [C], 1625 [O], 1626 [N],
+ NFE :               1628 [CA], 1644 [C], 1645 [O], 1646 [N], 1648 [CA],
+ NFE :               1659 [C], 1660 [O], 1661 [N], 1663 [CA], 1676 [C],
+ NFE :               1677 [O], 1678 [N], 1680 [CA], 1700 [C], 1701 [O],
+ NFE :               1702 [N], 1704 [CA], 1720 [C], 1721 [O], 1722 [N],
+ NFE :               1724 [CA], 1730 [C], 1731 [O], 1732 [N], 1734 [CA],
+ NFE :               1752 [C], 1753 [O], 1754 [N], 1756 [CA], 1769 [C],
+ NFE :               1770 [O])
+ NFE : 
+ NFE : ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~
+
+
+ NSTEP =        0   TIME(PS) =       0.000  TEMP(K) =    14.79  PRESS =     0.0
+ Etot   =   -107234.5107  EKtot   =       780.9448  EPtot      =   -108015.4555
+ BOND   =        68.5992  ANGLE   =       264.1476  DIHED      =      1208.4397
+ 1-4 NB =       365.6364  1-4 EEL =      5331.8742  VDWAALS    =     15497.4100
+ EELEC  =   -130752.7352  EHBOND  =         0.0000  RESTRAINT  =         1.1727
+ EAMBER (non-restraint)  =   -108016.6282
+ ------------------------------------------------------------------------------
+
+ NMR restraints: Bond =    0.130   Angle =     0.037   Torsion =     1.001
+===============================================================================
+ NFE restraints:    SMD  :    0.000    PMD  :     0.005    ABMD :     0.000
+                    BBMD :    0.000    STSM :     0.000
+===============================================================================
+
+ NSTEP =      500   TIME(PS) =       2.000  TEMP(K) =    29.05  PRESS =     0.0
+ Etot   =   -100185.5321  EKtot   =      1533.9030  EPtot      =   -101719.4351
+ BOND   =        67.3102  ANGLE   =       298.1804  DIHED      =      1237.5828
+ 1-4 NB =       383.4934  1-4 EEL =      5329.0727  VDWAALS    =     18738.9295
+ EELEC  =   -127778.4350  EHBOND  =         0.0000  RESTRAINT  =         4.4307
+ EAMBER (non-restraint)  =   -101723.8658
+ ------------------------------------------------------------------------------
+
+ NMR restraints: Bond =    0.367   Angle =     0.206   Torsion =     3.470
+===============================================================================
+ NFE restraints:    SMD  :    0.000    PMD  :     0.336    ABMD :     0.000
+                    BBMD :    0.000    STSM :     0.000
+===============================================================================
+
+      A V E R A G E S   O V E R       1 S T E P S
+
+
+ NSTEP =      500   TIME(PS) =       2.000  TEMP(K) =    29.05  PRESS =     0.0
+ Etot   =   -100185.5321  EKtot   =      1533.9030  EPtot      =   -101719.4351
+ BOND   =        67.3102  ANGLE   =       298.1804  DIHED      =      1237.5828
+ 1-4 NB =       383.4934  1-4 EEL =      5329.0727  VDWAALS    =     18738.9295
+ EELEC  =   -127778.4350  EHBOND  =         0.0000  RESTRAINT  =         4.4307
+ EAMBER (non-restraint)  =   -101723.8658
+ ------------------------------------------------------------------------------
+
+ NMR restraints: Bond =    0.367   Angle =     0.206   Torsion =     3.470
+===============================================================================
+
+      R M S  F L U C T U A T I O N S
+
+
+ NSTEP =      500   TIME(PS) =       2.000  TEMP(K) =     0.00  PRESS =     0.0
+ Etot   =         0.0000  EKtot   =         0.0000  EPtot      =         0.0000
+ BOND   =         0.0000  ANGLE   =         0.0000  DIHED      =         0.0000
+ 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =         0.0000
+ EELEC  =         0.0000  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+
+ NMR restraints on final step:
+
+ ------------------------------------------------------------------------------
+
+
+ Final Restraint Analysis for coords: therm1.rst7                             
+
+
+ Restraints, deviations, and energy contributions:    pencut =   -1.00
+
+ ------------------------------------------------------------------------------
+     First atom        Last atom    curr. value target deviation  penalty
+ ------------------------------------------------------------------------------
+  CA   MET   78 --  CA   GLN  100:    9.652    9.713    0.061    0.018 d    0: 0
+  CA   GLN  100 --  CA   GLU   16:   12.097   11.954    0.143    0.102 d    0: 0
+  CA   GLU   16 --  CA   MET   78:   16.270   16.144    0.126    0.079 d    0: 0
+  CA   PRO   32 --  C    PRO   32:  145.226  144.256    0.969    0.014 t
+  N    VAL   33 --  CA   VAL   33:  -57.870  -56.251    1.619    0.040 t
+  CA   VAL   33 --  C    VAL   33:  123.207  129.610    6.403    0.624 t
+  N    ASP   34 --  CA   ASP   34:  -79.276  -76.212    3.064    0.143 t
+  CA   ASP   34 --  C    ASP   34:   91.065   89.343    1.722    0.045 t
+  N    VAL   35 --  CA   VAL   35:  -68.202  -68.310    0.108    0.000 t
+  CA   VAL   35 --  C    VAL   35:   -3.641   -7.166    3.525    0.189 t
+  N    GLU   36 --  CA   GLU   36:  -86.634  -93.201    6.567    0.657 t
+  CA   GLU   36 --  C    GLU   36:   -9.150   -7.885    1.265    0.024 t
+  N    ALA   37 --  CA   ALA   37:  -72.848  -74.269    1.420    0.031 t
+  CA   ALA   37 --  C    ALA   37:  146.987  147.621    0.633    0.006 t
+  N    LEU   38 --  CA   LEU   38:  -58.187  -57.650    0.536    0.004 t
+  CA   LEU   38 --  C    LEU   38:  123.804  128.279    4.475    0.305 t
+  N    GLY   39 --  CA   GLY   39:   95.951   99.859    3.908    0.233 t
+  CA   GLY   39 --  C    GLY   39:  -12.231  -12.844    0.613    0.006 t
+  N    LEU   40 --  CA   LEU   40: -109.592 -107.607    1.985    0.060 t
+  CA   LEU   40 --  C    LEU   40:   14.521   18.386    3.866    0.228 t
+  N    HIE   41 --  CA   HIE   41:  -60.387  -58.826    1.561    0.037 t
+  CA   HIE   41 --  C    HIE   41:  -25.784  -25.383    0.401    0.002 t
+  N    ASP   42 --  CA   ASP   42: -104.634 -102.929    1.705    0.044 t
+  CA   ASP   42 --  C    ASP   42:    3.308    4.567    1.258    0.024 t
+  N    TYR   43 --  CA   TYR   43:  -54.779  -56.785    2.005    0.061 t
+  CA   MET   78 --  C13  LIG  111:   11.888   11.139    0.749    0.140 d    0: 0
+  CA   GLN  100 --  C13  LIG  111:   95.436   89.525    5.911    0.133 a
+  CA   GLN  100 --  CA   MET   78:   83.681   88.937    5.256    0.105 t
+  CA   MET   78 --  O11  LIG  111:   36.892   41.188    4.296    0.070 a
+  CA   MET   78 --  C13  LIG  111:  102.000  102.943    0.942    0.003 t
+  C13  LIG  111 --  O11  LIG  111:   14.189   12.834    1.355    0.007 t
+  C13  LIG  111 --  C14  LIG  111:  -51.427  -57.004    5.576    0.033 t
+  N12  LIG  111 --  C13  LIG  111: -145.645 -143.479    2.166    0.005 t
+  C3   LIG  111 --  S4   LIG  111:   -2.547   -0.353    2.193    0.005 t
+  C2   LIG  111 --  C3   LIG  111:  174.529  179.873    5.343    0.030 t
+  O15  LIG  111 --  C16  LIG  111:  -60.342  -59.072    1.270    0.002 t
+  C14  LIG  111 --  O15  LIG  111:   58.627   59.743    1.116    0.001 t
+  C17  LIG  111 --  C16  LIG  111:   53.582   55.828    2.247    0.005 t
+  N12  LIG  111 --  C17  LIG  111:  144.510  144.302    0.208    0.000 t
+  C8   LIG  111 --  C9   LIG  111:    0.798    1.544    0.746    0.001 t
+  C8   LIG  111 --  N12  LIG  111:  -37.159  -46.218    9.059    0.088 t
+  O7   LIG  111 --  C8   LIG  111:  178.160  174.172    3.988    0.017 t
+  C10  LIG  111 --  C9   LIG  111:   -1.953    1.742    3.695    0.015 t
+  C5   LIG  111 --  C10  LIG  111:   -1.154   -2.351    1.197    0.002 t
+  S4   LIG  111 --  C5   LIG  111: -168.045 -179.128   11.082    0.131 t
+  C6   LIG  111 --  C5   LIG  111:   -6.231    0.015    6.246    0.042 t
+  C6   LIG  111 --  O7   LIG  111: -168.381 -175.788    7.408    0.059 t
+  C2   LIG  111 --  C6   LIG  111: -170.512 -179.735    9.222    0.091 t
+                                       Total distance penalty:      0.340
+                                       Total angle    penalty:      0.203
+                                       Total torsion  penalty:      3.419
+ ------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+   5.  TIMINGS
+--------------------------------------------------------------------------------
+
+|  NonSetup CPU Time in Major Routines:
+|
+|     Routine           Sec        %
+|     ------------------------------
+|     Nonbond           0.19   59.11
+|     Bond              0.00    0.00
+|     Angle             0.00    0.00
+|     Dihedral          0.00    0.00
+|     Shake             0.00    1.41
+|     RunMD             0.12   38.22
+|     Other             0.00    1.26
+|     ------------------------------
+|     Total             0.33
+
+|  PME Nonbond Pairlist CPU Time:
+|
+|     Routine              Sec        %
+|     ---------------------------------
+|     Set Up Cit           0.00    0.00
+|     Build List           0.00    0.00
+|     ---------------------------------
+|     Total                0.00    0.00
+
+|  PME Direct Force CPU Time:
+|
+|     Routine              Sec        %
+|     ---------------------------------
+|     NonBonded Calc       0.00    0.00
+|     Exclude Masked       0.00    0.00
+|     Other                0.00    0.15
+|     ---------------------------------
+|     Total                0.00    0.15
+
+|  PME Reciprocal Force CPU Time:
+|
+|     Routine              Sec        %
+|     ---------------------------------
+|     1D bspline           0.00    0.00
+|     Grid Charges         0.00    0.00
+|     Scalar Sum           0.00    0.00
+|     Gradient Sum         0.00    0.00
+|     FFT                  0.00    0.00
+|     ---------------------------------
+|     Total                0.00    0.00
+
+|  Final Performance Info:
+|     -----------------------------------------------------
+|     Average timings for last     500 steps:
+|     Elapsed(s) =       0.29 Per Step(ms) =       0.58
+|         ns/day =     597.77   seconds/ns =     144.54
+|
+|     Average timings for all steps:
+|     Elapsed(s) =       0.29 Per Step(ms) =       0.58
+|         ns/day =     597.77   seconds/ns =     144.54
+|     -----------------------------------------------------
+
+|  Setup CPU time:            1.01 seconds
+|  NonSetup CPU time:         0.33 seconds
+|  Total CPU time:            1.34 seconds     0.00 hours
+
+|  Setup wall time:           1    seconds
+|  NonSetup wall time:        0    seconds
+|  Total wall time:           1    seconds     0.00 hours

@@ -1,0 +1,29 @@
+REMARK  Name = 5uet_lig.pdb
+REMARK  2 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C7_4  and  C9_10
+REMARK    2  A    between atoms: C8_5  and  C11_11
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  C6  87V A 501      13.972  11.772  -0.873  0.00  0.00    +0.008 C 
+ATOM      2  C8  87V A 501      12.782  11.375  -0.211  0.00  0.00    +0.068 C 
+ATOM      3  C10 87V A 501      13.045  10.141   0.353  0.00  0.00    +0.059 C 
+ATOM      4  C9  87V A 501      14.930  10.798  -0.701  0.00  0.00    +0.147 C 
+ATOM      5  C12 87V A 501      12.235   9.205   1.156  0.00  0.00    +0.052 C 
+ATOM      6  N13 87V A 501      14.337   9.823   0.049  0.00  0.00    -0.268 NA
+ENDROOT
+BRANCH   4   9
+ATOM      7  C4  87V A 501      16.754  11.656  -2.091  0.00  0.00    -0.002 A 
+ATOM      8  C5  87V A 501      17.126   9.690  -0.790  0.00  0.00    -0.002 A 
+ATOM      9  C7  87V A 501      16.288  10.715  -1.191  0.00  0.00    +0.004 A 
+ATOM     10  C1  87V A 501      18.871  10.553  -2.175  0.00  0.00    -0.000 A 
+ATOM     11  C2  87V A 501      18.043  11.580  -2.579  0.00  0.00    -0.000 A 
+ATOM     12  C3  87V A 501      18.413   9.606  -1.282  0.00  0.00    -0.000 A 
+ENDBRANCH   4   9
+BRANCH   2  13
+ATOM     13  C11 87V A 501      11.540  12.106  -0.158  0.00  0.00    +0.285 C 
+ATOM     14  N14 87V A 501      11.505  13.135  -1.062  0.00  0.00    -0.084 NA
+ATOM     15  O15 87V A 501      10.625  11.834   0.605  0.00  0.00    -0.267 OA
+ENDBRANCH   2  13
+TORSDOF 2

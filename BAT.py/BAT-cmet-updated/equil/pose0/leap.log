@@ -1,0 +1,10505 @@
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> 
+> # Load the dummy atom parameters
+> loadamberparams dum.frcmod
+Loading parameters: ./dum.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for a "Lead-like" Dummy Atom
+> DUM = loadmol2 dum.mol2
+Loading Mol2 file: ./dum.mol2
+Reading MOLECULE named DUM
+> 
+> # Load the necessary parameters
+> loadamberparams lig.frcmod
+Loading parameters: ./lig.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> LIG = loadmol2 lig.mol2
+Loading Mol2 file: ./lig.mol2
+Reading MOLECULE named LIG
+> 
+> # Load the water parameters
+> source leaprc.water.tip3p
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> 
+> model = loadpdb build-dry.pdb
+Loading PDB file: ./build-dry.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue SER, term: Terminal/beginning, seq. number: 1 to: NSER.
+Mapped residue MET, term: Terminal/last, seq. number: 109 to: CMET.
+  Added missing heavy atom: .R<CMET 110>.A<OXT 18>
+  total atoms in file: 910
+  Leap added 888 missing atoms according to residue templates:
+       1 Heavy
+       887 H / lone pairs
+> 
+> check model
+Checking 'model'....
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.146 angstroms between nonbonded atoms Pb and HE3
+-------  .R<DUM 1>.A<Pb 1> and .R<MET 78>.A<HE3 15>
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.139 angstroms between nonbonded atoms Pb and CE
+-------  .R<DUM 1>.A<Pb 1> and .R<MET 78>.A<CE 12>
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.262 angstroms between nonbonded atoms HG and HB2
+-------  .R<CYS 9>.A<HG 9> and .R<CMET 110>.A<HB2 6>
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.093 angstroms between nonbonded atoms HB3 and H5
+-------  .R<PRO 28>.A<HB3 10> and .R<LIG 111>.A<H5 23>
+Checking parameters for unit 'model'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+> savepdb model vac.pdb
+Writing pdb file: vac.pdb
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NSER -> SER
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CMET -> MET
+> saveamberparm model vac.prmtop vac.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 372 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CMET	1
+	LIG	1
+	NSER	1
+  )
+ (no restraints)
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 6; Notes = 0.
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> 
+> # Load the dummy atom parameters
+> loadamberparams dum.frcmod
+Loading parameters: ./dum.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for a "Lead-like" Dummy Atom
+> DUM = loadmol2 dum.mol2
+Loading Mol2 file: ./dum.mol2
+Reading MOLECULE named DUM
+> 
+> # Load the ligand parameters
+> loadamberparams lig.frcmod
+Loading parameters: ./lig.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> LIG = loadmol2 lig.mol2
+Loading Mol2 file: ./lig.mol2
+Reading MOLECULE named LIG
+> 
+> model = loadpdb lig.pdb
+Loading PDB file: ./lig.pdb
+Matching PDB residue names to LEaP variables.
+  total atoms in file: 17
+  Leap added 10 missing atoms according to residue templates:
+       10 H / lone pairs
+> 
+> check model
+Checking 'model'....
+Checking parameters for unit 'model'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+> savepdb model vac_ligand.pdb
+Writing pdb file: vac_ligand.pdb
+> saveamberparm model vac_ligand.prmtop vac_ligand.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 8 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> 
+> # Load the dummy atom parameters
+> loadamberparams dum.frcmod
+Loading parameters: ./dum.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for a "Lead-like" Dummy Atom
+> DUM = loadmol2 dum.mol2
+Loading Mol2 file: ./dum.mol2
+Reading MOLECULE named DUM
+> 
+> # Load the necessary parameters
+> loadamberparams lig.frcmod
+Loading parameters: ./lig.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> LIG = loadmol2 lig.mol2
+Loading Mol2 file: ./lig.mol2
+Reading MOLECULE named LIG
+> 
+> # Load the water and jc ion parameters
+> source leaprc.water.tip3p
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> 
+> model = loadpdb build.pdb
+Loading PDB file: ./build.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue SER, term: Terminal/beginning, seq. number: 1 to: NSER.
+Mapped residue MET, term: Terminal/last, seq. number: 109 to: CMET.
+  Added missing heavy atom: .R<CMET 110>.A<OXT 18>
+  total atoms in file: 910
+  Leap added 888 missing atoms according to residue templates:
+       1 Heavy
+       887 H / lone pairs
+> 
+> solvatebox model TIP3PBOX {12.0 12.0 12.0}
+ (using default radius 1.500000 for Pb)
+  Solute vdw bounding box:              41.163 36.722 48.886
+  Total bounding box for atom centers:  65.163 60.722 72.886
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 4  y= 4  z= 4
+ (using default radius 1.500000 for Pb)
+  Total vdw box size:                   68.524 63.857 76.165 angstroms.
+  Volume: 333278.513 A^3 
+  Total mass 159764.180 amu,  Density 0.796 g/cc
+  Added 8129 residues.
+ quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff14SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> parm10 = loadamberparams parm10.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+>> frcmod14SB = loadamberparams frcmod.ff14SB
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/amino12.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "HYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff done
+>> logFile leap.log
+log started: Sat Aug 12 02:18:28 2023
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+> 
+> 
+> # Load the dummy atom parameters
+> loadamberparams dum.frcmod
+Loading parameters: ./dum.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for a "Lead-like" Dummy Atom
+> DUM = loadmol2 dum.mol2
+Loading Mol2 file: ./dum.mol2
+Reading MOLECULE named DUM
+> 
+> # Load the necessary parameters
+> loadamberparams lig.frcmod
+Loading parameters: ./lig.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> LIG = loadmol2 lig.mol2
+Loading Mol2 file: ./lig.mol2
+Reading MOLECULE named LIG
+> 
+> # Load the water and jc ion parameters
+> source leaprc.water.tip3p
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> 
+> model = loadpdb build.pdb
+Loading PDB file: ./build.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue SER, term: Terminal/beginning, seq. number: 1 to: NSER.
+Mapped residue MET, term: Terminal/last, seq. number: 109 to: CMET.
+  Added missing heavy atom: .R<CMET 110>.A<OXT 18>
+  total atoms in file: 910
+  Leap added 888 missing atoms according to residue templates:
+       1 Heavy
+       887 H / lone pairs
+> 
+> # Create water box with chosen model
+> solvatebox model TIP3PBOX {12.0 12.0 12.0}
+ (using default radius 1.500000 for Pb)
+  Solute vdw bounding box:              41.163 36.722 48.886
+  Total bounding box for atom centers:  65.163 60.722 72.886
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 4  y= 4  z= 4
+ (using default radius 1.500000 for Pb)
+  Total vdw box size:                   68.524 63.857 76.165 angstroms.
+  Volume: 333278.513 A^3 
+  Total mass 159764.180 amu,  Density 0.796 g/cc
+  Added 8129 residues.
+> 
+> # Add ions for neutralization/ionization
+> addionsrand model Na+ 24
+Adding 24 counter ions to "model". 8105 solvent molecules will remain.
+0: Placed Na+ in model at (2.19, 0.94, 29.02).
+0: Placed Na+ in model at (24.97, -1.05, 5.53).
+0: Placed Na+ in model at (30.50, 27.11, 11.04).
+0: Placed Na+ in model at (-31.63, 23.25, -34.87).
+0: Placed Na+ in model at (-11.93, -8.05, -34.42).
+0: Placed Na+ in model at (11.14, 24.52, -11.83).
+0: Placed Na+ in model at (9.34, 26.36, -5.47).
+0: Placed Na+ in model at (-3.79, -25.49, 21.51).
+0: Placed Na+ in model at (15.54, 11.31, 28.67).
+0: Placed Na+ in model at (-26.37, 11.77, 20.01).
+0: Placed Na+ in model at (23.03, -22.72, 29.41).
+0: Placed Na+ in model at (4.98, -16.82, -23.70).
+0: Placed Na+ in model at (-24.33, 1.61, -34.94).
+0: Placed Na+ in model at (16.90, -21.19, -3.40).
+0: Placed Na+ in model at (-20.00, 27.85, -32.18).
+0: Placed Na+ in model at (21.39, 19.40, 35.03).
+0: Placed Na+ in model at (-30.35, -3.23, -16.11).
+0: Placed Na+ in model at (30.15, -25.49, -13.42).
+0: Placed Na+ in model at (5.51, 18.54, 2.75).
+0: Placed Na+ in model at (-14.89, 19.46, 5.87).
+0: Placed Na+ in model at (4.67, 22.44, 30.63).
+0: Placed Na+ in model at (-11.52, -21.72, 31.52).
+0: Placed Na+ in model at (-12.07, 7.31, 28.36).
+0: Placed Na+ in model at (-17.74, -27.56, 17.08).
+> addionsrand model Cl- 24
+Adding 24 counter ions to "model". 8081 solvent molecules will remain.
+0: Placed Cl- in model at (7.42, 17.49, -18.01).
+0: Placed Cl- in model at (-8.27, 17.18, -10.81).
+0: Placed Cl- in model at (-31.03, -20.12, -22.76).
+0: Placed Cl- in model at (16.31, 25.34, 4.61).
+0: Placed Cl- in model at (-25.66, 26.34, -20.13).
+0: Placed Cl- in model at (29.50, 24.74, 28.57).
+0: Placed Cl- in model at (-3.94, -28.50, -11.18).
+0: Placed Cl- in model at (-4.40, 27.29, -19.84).
+0: Placed Cl- in model at (-26.50, -3.82, -12.37).
+0: Placed Cl- in model at (2.14, -27.79, -25.56).
+0: Placed Cl- in model at (-12.43, 9.74, -29.85).
+0: Placed Cl- in model at (4.25, -22.72, 29.41).
+0: Placed Cl- in model at (6.34, 28.52, 7.70).
+0: Placed Cl- in model at (-26.55, 21.48, 4.04).
+0: Placed Cl- in model at (2.62, -18.15, -21.29).
+0: Placed Cl- in model at (11.56, 13.85, -26.20).
+0: Placed Cl- in model at (-5.19, -1.44, 35.46).
+0: Placed Cl- in model at (-7.85, 11.39, 15.79).
+0: Placed Cl- in model at (-25.83, -10.44, 11.04).
+0: Placed Cl- in model at (20.97, -17.83, -27.31).
+0: Placed Cl- in model at (-26.41, 24.52, -11.83).
+0: Placed Cl- in model at (-11.93, -8.05, -15.64).
+0: Placed Cl- in model at (26.76, 10.34, 24.17).
+0: Placed Cl- in model at (-26.70, -23.34, 34.31).
+> 
+> desc model
+UNIT name: default_name
+Head atom: null
+Tail atom: null
+Periodic box:   68.52388,   63.85692,   76.16535
+Contents: 
+R<DUM 1>
+R<NSER 2>
+R<HIE 3>
+R<MET 4>
+R<GLU 5>
+R<GLN 6>
+R<LEU 7>
+R<LYS 8>
+R<CYS 9>
+R<CYS 10>
+R<SER 11>
+R<GLY 12>
+R<ILE 13>
+R<LEU 14>
+R<LYS 15>
+R<GLU 16>
+R<MET 17>
+R<PHE 18>
+R<ALA 19>
+R<LYS 20>
+R<LYS 21>
+R<HIE 22>
+R<ALA 23>
+R<ALA 24>
+R<TYR 25>
+R<ALA 26>
+R<TRP 27>
+R<PRO 28>
+R<PHE 29>
+R<TYR 30>
+R<LYS 31>
+R<PRO 32>
+R<VAL 33>
+R<ASP 34>
+R<VAL 35>
+R<GLU 36>
+R<ALA 37>
+R<LEU 38>
+R<GLY 39>
+R<LEU 40>
+R<HIE 41>
+R<ASP 42>
+R<TYR 43>
+R<CYS 44>
+R<ASP 45>
+R<ILE 46>
+R<ILE 47>
+R<LYS 48>
+R<HIE 49>
+R<PRO 50>
+R<MET 51>
+R<ASP 52>
+R<MET 53>
+R<SER 54>
+R<THR 55>
+R<ILE 56>
+R<LYS 57>
+R<SER 58>
+R<LYS 59>
+R<LEU 60>
+R<GLU 61>
+R<ALA 62>
+R<ARG 63>
+R<GLU 64>
+R<TYR 65>
+R<ARG 66>
+R<ASP 67>
+R<ALA 68>
+R<GLN 69>
+R<GLU 70>
+R<PHE 71>
+R<GLY 72>
+R<ALA 73>
+R<ASP 74>
+R<VAL 75>
+R<ARG 76>
+R<LEU 77>
+R<MET 78>
+R<PHE 79>
+R<SER 80>
+R<ASN 81>
+R<CYS 82>
+R<TYR 83>
+R<LYS 84>
+R<TYR 85>
+R<ASN 86>
+R<PRO 87>
+R<PRO 88>
+R<ASP 89>
+R<HIE 90>
+R<GLU 91>
+R<VAL 92>
+R<VAL 93>
+R<ALA 94>
+R<MET 95>
+R<ALA 96>
+R<ARG 97>
+R<LYS 98>
+R<LEU 99>
+R<GLN 100>
+R<ASP 101>
+R<VAL 102>
+R<PHE 103>
+R<GLU 104>
+R<MET 105>
+R<ARG 106>
+R<PHE 107>
+R<ALA 108>
+R<LYS 109>
+R<CMET 110>
+R<LIG 111>
+R<WAT 112>
+R<WAT 113>
+R<WAT 114>
+R<WAT 115>
+R<WAT 116>
+R<WAT 117>
+R<WAT 119>
+R<WAT 120>
+R<WAT 121>
+R<WAT 122>
+R<WAT 123>
+R<WAT 124>
+R<WAT 125>
+R<WAT 126>
+R<WAT 127>
+R<WAT 128>
+R<WAT 129>
+R<WAT 130>
+R<WAT 131>
+R<WAT 132>
+R<WAT 133>
+R<WAT 134>
+R<WAT 135>
+R<WAT 136>
+R<WAT 137>
+R<WAT 138>
+R<WAT 139>
+R<WAT 140>
+R<WAT 141>
+R<WAT 142>
+R<WAT 143>
+R<WAT 144>
+R<WAT 145>
+R<WAT 146>
+R<WAT 147>
+R<WAT 148>
+R<WAT 149>
+R<WAT 150>
+R<WAT 151>
+R<WAT 152>
+R<WAT 153>
+R<WAT 154>
+R<WAT 155>
+R<WAT 156>
+R<WAT 157>
+R<WAT 158>
+R<WAT 159>
+R<WAT 160>
+R<WAT 161>
+R<WAT 162>
+R<WAT 163>
+R<WAT 164>
+R<WAT 165>
+R<WAT 166>
+R<WAT 167>
+R<WAT 168>
+R<WAT 169>
+R<WAT 170>
+R<WAT 171>
+R<WAT 172>
+R<WAT 173>
+R<WAT 174>
+R<WAT 175>
+R<WAT 176>
+R<WAT 177>
+R<WAT 178>
+R<WAT 179>
+R<WAT 180>
+R<WAT 181>
+R<WAT 182>
+R<WAT 183>
+R<WAT 184>
+R<WAT 185>
+R<WAT 186>
+R<WAT 187>
+R<WAT 188>
+R<WAT 189>
+R<WAT 190>
+R<WAT 192>
+R<WAT 193>
+R<WAT 194>
+R<WAT 195>
+R<WAT 196>
+R<WAT 197>
+R<WAT 198>
+R<WAT 199>
+R<WAT 200>
+R<WAT 201>
+R<WAT 202>
+R<WAT 203>
+R<WAT 204>
+R<WAT 205>
+R<WAT 206>
+R<WAT 207>
+R<WAT 208>
+R<WAT 209>
+R<WAT 210>
+R<WAT 211>
+R<WAT 212>
+R<WAT 213>
+R<WAT 214>
+R<WAT 215>
+R<WAT 216>
+R<WAT 217>
+R<WAT 218>
+R<WAT 219>
+R<WAT 220>
+R<WAT 221>
+R<WAT 222>
+R<WAT 223>
+R<WAT 224>
+R<WAT 225>
+R<WAT 226>
+R<WAT 227>
+R<WAT 228>
+R<WAT 229>
+R<WAT 230>
+R<WAT 231>
+R<WAT 233>
+R<WAT 234>
+R<WAT 235>
+R<WAT 236>
+R<WAT 237>
+R<WAT 238>
+R<WAT 239>
+R<WAT 240>
+R<WAT 241>
+R<WAT 242>
+R<WAT 243>
+R<WAT 244>
+R<WAT 245>
+R<WAT 246>
+R<WAT 247>
+R<WAT 248>
+R<WAT 249>
+R<WAT 250>
+R<WAT 251>
+R<WAT 252>
+R<WAT 253>
+R<WAT 254>
+R<WAT 255>
+R<WAT 256>
+R<WAT 257>
+R<WAT 258>
+R<WAT 259>
+R<WAT 260>
+R<WAT 261>
+R<WAT 262>
+R<WAT 263>
+R<WAT 264>
+R<WAT 265>
+R<WAT 266>
+R<WAT 267>
+R<WAT 268>
+R<WAT 269>
+R<WAT 270>
+R<WAT 271>
+R<WAT 272>
+R<WAT 273>
+R<WAT 274>
+R<WAT 275>
+R<WAT 276>
+R<WAT 277>
+R<WAT 278>
+R<WAT 279>
+R<WAT 280>
+R<WAT 281>
+R<WAT 282>
+R<WAT 283>
+R<WAT 284>
+R<WAT 285>
+R<WAT 286>
+R<WAT 287>
+R<WAT 288>
+R<WAT 289>
+R<WAT 290>
+R<WAT 291>
+R<WAT 292>
+R<WAT 293>
+R<WAT 294>
+R<WAT 295>
+R<WAT 296>
+R<WAT 297>
+R<WAT 298>
+R<WAT 299>
+R<WAT 300>
+R<WAT 301>
+R<WAT 302>
+R<WAT 303>
+R<WAT 304>
+R<WAT 305>
+R<WAT 306>
+R<WAT 307>
+R<WAT 308>
+R<WAT 309>
+R<WAT 310>
+R<WAT 311>
+R<WAT 312>
+R<WAT 313>
+R<WAT 314>
+R<WAT 315>
+R<WAT 316>
+R<WAT 317>
+R<WAT 318>
+R<WAT 319>
+R<WAT 320>
+R<WAT 321>
+R<WAT 322>
+R<WAT 323>
+R<WAT 324>
+R<WAT 325>
+R<WAT 326>
+R<WAT 327>
+R<WAT 328>
+R<WAT 329>
+R<WAT 330>
+R<WAT 331>
+R<WAT 332>
+R<WAT 333>
+R<WAT 334>
+R<WAT 335>
+R<WAT 336>
+R<WAT 337>
+R<WAT 338>
+R<WAT 339>
+R<WAT 340>
+R<WAT 341>
+R<WAT 342>
+R<WAT 343>
+R<WAT 344>
+R<WAT 345>
+R<WAT 346>
+R<WAT 347>
+R<WAT 348>
+R<WAT 349>
+R<WAT 350>
+R<WAT 351>
+R<WAT 352>
+R<WAT 353>
+R<WAT 354>
+R<WAT 355>
+R<WAT 356>
+R<WAT 357>
+R<WAT 358>
+R<WAT 359>
+R<WAT 360>
+R<WAT 361>
+R<WAT 362>
+R<WAT 363>
+R<WAT 364>
+R<WAT 365>
+R<WAT 366>
+R<WAT 367>
+R<WAT 368>
+R<WAT 369>
+R<WAT 370>
+R<WAT 371>
+R<WAT 372>
+R<WAT 373>
+R<WAT 374>
+R<WAT 375>
+R<WAT 376>
+R<WAT 377>
+R<WAT 378>
+R<WAT 379>
+R<WAT 380>
+R<WAT 381>
+R<WAT 382>
+R<WAT 383>
+R<WAT 384>
+R<WAT 385>
+R<WAT 386>
+R<WAT 387>
+R<WAT 388>
+R<WAT 389>
+R<WAT 390>
+R<WAT 391>
+R<WAT 392>
+R<WAT 393>
+R<WAT 394>
+R<WAT 395>
+R<WAT 396>
+R<WAT 397>
+R<WAT 398>
+R<WAT 399>
+R<WAT 400>
+R<WAT 401>
+R<WAT 402>
+R<WAT 403>
+R<WAT 404>
+R<WAT 405>
+R<WAT 406>
+R<WAT 407>
+R<WAT 408>
+R<WAT 409>
+R<WAT 410>
+R<WAT 411>
+R<WAT 412>
+R<WAT 413>
+R<WAT 414>
+R<WAT 415>
+R<WAT 416>
+R<WAT 417>
+R<WAT 418>
+R<WAT 419>
+R<WAT 420>
+R<WAT 421>
+R<WAT 422>
+R<WAT 423>
+R<WAT 424>
+R<WAT 425>
+R<WAT 426>
+R<WAT 427>
+R<WAT 428>
+R<WAT 429>
+R<WAT 430>
+R<WAT 431>
+R<WAT 432>
+R<WAT 433>
+R<WAT 434>
+R<WAT 435>
+R<WAT 436>
+R<WAT 437>
+R<WAT 438>
+R<WAT 439>
+R<WAT 440>
+R<WAT 441>
+R<WAT 442>
+R<WAT 443>
+R<WAT 444>
+R<WAT 445>
+R<WAT 446>
+R<WAT 447>
+R<WAT 448>
+R<WAT 449>
+R<WAT 450>
+R<WAT 451>
+R<WAT 452>
+R<WAT 453>
+R<WAT 454>
+R<WAT 455>
+R<WAT 456>
+R<WAT 457>
+R<WAT 458>
+R<WAT 459>
+R<WAT 460>
+R<WAT 461>
+R<WAT 462>
+R<WAT 463>
+R<WAT 464>
+R<WAT 465>
+R<WAT 466>
+R<WAT 467>
+R<WAT 468>
+R<WAT 469>
+R<WAT 470>
+R<WAT 471>
+R<WAT 472>
+R<WAT 473>
+R<WAT 474>
+R<WAT 475>
+R<WAT 476>
+R<WAT 477>
+R<WAT 478>
+R<WAT 479>
+R<WAT 480>
+R<WAT 481>
+R<WAT 482>
+R<WAT 483>
+R<WAT 484>
+R<WAT 485>
+R<WAT 486>
+R<WAT 487>
+R<WAT 488>
+R<WAT 489>
+R<WAT 490>
+R<WAT 491>
+R<WAT 492>
+R<WAT 493>
+R<WAT 494>
+R<WAT 495>
+R<WAT 496>
+R<WAT 497>
+R<WAT 498>
+R<WAT 499>
+R<WAT 500>
+R<WAT 501>
+R<WAT 502>
+R<WAT 503>
+R<WAT 504>
+R<WAT 505>
+R<WAT 506>
+R<WAT 507>
+R<WAT 508>
+R<WAT 509>
+R<WAT 510>
+R<WAT 511>
+R<WAT 512>
+R<WAT 513>
+R<WAT 514>
+R<WAT 515>
+R<WAT 516>
+R<WAT 517>
+R<WAT 518>
+R<WAT 519>
+R<WAT 520>
+R<WAT 521>
+R<WAT 522>
+R<WAT 523>
+R<WAT 524>
+R<WAT 525>
+R<WAT 526>
+R<WAT 527>
+R<WAT 528>
+R<WAT 529>
+R<WAT 530>
+R<WAT 531>
+R<WAT 532>
+R<WAT 533>
+R<WAT 534>
+R<WAT 535>
+R<WAT 536>
+R<WAT 538>
+R<WAT 539>
+R<WAT 540>
+R<WAT 541>
+R<WAT 542>
+R<WAT 543>
+R<WAT 544>
+R<WAT 545>
+R<WAT 546>
+R<WAT 547>
+R<WAT 548>
+R<WAT 549>
+R<WAT 550>
+R<WAT 551>
+R<WAT 552>
+R<WAT 553>
+R<WAT 554>
+R<WAT 555>
+R<WAT 556>
+R<WAT 557>
+R<WAT 558>
+R<WAT 559>
+R<WAT 560>
+R<WAT 561>
+R<WAT 562>
+R<WAT 563>
+R<WAT 564>
+R<WAT 565>
+R<WAT 566>
+R<WAT 567>
+R<WAT 568>
+R<WAT 569>
+R<WAT 570>
+R<WAT 571>
+R<WAT 572>
+R<WAT 573>
+R<WAT 574>
+R<WAT 575>
+R<WAT 576>
+R<WAT 577>
+R<WAT 578>
+R<WAT 579>
+R<WAT 580>
+R<WAT 581>
+R<WAT 582>
+R<WAT 583>
+R<WAT 584>
+R<WAT 585>
+R<WAT 586>
+R<WAT 587>
+R<WAT 588>
+R<WAT 589>
+R<WAT 590>
+R<WAT 591>
+R<WAT 592>
+R<WAT 593>
+R<WAT 594>
+R<WAT 595>
+R<WAT 596>
+R<WAT 597>
+R<WAT 598>
+R<WAT 599>
+R<WAT 600>
+R<WAT 601>
+R<WAT 602>
+R<WAT 603>
+R<WAT 604>
+R<WAT 605>
+R<WAT 606>
+R<WAT 607>
+R<WAT 608>
+R<WAT 609>
+R<WAT 610>
+R<WAT 611>
+R<WAT 612>
+R<WAT 613>
+R<WAT 614>
+R<WAT 615>
+R<WAT 616>
+R<WAT 617>
+R<WAT 618>
+R<WAT 619>
+R<WAT 620>
+R<WAT 621>
+R<WAT 622>
+R<WAT 623>
+R<WAT 624>
+R<WAT 625>
+R<WAT 626>
+R<WAT 627>
+R<WAT 628>
+R<WAT 629>
+R<WAT 630>
+R<WAT 631>
+R<WAT 632>
+R<WAT 633>
+R<WAT 634>
+R<WAT 635>
+R<WAT 636>
+R<WAT 637>
+R<WAT 638>
+R<WAT 639>
+R<WAT 640>
+R<WAT 641>
+R<WAT 642>
+R<WAT 643>
+R<WAT 644>
+R<WAT 645>
+R<WAT 646>
+R<WAT 647>
+R<WAT 648>
+R<WAT 649>
+R<WAT 650>
+R<WAT 651>
+R<WAT 652>
+R<WAT 653>
+R<WAT 654>
+R<WAT 655>
+R<WAT 656>
+R<WAT 657>
+R<WAT 658>
+R<WAT 659>
+R<WAT 660>
+R<WAT 661>
+R<WAT 662>
+R<WAT 663>
+R<WAT 664>
+R<WAT 665>
+R<WAT 666>
+R<WAT 667>
+R<WAT 668>
+R<WAT 669>
+R<WAT 670>
+R<WAT 671>
+R<WAT 672>
+R<WAT 673>
+R<WAT 674>
+R<WAT 675>
+R<WAT 676>
+R<WAT 677>
+R<WAT 678>
+R<WAT 679>
+R<WAT 680>
+R<WAT 681>
+R<WAT 682>
+R<WAT 683>
+R<WAT 684>
+R<WAT 685>
+R<WAT 686>
+R<WAT 687>
+R<WAT 688>
+R<WAT 689>
+R<WAT 690>
+R<WAT 691>
+R<WAT 692>
+R<WAT 693>
+R<WAT 694>
+R<WAT 695>
+R<WAT 696>
+R<WAT 697>
+R<WAT 698>
+R<WAT 699>
+R<WAT 700>
+R<WAT 701>
+R<WAT 702>
+R<WAT 703>
+R<WAT 704>
+R<WAT 705>
+R<WAT 706>
+R<WAT 707>
+R<WAT 708>
+R<WAT 709>
+R<WAT 710>
+R<WAT 711>
+R<WAT 712>
+R<WAT 713>
+R<WAT 714>
+R<WAT 715>
+R<WAT 716>
+R<WAT 717>
+R<WAT 718>
+R<WAT 719>
+R<WAT 720>
+R<WAT 721>
+R<WAT 722>
+R<WAT 723>
+R<WAT 724>
+R<WAT 725>
+R<WAT 726>
+R<WAT 727>
+R<WAT 728>
+R<WAT 729>
+R<WAT 730>
+R<WAT 731>
+R<WAT 732>
+R<WAT 733>
+R<WAT 734>
+R<WAT 735>
+R<WAT 736>
+R<WAT 737>
+R<WAT 738>
+R<WAT 739>
+R<WAT 740>
+R<WAT 741>
+R<WAT 742>
+R<WAT 743>
+R<WAT 744>
+R<WAT 745>
+R<WAT 746>
+R<WAT 747>
+R<WAT 748>
+R<WAT 749>
+R<WAT 750>
+R<WAT 751>
+R<WAT 752>
+R<WAT 753>
+R<WAT 754>
+R<WAT 755>
+R<WAT 756>
+R<WAT 757>
+R<WAT 758>
+R<WAT 759>
+R<WAT 760>
+R<WAT 761>
+R<WAT 762>
+R<WAT 763>
+R<WAT 764>
+R<WAT 765>
+R<WAT 766>
+R<WAT 767>
+R<WAT 768>
+R<WAT 769>
+R<WAT 770>
+R<WAT 771>
+R<WAT 772>
+R<WAT 773>
+R<WAT 774>
+R<WAT 775>
+R<WAT 776>
+R<WAT 777>
+R<WAT 778>
+R<WAT 779>
+R<WAT 780>
+R<WAT 781>
+R<WAT 782>
+R<WAT 783>
+R<WAT 784>
+R<WAT 785>
+R<WAT 786>
+R<WAT 787>
+R<WAT 788>
+R<WAT 789>
+R<WAT 790>
+R<WAT 791>
+R<WAT 792>
+R<WAT 793>
+R<WAT 794>
+R<WAT 795>
+R<WAT 796>
+R<WAT 797>
+R<WAT 798>
+R<WAT 799>
+R<WAT 800>
+R<WAT 801>
+R<WAT 802>
+R<WAT 803>
+R<WAT 804>
+R<WAT 805>
+R<WAT 806>
+R<WAT 807>
+R<WAT 808>
+R<WAT 809>
+R<WAT 810>
+R<WAT 811>
+R<WAT 812>
+R<WAT 813>
+R<WAT 814>
+R<WAT 815>
+R<WAT 816>
+R<WAT 817>
+R<WAT 818>
+R<WAT 819>
+R<WAT 820>
+R<WAT 821>
+R<WAT 822>
+R<WAT 823>
+R<WAT 824>
+R<WAT 825>
+R<WAT 826>
+R<WAT 827>
+R<WAT 828>
+R<WAT 829>
+R<WAT 830>
+R<WAT 831>
+R<WAT 832>
+R<WAT 833>
+R<WAT 834>
+R<WAT 835>
+R<WAT 836>
+R<WAT 837>
+R<WAT 838>
+R<WAT 839>
+R<WAT 840>
+R<WAT 841>
+R<WAT 842>
+R<WAT 843>
+R<WAT 844>
+R<WAT 845>
+R<WAT 846>
+R<WAT 847>
+R<WAT 848>
+R<WAT 849>
+R<WAT 850>
+R<WAT 851>
+R<WAT 852>
+R<WAT 853>
+R<WAT 854>
+R<WAT 855>
+R<WAT 856>
+R<WAT 857>
+R<WAT 858>
+R<WAT 859>
+R<WAT 860>
+R<WAT 861>
+R<WAT 862>
+R<WAT 863>
+R<WAT 864>
+R<WAT 865>
+R<WAT 866>
+R<WAT 867>
+R<WAT 868>
+R<WAT 869>
+R<WAT 870>
+R<WAT 871>
+R<WAT 872>
+R<WAT 873>
+R<WAT 874>
+R<WAT 875>
+R<WAT 876>
+R<WAT 877>
+R<WAT 878>
+R<WAT 879>
+R<WAT 880>
+R<WAT 881>
+R<WAT 882>
+R<WAT 883>
+R<WAT 884>
+R<WAT 885>
+R<WAT 886>
+R<WAT 887>
+R<WAT 888>
+R<WAT 889>
+R<WAT 890>
+R<WAT 891>
+R<WAT 892>
+R<WAT 893>
+R<WAT 894>
+R<WAT 895>
+R<WAT 896>
+R<WAT 897>
+R<WAT 898>
+R<WAT 899>
+R<WAT 900>
+R<WAT 901>
+R<WAT 902>
+R<WAT 903>
+R<WAT 904>
+R<WAT 905>
+R<WAT 906>
+R<WAT 907>
+R<WAT 908>
+R<WAT 909>
+R<WAT 910>
+R<WAT 911>
+R<WAT 912>
+R<WAT 913>
+R<WAT 914>
+R<WAT 915>
+R<WAT 916>
+R<WAT 917>
+R<WAT 918>
+R<WAT 919>
+R<WAT 920>
+R<WAT 921>
+R<WAT 922>
+R<WAT 923>
+R<WAT 924>
+R<WAT 925>
+R<WAT 926>
+R<WAT 927>
+R<WAT 928>
+R<WAT 929>
+R<WAT 930>
+R<WAT 931>
+R<WAT 932>
+R<WAT 933>
+R<WAT 934>
+R<WAT 935>
+R<WAT 936>
+R<WAT 937>
+R<WAT 938>
+R<WAT 939>
+R<WAT 940>
+R<WAT 941>
+R<WAT 942>
+R<WAT 943>
+R<WAT 944>
+R<WAT 945>
+R<WAT 946>
+R<WAT 947>
+R<WAT 948>
+R<WAT 949>
+R<WAT 950>
+R<WAT 951>
+R<WAT 952>
+R<WAT 953>
+R<WAT 954>
+R<WAT 955>
+R<WAT 956>
+R<WAT 957>
+R<WAT 958>
+R<WAT 959>
+R<WAT 960>
+R<WAT 961>
+R<WAT 962>
+R<WAT 963>
+R<WAT 964>
+R<WAT 965>
+R<WAT 966>
+R<WAT 967>
+R<WAT 968>
+R<WAT 969>
+R<WAT 970>
+R<WAT 971>
+R<WAT 972>
+R<WAT 973>
+R<WAT 974>
+R<WAT 975>
+R<WAT 976>
+R<WAT 977>
+R<WAT 978>
+R<WAT 979>
+R<WAT 980>
+R<WAT 981>
+R<WAT 982>
+R<WAT 983>
+R<WAT 984>
+R<WAT 985>
+R<WAT 986>
+R<WAT 987>
+R<WAT 988>
+R<WAT 989>
+R<WAT 990>
+R<WAT 991>
+R<WAT 992>
+R<WAT 993>
+R<WAT 994>
+R<WAT 995>
+R<WAT 996>
+R<WAT 997>
+R<WAT 998>
+R<WAT 999>
+R<WAT 1000>
+R<WAT 1001>
+R<WAT 1002>
+R<WAT 1003>
+R<WAT 1004>
+R<WAT 1005>
+R<WAT 1006>
+R<WAT 1007>
+R<WAT 1008>
+R<WAT 1009>
+R<WAT 1010>
+R<WAT 1011>
+R<WAT 1012>
+R<WAT 1013>
+R<WAT 1014>
+R<WAT 1015>
+R<WAT 1016>
+R<WAT 1017>
+R<WAT 1018>
+R<WAT 1019>
+R<WAT 1020>
+R<WAT 1021>
+R<WAT 1022>
+R<WAT 1023>
+R<WAT 1024>
+R<WAT 1025>
+R<WAT 1026>
+R<WAT 1027>
+R<WAT 1028>
+R<WAT 1029>
+R<WAT 1030>
+R<WAT 1031>
+R<WAT 1032>
+R<WAT 1033>
+R<WAT 1034>
+R<WAT 1035>
+R<WAT 1036>
+R<WAT 1037>
+R<WAT 1038>
+R<WAT 1039>
+R<WAT 1040>
+R<WAT 1041>
+R<WAT 1042>
+R<WAT 1043>
+R<WAT 1044>
+R<WAT 1045>
+R<WAT 1046>
+R<WAT 1047>
+R<WAT 1048>
+R<WAT 1049>
+R<WAT 1050>
+R<WAT 1051>
+R<WAT 1052>
+R<WAT 1053>
+R<WAT 1054>
+R<WAT 1055>
+R<WAT 1056>
+R<WAT 1057>
+R<WAT 1058>
+R<WAT 1059>
+R<WAT 1060>
+R<WAT 1061>
+R<WAT 1062>
+R<WAT 1063>
+R<WAT 1064>
+R<WAT 1065>
+R<WAT 1066>
+R<WAT 1067>
+R<WAT 1068>
+R<WAT 1069>
+R<WAT 1070>
+R<WAT 1071>
+R<WAT 1072>
+R<WAT 1073>
+R<WAT 1074>
+R<WAT 1075>
+R<WAT 1076>
+R<WAT 1077>
+R<WAT 1078>
+R<WAT 1079>
+R<WAT 1080>
+R<WAT 1081>
+R<WAT 1082>
+R<WAT 1083>
+R<WAT 1084>
+R<WAT 1085>
+R<WAT 1086>
+R<WAT 1087>
+R<WAT 1088>
+R<WAT 1089>
+R<WAT 1090>
+R<WAT 1091>
+R<WAT 1092>
+R<WAT 1093>
+R<WAT 1094>
+R<WAT 1095>
+R<WAT 1096>
+R<WAT 1097>
+R<WAT 1098>
+R<WAT 1099>
+R<WAT 1100>
+R<WAT 1101>
+R<WAT 1102>
+R<WAT 1103>
+R<WAT 1104>
+R<WAT 1105>
+R<WAT 1106>
+R<WAT 1107>
+R<WAT 1108>
+R<WAT 1109>
+R<WAT 1110>
+R<WAT 1111>
+R<WAT 1112>
+R<WAT 1113>
+R<WAT 1114>
+R<WAT 1115>
+R<WAT 1116>
+R<WAT 1117>
+R<WAT 1118>
+R<WAT 1119>
+R<WAT 1120>
+R<WAT 1121>
+R<WAT 1122>
+R<WAT 1123>
+R<WAT 1124>
+R<WAT 1125>
+R<WAT 1126>
+R<WAT 1127>
+R<WAT 1128>
+R<WAT 1129>
+R<WAT 1130>
+R<WAT 1131>
+R<WAT 1132>
+R<WAT 1133>
+R<WAT 1134>
+R<WAT 1135>
+R<WAT 1136>
+R<WAT 1137>
+R<WAT 1138>
+R<WAT 1139>
+R<WAT 1140>
+R<WAT 1141>
+R<WAT 1142>
+R<WAT 1143>
+R<WAT 1144>
+R<WAT 1145>
+R<WAT 1146>
+R<WAT 1147>
+R<WAT 1148>
+R<WAT 1149>
+R<WAT 1150>
+R<WAT 1151>
+R<WAT 1152>
+R<WAT 1153>
+R<WAT 1154>
+R<WAT 1155>
+R<WAT 1156>
+R<WAT 1157>
+R<WAT 1158>
+R<WAT 1159>
+R<WAT 1160>
+R<WAT 1161>
+R<WAT 1162>
+R<WAT 1163>
+R<WAT 1164>
+R<WAT 1165>
+R<WAT 1166>
+R<WAT 1167>
+R<WAT 1168>
+R<WAT 1169>
+R<WAT 1170>
+R<WAT 1171>
+R<WAT 1172>
+R<WAT 1173>
+R<WAT 1174>
+R<WAT 1175>
+R<WAT 1176>
+R<WAT 1177>
+R<WAT 1178>
+R<WAT 1179>
+R<WAT 1180>
+R<WAT 1181>
+R<WAT 1182>
+R<WAT 1183>
+R<WAT 1184>
+R<WAT 1185>
+R<WAT 1186>
+R<WAT 1187>
+R<WAT 1188>
+R<WAT 1189>
+R<WAT 1190>
+R<WAT 1191>
+R<WAT 1192>
+R<WAT 1193>
+R<WAT 1194>
+R<WAT 1195>
+R<WAT 1196>
+R<WAT 1197>
+R<WAT 1198>
+R<WAT 1199>
+R<WAT 1200>
+R<WAT 1201>
+R<WAT 1202>
+R<WAT 1203>
+R<WAT 1204>
+R<WAT 1205>
+R<WAT 1206>
+R<WAT 1207>
+R<WAT 1208>
+R<WAT 1209>
+R<WAT 1210>
+R<WAT 1211>
+R<WAT 1212>
+R<WAT 1213>
+R<WAT 1214>
+R<WAT 1215>
+R<WAT 1216>
+R<WAT 1217>
+R<WAT 1218>
+R<WAT 1219>
+R<WAT 1220>
+R<WAT 1221>
+R<WAT 1222>
+R<WAT 1223>
+R<WAT 1224>
+R<WAT 1225>
+R<WAT 1226>
+R<WAT 1227>
+R<WAT 1228>
+R<WAT 1229>
+R<WAT 1230>
+R<WAT 1232>
+R<WAT 1233>
+R<WAT 1234>
+R<WAT 1235>
+R<WAT 1236>
+R<WAT 1237>
+R<WAT 1238>
+R<WAT 1239>
+R<WAT 1240>
+R<WAT 1241>
+R<WAT 1242>
+R<WAT 1243>
+R<WAT 1244>
+R<WAT 1245>
+R<WAT 1246>
+R<WAT 1247>
+R<WAT 1248>
+R<WAT 1249>
+R<WAT 1250>
+R<WAT 1251>
+R<WAT 1252>
+R<WAT 1253>
+R<WAT 1254>
+R<WAT 1255>
+R<WAT 1256>
+R<WAT 1257>
+R<WAT 1258>
+R<WAT 1259>
+R<WAT 1260>
+R<WAT 1261>
+R<WAT 1262>
+R<WAT 1263>
+R<WAT 1264>
+R<WAT 1265>
+R<WAT 1266>
+R<WAT 1267>
+R<WAT 1268>
+R<WAT 1269>
+R<WAT 1270>
+R<WAT 1271>
+R<WAT 1272>
+R<WAT 1273>
+R<WAT 1274>
+R<WAT 1275>
+R<WAT 1276>
+R<WAT 1277>
+R<WAT 1278>
+R<WAT 1279>
+R<WAT 1280>
+R<WAT 1281>
+R<WAT 1282>
+R<WAT 1283>
+R<WAT 1284>
+R<WAT 1285>
+R<WAT 1286>
+R<WAT 1287>
+R<WAT 1288>
+R<WAT 1289>
+R<WAT 1290>
+R<WAT 1291>
+R<WAT 1292>
+R<WAT 1293>
+R<WAT 1294>
+R<WAT 1295>
+R<WAT 1296>
+R<WAT 1297>
+R<WAT 1298>
+R<WAT 1299>
+R<WAT 1300>
+R<WAT 1301>
+R<WAT 1302>
+R<WAT 1303>
+R<WAT 1304>
+R<WAT 1305>
+R<WAT 1306>
+R<WAT 1307>
+R<WAT 1308>
+R<WAT 1309>
+R<WAT 1310>
+R<WAT 1311>
+R<WAT 1312>
+R<WAT 1313>
+R<WAT 1314>
+R<WAT 1315>
+R<WAT 1316>
+R<WAT 1317>
+R<WAT 1318>
+R<WAT 1319>
+R<WAT 1320>
+R<WAT 1321>
+R<WAT 1322>
+R<WAT 1323>
+R<WAT 1324>
+R<WAT 1325>
+R<WAT 1326>
+R<WAT 1327>
+R<WAT 1328>
+R<WAT 1329>
+R<WAT 1330>
+R<WAT 1331>
+R<WAT 1332>
+R<WAT 1333>
+R<WAT 1334>
+R<WAT 1335>
+R<WAT 1336>
+R<WAT 1337>
+R<WAT 1338>
+R<WAT 1339>
+R<WAT 1340>
+R<WAT 1341>
+R<WAT 1342>
+R<WAT 1343>
+R<WAT 1344>
+R<WAT 1345>
+R<WAT 1346>
+R<WAT 1347>
+R<WAT 1348>
+R<WAT 1349>
+R<WAT 1350>
+R<WAT 1351>
+R<WAT 1352>
+R<WAT 1353>
+R<WAT 1354>
+R<WAT 1355>
+R<WAT 1356>
+R<WAT 1357>
+R<WAT 1358>
+R<WAT 1359>
+R<WAT 1360>
+R<WAT 1361>
+R<WAT 1362>
+R<WAT 1363>
+R<WAT 1364>
+R<WAT 1365>
+R<WAT 1366>
+R<WAT 1367>
+R<WAT 1368>
+R<WAT 1369>
+R<WAT 1370>
+R<WAT 1371>
+R<WAT 1372>
+R<WAT 1373>
+R<WAT 1374>
+R<WAT 1375>
+R<WAT 1376>
+R<WAT 1377>
+R<WAT 1378>
+R<WAT 1379>
+R<WAT 1380>
+R<WAT 1381>
+R<WAT 1382>
+R<WAT 1383>
+R<WAT 1384>
+R<WAT 1385>
+R<WAT 1386>
+R<WAT 1387>
+R<WAT 1388>
+R<WAT 1389>
+R<WAT 1390>
+R<WAT 1391>
+R<WAT 1392>
+R<WAT 1393>
+R<WAT 1394>
+R<WAT 1395>
+R<WAT 1396>
+R<WAT 1397>
+R<WAT 1398>
+R<WAT 1399>
+R<WAT 1400>
+R<WAT 1401>
+R<WAT 1402>
+R<WAT 1403>
+R<WAT 1404>
+R<WAT 1405>
+R<WAT 1406>
+R<WAT 1407>
+R<WAT 1408>
+R<WAT 1409>
+R<WAT 1410>
+R<WAT 1411>
+R<WAT 1412>
+R<WAT 1413>
+R<WAT 1414>
+R<WAT 1415>
+R<WAT 1416>
+R<WAT 1417>
+R<WAT 1418>
+R<WAT 1419>
+R<WAT 1420>
+R<WAT 1421>
+R<WAT 1422>
+R<WAT 1423>
+R<WAT 1424>
+R<WAT 1425>
+R<WAT 1426>
+R<WAT 1427>
+R<WAT 1428>
+R<WAT 1429>
+R<WAT 1430>
+R<WAT 1431>
+R<WAT 1432>
+R<WAT 1433>
+R<WAT 1434>
+R<WAT 1435>
+R<WAT 1436>
+R<WAT 1437>
+R<WAT 1438>
+R<WAT 1439>
+R<WAT 1440>
+R<WAT 1441>
+R<WAT 1442>
+R<WAT 1443>
+R<WAT 1444>
+R<WAT 1445>
+R<WAT 1446>
+R<WAT 1447>
+R<WAT 1448>
+R<WAT 1449>
+R<WAT 1450>
+R<WAT 1451>
+R<WAT 1452>
+R<WAT 1453>
+R<WAT 1454>
+R<WAT 1455>
+R<WAT 1456>
+R<WAT 1457>
+R<WAT 1458>
+R<WAT 1459>
+R<WAT 1460>
+R<WAT 1461>
+R<WAT 1462>
+R<WAT 1463>
+R<WAT 1464>
+R<WAT 1465>
+R<WAT 1466>
+R<WAT 1467>
+R<WAT 1468>
+R<WAT 1469>
+R<WAT 1470>
+R<WAT 1471>
+R<WAT 1472>
+R<WAT 1473>
+R<WAT 1474>
+R<WAT 1475>
+R<WAT 1476>
+R<WAT 1477>
+R<WAT 1478>
+R<WAT 1479>
+R<WAT 1480>
+R<WAT 1481>
+R<WAT 1482>
+R<WAT 1483>
+R<WAT 1484>
+R<WAT 1485>
+R<WAT 1486>
+R<WAT 1487>
+R<WAT 1488>
+R<WAT 1489>
+R<WAT 1490>
+R<WAT 1491>
+R<WAT 1492>
+R<WAT 1493>
+R<WAT 1494>
+R<WAT 1495>
+R<WAT 1496>
+R<WAT 1497>
+R<WAT 1498>
+R<WAT 1499>
+R<WAT 1500>
+R<WAT 1501>
+R<WAT 1502>
+R<WAT 1503>
+R<WAT 1504>
+R<WAT 1505>
+R<WAT 1506>
+R<WAT 1507>
+R<WAT 1508>
+R<WAT 1509>
+R<WAT 1510>
+R<WAT 1511>
+R<WAT 1512>
+R<WAT 1513>
+R<WAT 1514>
+R<WAT 1515>
+R<WAT 1516>
+R<WAT 1517>
+R<WAT 1518>
+R<WAT 1519>
+R<WAT 1520>
+R<WAT 1521>
+R<WAT 1522>
+R<WAT 1523>
+R<WAT 1524>
+R<WAT 1525>
+R<WAT 1526>
+R<WAT 1527>
+R<WAT 1528>
+R<WAT 1529>
+R<WAT 1530>
+R<WAT 1531>
+R<WAT 1532>
+R<WAT 1533>
+R<WAT 1534>
+R<WAT 1535>
+R<WAT 1536>
+R<WAT 1537>
+R<WAT 1538>
+R<WAT 1539>
+R<WAT 1540>
+R<WAT 1541>
+R<WAT 1542>
+R<WAT 1543>
+R<WAT 1544>
+R<WAT 1545>
+R<WAT 1546>
+R<WAT 1547>
+R<WAT 1548>
+R<WAT 1549>
+R<WAT 1550>
+R<WAT 1551>
+R<WAT 1552>
+R<WAT 1553>
+R<WAT 1554>
+R<WAT 1555>
+R<WAT 1556>
+R<WAT 1557>
+R<WAT 1558>
+R<WAT 1559>
+R<WAT 1560>
+R<WAT 1561>
+R<WAT 1562>
+R<WAT 1563>
+R<WAT 1564>
+R<WAT 1565>
+R<WAT 1566>
+R<WAT 1567>
+R<WAT 1568>
+R<WAT 1569>
+R<WAT 1570>
+R<WAT 1571>
+R<WAT 1572>
+R<WAT 1573>
+R<WAT 1574>
+R<WAT 1575>
+R<WAT 1576>
+R<WAT 1577>
+R<WAT 1578>
+R<WAT 1579>
+R<WAT 1580>
+R<WAT 1581>
+R<WAT 1582>
+R<WAT 1583>
+R<WAT 1584>
+R<WAT 1585>
+R<WAT 1586>
+R<WAT 1587>
+R<WAT 1588>
+R<WAT 1589>
+R<WAT 1590>
+R<WAT 1591>
+R<WAT 1592>
+R<WAT 1593>
+R<WAT 1594>
+R<WAT 1595>
+R<WAT 1596>
+R<WAT 1597>
+R<WAT 1598>
+R<WAT 1599>
+R<WAT 1600>
+R<WAT 1601>
+R<WAT 1602>
+R<WAT 1603>
+R<WAT 1604>
+R<WAT 1605>
+R<WAT 1606>
+R<WAT 1607>
+R<WAT 1608>
+R<WAT 1609>
+R<WAT 1610>
+R<WAT 1611>
+R<WAT 1612>
+R<WAT 1613>
+R<WAT 1614>
+R<WAT 1616>
+R<WAT 1617>
+R<WAT 1618>
+R<WAT 1619>
+R<WAT 1620>
+R<WAT 1621>
+R<WAT 1622>
+R<WAT 1623>
+R<WAT 1624>
+R<WAT 1625>
+R<WAT 1626>
+R<WAT 1627>
+R<WAT 1628>
+R<WAT 1629>
+R<WAT 1630>
+R<WAT 1631>
+R<WAT 1632>
+R<WAT 1633>
+R<WAT 1634>
+R<WAT 1635>
+R<WAT 1636>
+R<WAT 1637>
+R<WAT 1638>
+R<WAT 1639>
+R<WAT 1640>
+R<WAT 1641>
+R<WAT 1643>
+R<WAT 1644>
+R<WAT 1645>
+R<WAT 1646>
+R<WAT 1647>
+R<WAT 1648>
+R<WAT 1649>
+R<WAT 1650>
+R<WAT 1651>
+R<WAT 1652>
+R<WAT 1653>
+R<WAT 1654>
+R<WAT 1655>
+R<WAT 1656>
+R<WAT 1657>
+R<WAT 1658>
+R<WAT 1659>
+R<WAT 1660>
+R<WAT 1661>
+R<WAT 1662>
+R<WAT 1663>
+R<WAT 1664>
+R<WAT 1665>
+R<WAT 1666>
+R<WAT 1667>
+R<WAT 1668>
+R<WAT 1669>
+R<WAT 1670>
+R<WAT 1671>
+R<WAT 1672>
+R<WAT 1673>
+R<WAT 1674>
+R<WAT 1675>
+R<WAT 1676>
+R<WAT 1677>
+R<WAT 1678>
+R<WAT 1679>
+R<WAT 1680>
+R<WAT 1681>
+R<WAT 1682>
+R<WAT 1683>
+R<WAT 1684>
+R<WAT 1685>
+R<WAT 1686>
+R<WAT 1687>
+R<WAT 1688>
+R<WAT 1689>
+R<WAT 1690>
+R<WAT 1691>
+R<WAT 1692>
+R<WAT 1693>
+R<WAT 1694>
+R<WAT 1695>
+R<WAT 1696>
+R<WAT 1697>
+R<WAT 1698>
+R<WAT 1699>
+R<WAT 1700>
+R<WAT 1701>
+R<WAT 1702>
+R<WAT 1703>
+R<WAT 1704>
+R<WAT 1705>
+R<WAT 1706>
+R<WAT 1707>
+R<WAT 1708>
+R<WAT 1709>
+R<WAT 1710>
+R<WAT 1711>
+R<WAT 1712>
+R<WAT 1713>
+R<WAT 1714>
+R<WAT 1715>
+R<WAT 1716>
+R<WAT 1717>
+R<WAT 1718>
+R<WAT 1719>
+R<WAT 1720>
+R<WAT 1721>
+R<WAT 1722>
+R<WAT 1723>
+R<WAT 1724>
+R<WAT 1725>
+R<WAT 1726>
+R<WAT 1727>
+R<WAT 1728>
+R<WAT 1729>
+R<WAT 1730>
+R<WAT 1731>
+R<WAT 1732>
+R<WAT 1733>
+R<WAT 1734>
+R<WAT 1735>
+R<WAT 1736>
+R<WAT 1737>
+R<WAT 1738>
+R<WAT 1739>
+R<WAT 1740>
+R<WAT 1741>
+R<WAT 1742>
+R<WAT 1743>
+R<WAT 1744>
+R<WAT 1745>
+R<WAT 1746>
+R<WAT 1747>
+R<WAT 1748>
+R<WAT 1749>
+R<WAT 1750>
+R<WAT 1751>
+R<WAT 1752>
+R<WAT 1753>
+R<WAT 1754>
+R<WAT 1755>
+R<WAT 1756>
+R<WAT 1757>
+R<WAT 1758>
+R<WAT 1759>
+R<WAT 1760>
+R<WAT 1761>
+R<WAT 1762>
+R<WAT 1763>
+R<WAT 1764>
+R<WAT 1765>
+R<WAT 1766>
+R<WAT 1767>
+R<WAT 1768>
+R<WAT 1769>
+R<WAT 1770>
+R<WAT 1771>
+R<WAT 1772>
+R<WAT 1773>
+R<WAT 1774>
+R<WAT 1775>
+R<WAT 1776>
+R<WAT 1777>
+R<WAT 1778>
+R<WAT 1779>
+R<WAT 1780>
+R<WAT 1781>
+R<WAT 1782>
+R<WAT 1783>
+R<WAT 1784>
+R<WAT 1785>
+R<WAT 1786>
+R<WAT 1787>
+R<WAT 1788>
+R<WAT 1789>
+R<WAT 1790>
+R<WAT 1791>
+R<WAT 1792>
+R<WAT 1793>
+R<WAT 1794>
+R<WAT 1795>
+R<WAT 1796>
+R<WAT 1797>
+R<WAT 1798>
+R<WAT 1799>
+R<WAT 1800>
+R<WAT 1801>
+R<WAT 1802>
+R<WAT 1803>
+R<WAT 1804>
+R<WAT 1805>
+R<WAT 1806>
+R<WAT 1807>
+R<WAT 1808>
+R<WAT 1809>
+R<WAT 1810>
+R<WAT 1811>
+R<WAT 1812>
+R<WAT 1813>
+R<WAT 1814>
+R<WAT 1815>
+R<WAT 1816>
+R<WAT 1818>
+R<WAT 1819>
+R<WAT 1820>
+R<WAT 1821>
+R<WAT 1822>
+R<WAT 1823>
+R<WAT 1824>
+R<WAT 1825>
+R<WAT 1826>
+R<WAT 1827>
+R<WAT 1828>
+R<WAT 1829>
+R<WAT 1830>
+R<WAT 1831>
+R<WAT 1832>
+R<WAT 1833>
+R<WAT 1834>
+R<WAT 1835>
+R<WAT 1836>
+R<WAT 1837>
+R<WAT 1838>
+R<WAT 1839>
+R<WAT 1840>
+R<WAT 1841>
+R<WAT 1842>
+R<WAT 1843>
+R<WAT 1844>
+R<WAT 1845>
+R<WAT 1846>
+R<WAT 1847>
+R<WAT 1848>
+R<WAT 1849>
+R<WAT 1850>
+R<WAT 1851>
+R<WAT 1852>
+R<WAT 1853>
+R<WAT 1854>
+R<WAT 1855>
+R<WAT 1856>
+R<WAT 1857>
+R<WAT 1858>
+R<WAT 1859>
+R<WAT 1860>
+R<WAT 1861>
+R<WAT 1862>
+R<WAT 1863>
+R<WAT 1864>
+R<WAT 1865>
+R<WAT 1866>
+R<WAT 1867>
+R<WAT 1868>
+R<WAT 1869>
+R<WAT 1870>
+R<WAT 1871>
+R<WAT 1872>
+R<WAT 1873>
+R<WAT 1874>
+R<WAT 1875>
+R<WAT 1876>
+R<WAT 1877>
+R<WAT 1878>
+R<WAT 1879>
+R<WAT 1880>
+R<WAT 1881>
+R<WAT 1882>
+R<WAT 1883>
+R<WAT 1884>
+R<WAT 1885>
+R<WAT 1886>
+R<WAT 1887>
+R<WAT 1888>
+R<WAT 1889>
+R<WAT 1890>
+R<WAT 1891>
+R<WAT 1892>
+R<WAT 1893>
+R<WAT 1894>
+R<WAT 1895>
+R<WAT 1896>
+R<WAT 1897>
+R<WAT 1898>
+R<WAT 1899>
+R<WAT 1900>
+R<WAT 1901>
+R<WAT 1902>
+R<WAT 1903>
+R<WAT 1904>
+R<WAT 1905>
+R<WAT 1906>
+R<WAT 1907>
+R<WAT 1908>
+R<WAT 1909>
+R<WAT 1910>
+R<WAT 1911>
+R<WAT 1912>
+R<WAT 1913>
+R<WAT 1914>
+R<WAT 1915>
+R<WAT 1916>
+R<WAT 1917>
+R<WAT 1918>
+R<WAT 1919>
+R<WAT 1920>
+R<WAT 1921>
+R<WAT 1922>
+R<WAT 1923>
+R<WAT 1924>
+R<WAT 1925>
+R<WAT 1926>
+R<WAT 1927>
+R<WAT 1928>
+R<WAT 1929>
+R<WAT 1930>
+R<WAT 1931>
+R<WAT 1932>
+R<WAT 1933>
+R<WAT 1934>
+R<WAT 1935>
+R<WAT 1936>
+R<WAT 1937>
+R<WAT 1938>
+R<WAT 1939>
+R<WAT 1940>
+R<WAT 1941>
+R<WAT 1942>
+R<WAT 1943>
+R<WAT 1944>
+R<WAT 1945>
+R<WAT 1946>
+R<WAT 1947>
+R<WAT 1948>
+R<WAT 1949>
+R<WAT 1950>
+R<WAT 1951>
+R<WAT 1952>
+R<WAT 1953>
+R<WAT 1954>
+R<WAT 1955>
+R<WAT 1956>
+R<WAT 1957>
+R<WAT 1958>
+R<WAT 1959>
+R<WAT 1960>
+R<WAT 1961>
+R<WAT 1962>
+R<WAT 1963>
+R<WAT 1964>
+R<WAT 1965>
+R<WAT 1966>
+R<WAT 1967>
+R<WAT 1968>
+R<WAT 1969>
+R<WAT 1970>
+R<WAT 1971>
+R<WAT 1972>
+R<WAT 1973>
+R<WAT 1974>
+R<WAT 1975>
+R<WAT 1976>
+R<WAT 1977>
+R<WAT 1978>
+R<WAT 1979>
+R<WAT 1980>
+R<WAT 1981>
+R<WAT 1982>
+R<WAT 1983>
+R<WAT 1984>
+R<WAT 1985>
+R<WAT 1986>
+R<WAT 1987>
+R<WAT 1988>
+R<WAT 1989>
+R<WAT 1990>
+R<WAT 1991>
+R<WAT 1992>
+R<WAT 1993>
+R<WAT 1994>
+R<WAT 1995>
+R<WAT 1997>
+R<WAT 1998>
+R<WAT 1999>
+R<WAT 2000>
+R<WAT 2001>
+R<WAT 2002>
+R<WAT 2003>
+R<WAT 2004>
+R<WAT 2005>
+R<WAT 2006>
+R<WAT 2007>
+R<WAT 2008>
+R<WAT 2009>
+R<WAT 2010>
+R<WAT 2011>
+R<WAT 2012>
+R<WAT 2013>
+R<WAT 2014>
+R<WAT 2015>
+R<WAT 2016>
+R<WAT 2017>
+R<WAT 2018>
+R<WAT 2019>
+R<WAT 2020>
+R<WAT 2021>
+R<WAT 2022>
+R<WAT 2023>
+R<WAT 2024>
+R<WAT 2025>
+R<WAT 2026>
+R<WAT 2027>
+R<WAT 2028>
+R<WAT 2029>
+R<WAT 2030>
+R<WAT 2031>
+R<WAT 2032>
+R<WAT 2033>
+R<WAT 2034>
+R<WAT 2035>
+R<WAT 2036>
+R<WAT 2037>
+R<WAT 2038>
+R<WAT 2039>
+R<WAT 2040>
+R<WAT 2041>
+R<WAT 2042>
+R<WAT 2043>
+R<WAT 2044>
+R<WAT 2045>
+R<WAT 2046>
+R<WAT 2047>
+R<WAT 2048>
+R<WAT 2049>
+R<WAT 2050>
+R<WAT 2051>
+R<WAT 2052>
+R<WAT 2053>
+R<WAT 2054>
+R<WAT 2055>
+R<WAT 2056>
+R<WAT 2057>
+R<WAT 2058>
+R<WAT 2059>
+R<WAT 2060>
+R<WAT 2061>
+R<WAT 2062>
+R<WAT 2063>
+R<WAT 2064>
+R<WAT 2065>
+R<WAT 2066>
+R<WAT 2067>
+R<WAT 2068>
+R<WAT 2069>
+R<WAT 2070>
+R<WAT 2071>
+R<WAT 2072>
+R<WAT 2073>
+R<WAT 2074>
+R<WAT 2075>
+R<WAT 2076>
+R<WAT 2077>
+R<WAT 2078>
+R<WAT 2079>
+R<WAT 2080>
+R<WAT 2081>
+R<WAT 2082>
+R<WAT 2083>
+R<WAT 2084>
+R<WAT 2085>
+R<WAT 2086>
+R<WAT 2087>
+R<WAT 2088>
+R<WAT 2089>
+R<WAT 2090>
+R<WAT 2091>
+R<WAT 2092>
+R<WAT 2093>
+R<WAT 2094>
+R<WAT 2095>
+R<WAT 2096>
+R<WAT 2097>
+R<WAT 2098>
+R<WAT 2099>
+R<WAT 2100>
+R<WAT 2101>
+R<WAT 2102>
+R<WAT 2103>
+R<WAT 2104>
+R<WAT 2105>
+R<WAT 2106>
+R<WAT 2107>
+R<WAT 2108>
+R<WAT 2109>
+R<WAT 2110>
+R<WAT 2111>
+R<WAT 2112>
+R<WAT 2113>
+R<WAT 2114>
+R<WAT 2115>
+R<WAT 2116>
+R<WAT 2117>
+R<WAT 2118>
+R<WAT 2119>
+R<WAT 2120>
+R<WAT 2121>
+R<WAT 2122>
+R<WAT 2123>
+R<WAT 2125>
+R<WAT 2126>
+R<WAT 2127>
+R<WAT 2128>
+R<WAT 2129>
+R<WAT 2130>
+R<WAT 2131>
+R<WAT 2132>
+R<WAT 2133>
+R<WAT 2134>
+R<WAT 2135>
+R<WAT 2136>
+R<WAT 2137>
+R<WAT 2138>
+R<WAT 2139>
+R<WAT 2140>
+R<WAT 2141>
+R<WAT 2142>
+R<WAT 2143>
+R<WAT 2144>
+R<WAT 2145>
+R<WAT 2146>
+R<WAT 2147>
+R<WAT 2148>
+R<WAT 2149>
+R<WAT 2150>
+R<WAT 2151>
+R<WAT 2152>
+R<WAT 2153>
+R<WAT 2154>
+R<WAT 2155>
+R<WAT 2156>
+R<WAT 2157>
+R<WAT 2158>
+R<WAT 2159>
+R<WAT 2160>
+R<WAT 2161>
+R<WAT 2162>
+R<WAT 2163>
+R<WAT 2164>
+R<WAT 2165>
+R<WAT 2166>
+R<WAT 2167>
+R<WAT 2168>
+R<WAT 2169>
+R<WAT 2170>
+R<WAT 2171>
+R<WAT 2172>
+R<WAT 2173>
+R<WAT 2174>
+R<WAT 2175>
+R<WAT 2176>
+R<WAT 2177>
+R<WAT 2178>
+R<WAT 2179>
+R<WAT 2180>
+R<WAT 2181>
+R<WAT 2182>
+R<WAT 2183>
+R<WAT 2184>
+R<WAT 2185>
+R<WAT 2186>
+R<WAT 2187>
+R<WAT 2188>
+R<WAT 2189>
+R<WAT 2190>
+R<WAT 2191>
+R<WAT 2192>
+R<WAT 2193>
+R<WAT 2194>
+R<WAT 2195>
+R<WAT 2196>
+R<WAT 2197>
+R<WAT 2198>
+R<WAT 2199>
+R<WAT 2200>
+R<WAT 2201>
+R<WAT 2202>
+R<WAT 2203>
+R<WAT 2204>
+R<WAT 2205>
+R<WAT 2206>
+R<WAT 2208>
+R<WAT 2209>
+R<WAT 2210>
+R<WAT 2211>
+R<WAT 2212>
+R<WAT 2213>
+R<WAT 2214>
+R<WAT 2215>
+R<WAT 2216>
+R<WAT 2217>
+R<WAT 2218>
+R<WAT 2219>
+R<WAT 2220>
+R<WAT 2221>
+R<WAT 2222>
+R<WAT 2223>
+R<WAT 2224>
+R<WAT 2225>
+R<WAT 2226>
+R<WAT 2227>
+R<WAT 2228>
+R<WAT 2229>
+R<WAT 2230>
+R<WAT 2231>
+R<WAT 2232>
+R<WAT 2233>
+R<WAT 2234>
+R<WAT 2235>
+R<WAT 2236>
+R<WAT 2237>
+R<WAT 2238>
+R<WAT 2239>
+R<WAT 2240>
+R<WAT 2241>
+R<WAT 2242>
+R<WAT 2243>
+R<WAT 2244>
+R<WAT 2245>
+R<WAT 2246>
+R<WAT 2247>
+R<WAT 2248>
+R<WAT 2249>
+R<WAT 2250>
+R<WAT 2251>
+R<WAT 2252>
+R<WAT 2253>
+R<WAT 2254>
+R<WAT 2255>
+R<WAT 2256>
+R<WAT 2257>
+R<WAT 2258>
+R<WAT 2259>
+R<WAT 2260>
+R<WAT 2261>
+R<WAT 2262>
+R<WAT 2263>
+R<WAT 2264>
+R<WAT 2265>
+R<WAT 2266>
+R<WAT 2267>
+R<WAT 2269>
+R<WAT 2270>
+R<WAT 2271>
+R<WAT 2272>
+R<WAT 2273>
+R<WAT 2274>
+R<WAT 2275>
+R<WAT 2276>
+R<WAT 2277>
+R<WAT 2278>
+R<WAT 2279>
+R<WAT 2280>
+R<WAT 2281>
+R<WAT 2282>
+R<WAT 2283>
+R<WAT 2284>
+R<WAT 2285>
+R<WAT 2286>
+R<WAT 2287>
+R<WAT 2288>
+R<WAT 2289>
+R<WAT 2290>
+R<WAT 2291>
+R<WAT 2292>
+R<WAT 2293>
+R<WAT 2294>
+R<WAT 2295>
+R<WAT 2296>
+R<WAT 2297>
+R<WAT 2299>
+R<WAT 2300>
+R<WAT 2301>
+R<WAT 2302>
+R<WAT 2303>
+R<WAT 2304>
+R<WAT 2305>
+R<WAT 2306>
+R<WAT 2307>
+R<WAT 2308>
+R<WAT 2309>
+R<WAT 2310>
+R<WAT 2311>
+R<WAT 2312>
+R<WAT 2313>
+R<WAT 2314>
+R<WAT 2315>
+R<WAT 2316>
+R<WAT 2317>
+R<WAT 2318>
+R<WAT 2319>
+R<WAT 2320>
+R<WAT 2321>
+R<WAT 2322>
+R<WAT 2323>
+R<WAT 2324>
+R<WAT 2325>
+R<WAT 2326>
+R<WAT 2327>
+R<WAT 2328>
+R<WAT 2329>
+R<WAT 2330>
+R<WAT 2331>
+R<WAT 2332>
+R<WAT 2333>
+R<WAT 2334>
+R<WAT 2335>
+R<WAT 2336>
+R<WAT 2337>
+R<WAT 2338>
+R<WAT 2339>
+R<WAT 2340>
+R<WAT 2341>
+R<WAT 2342>
+R<WAT 2343>
+R<WAT 2344>
+R<WAT 2345>
+R<WAT 2346>
+R<WAT 2347>
+R<WAT 2348>
+R<WAT 2349>
+R<WAT 2350>
+R<WAT 2351>
+R<WAT 2352>
+R<WAT 2353>
+R<WAT 2354>
+R<WAT 2355>
+R<WAT 2356>
+R<WAT 2357>
+R<WAT 2358>
+R<WAT 2359>
+R<WAT 2360>
+R<WAT 2361>
+R<WAT 2362>
+R<WAT 2363>
+R<WAT 2364>
+R<WAT 2365>
+R<WAT 2366>
+R<WAT 2367>
+R<WAT 2368>
+R<WAT 2369>
+R<WAT 2370>
+R<WAT 2371>
+R<WAT 2372>
+R<WAT 2373>
+R<WAT 2374>
+R<WAT 2375>
+R<WAT 2376>
+R<WAT 2377>
+R<WAT 2378>
+R<WAT 2379>
+R<WAT 2380>
+R<WAT 2381>
+R<WAT 2382>
+R<WAT 2383>
+R<WAT 2384>
+R<WAT 2385>
+R<WAT 2386>
+R<WAT 2387>
+R<WAT 2388>
+R<WAT 2389>
+R<WAT 2390>
+R<WAT 2391>
+R<WAT 2392>
+R<WAT 2393>
+R<WAT 2394>
+R<WAT 2395>
+R<WAT 2396>
+R<WAT 2397>
+R<WAT 2398>
+R<WAT 2399>
+R<WAT 2400>
+R<WAT 2401>
+R<WAT 2402>
+R<WAT 2403>
+R<WAT 2404>
+R<WAT 2405>
+R<WAT 2406>
+R<WAT 2407>
+R<WAT 2408>
+R<WAT 2409>
+R<WAT 2410>
+R<WAT 2411>
+R<WAT 2412>
+R<WAT 2413>
+R<WAT 2414>
+R<WAT 2415>
+R<WAT 2416>
+R<WAT 2417>
+R<WAT 2418>
+R<WAT 2419>
+R<WAT 2420>
+R<WAT 2421>
+R<WAT 2422>
+R<WAT 2423>
+R<WAT 2424>
+R<WAT 2425>
+R<WAT 2426>
+R<WAT 2427>
+R<WAT 2428>
+R<WAT 2429>
+R<WAT 2430>
+R<WAT 2431>
+R<WAT 2432>
+R<WAT 2433>
+R<WAT 2434>
+R<WAT 2435>
+R<WAT 2436>
+R<WAT 2437>
+R<WAT 2438>
+R<WAT 2439>
+R<WAT 2440>
+R<WAT 2441>
+R<WAT 2442>
+R<WAT 2443>
+R<WAT 2444>
+R<WAT 2445>
+R<WAT 2446>
+R<WAT 2447>
+R<WAT 2448>
+R<WAT 2449>
+R<WAT 2450>
+R<WAT 2451>
+R<WAT 2452>
+R<WAT 2453>
+R<WAT 2454>
+R<WAT 2455>
+R<WAT 2456>
+R<WAT 2457>
+R<WAT 2458>
+R<WAT 2459>
+R<WAT 2460>
+R<WAT 2461>
+R<WAT 2462>
+R<WAT 2463>
+R<WAT 2464>
+R<WAT 2465>
+R<WAT 2466>
+R<WAT 2467>
+R<WAT 2468>
+R<WAT 2469>
+R<WAT 2470>
+R<WAT 2471>
+R<WAT 2472>
+R<WAT 2473>
+R<WAT 2474>
+R<WAT 2475>
+R<WAT 2476>
+R<WAT 2477>
+R<WAT 2478>
+R<WAT 2479>
+R<WAT 2480>
+R<WAT 2481>
+R<WAT 2482>
+R<WAT 2483>
+R<WAT 2484>
+R<WAT 2485>
+R<WAT 2486>
+R<WAT 2487>
+R<WAT 2488>
+R<WAT 2489>
+R<WAT 2490>
+R<WAT 2491>
+R<WAT 2492>
+R<WAT 2493>
+R<WAT 2494>
+R<WAT 2495>
+R<WAT 2496>
+R<WAT 2497>
+R<WAT 2498>
+R<WAT 2499>
+R<WAT 2500>
+R<WAT 2501>
+R<WAT 2502>
+R<WAT 2503>
+R<WAT 2504>
+R<WAT 2505>
+R<WAT 2506>
+R<WAT 2507>
+R<WAT 2508>
+R<WAT 2509>
+R<WAT 2510>
+R<WAT 2511>
+R<WAT 2512>
+R<WAT 2513>
+R<WAT 2514>
+R<WAT 2515>
+R<WAT 2516>
+R<WAT 2517>
+R<WAT 2518>
+R<WAT 2519>
+R<WAT 2520>
+R<WAT 2521>
+R<WAT 2522>
+R<WAT 2523>
+R<WAT 2524>
+R<WAT 2525>
+R<WAT 2526>
+R<WAT 2527>
+R<WAT 2528>
+R<WAT 2529>
+R<WAT 2530>
+R<WAT 2531>
+R<WAT 2532>
+R<WAT 2533>
+R<WAT 2534>
+R<WAT 2535>
+R<WAT 2536>
+R<WAT 2537>
+R<WAT 2538>
+R<WAT 2539>
+R<WAT 2540>
+R<WAT 2541>
+R<WAT 2542>
+R<WAT 2543>
+R<WAT 2544>
+R<WAT 2545>
+R<WAT 2546>
+R<WAT 2547>
+R<WAT 2548>
+R<WAT 2549>
+R<WAT 2550>
+R<WAT 2551>
+R<WAT 2552>
+R<WAT 2554>
+R<WAT 2555>
+R<WAT 2556>
+R<WAT 2557>
+R<WAT 2558>
+R<WAT 2559>
+R<WAT 2560>
+R<WAT 2561>
+R<WAT 2562>
+R<WAT 2563>
+R<WAT 2564>
+R<WAT 2565>
+R<WAT 2566>
+R<WAT 2567>
+R<WAT 2568>
+R<WAT 2569>
+R<WAT 2570>
+R<WAT 2571>
+R<WAT 2572>
+R<WAT 2573>
+R<WAT 2574>
+R<WAT 2575>
+R<WAT 2576>
+R<WAT 2577>
+R<WAT 2578>
+R<WAT 2579>
+R<WAT 2580>
+R<WAT 2581>
+R<WAT 2582>
+R<WAT 2583>
+R<WAT 2584>
+R<WAT 2585>
+R<WAT 2586>
+R<WAT 2587>
+R<WAT 2588>
+R<WAT 2589>
+R<WAT 2590>
+R<WAT 2591>
+R<WAT 2592>
+R<WAT 2593>
+R<WAT 2594>
+R<WAT 2595>
+R<WAT 2596>
+R<WAT 2597>
+R<WAT 2598>
+R<WAT 2599>
+R<WAT 2600>
+R<WAT 2601>
+R<WAT 2602>
+R<WAT 2603>
+R<WAT 2604>
+R<WAT 2605>
+R<WAT 2606>
+R<WAT 2607>
+R<WAT 2608>
+R<WAT 2609>
+R<WAT 2610>
+R<WAT 2611>
+R<WAT 2612>
+R<WAT 2613>
+R<WAT 2614>
+R<WAT 2615>
+R<WAT 2616>
+R<WAT 2617>
+R<WAT 2618>
+R<WAT 2619>
+R<WAT 2620>
+R<WAT 2621>
+R<WAT 2622>
+R<WAT 2623>
+R<WAT 2624>
+R<WAT 2625>
+R<WAT 2626>
+R<WAT 2627>
+R<WAT 2628>
+R<WAT 2629>
+R<WAT 2630>
+R<WAT 2631>
+R<WAT 2632>
+R<WAT 2633>
+R<WAT 2634>
+R<WAT 2635>
+R<WAT 2636>
+R<WAT 2637>
+R<WAT 2638>
+R<WAT 2639>
+R<WAT 2640>
+R<WAT 2641>
+R<WAT 2643>
+R<WAT 2644>
+R<WAT 2645>
+R<WAT 2646>
+R<WAT 2647>
+R<WAT 2648>
+R<WAT 2649>
+R<WAT 2650>
+R<WAT 2651>
+R<WAT 2652>
+R<WAT 2653>
+R<WAT 2654>
+R<WAT 2655>
+R<WAT 2656>
+R<WAT 2657>
+R<WAT 2658>
+R<WAT 2659>
+R<WAT 2660>
+R<WAT 2661>
+R<WAT 2662>
+R<WAT 2663>
+R<WAT 2664>
+R<WAT 2665>
+R<WAT 2666>
+R<WAT 2667>
+R<WAT 2668>
+R<WAT 2669>
+R<WAT 2670>
+R<WAT 2671>
+R<WAT 2672>
+R<WAT 2673>
+R<WAT 2674>
+R<WAT 2675>
+R<WAT 2676>
+R<WAT 2677>
+R<WAT 2678>
+R<WAT 2679>
+R<WAT 2680>
+R<WAT 2681>
+R<WAT 2682>
+R<WAT 2683>
+R<WAT 2684>
+R<WAT 2685>
+R<WAT 2686>
+R<WAT 2687>
+R<WAT 2688>
+R<WAT 2689>
+R<WAT 2690>
+R<WAT 2691>
+R<WAT 2692>
+R<WAT 2693>
+R<WAT 2694>
+R<WAT 2695>
+R<WAT 2696>
+R<WAT 2697>
+R<WAT 2698>
+R<WAT 2699>
+R<WAT 2700>
+R<WAT 2701>
+R<WAT 2702>
+R<WAT 2703>
+R<WAT 2704>
+R<WAT 2705>
+R<WAT 2706>
+R<WAT 2707>
+R<WAT 2708>
+R<WAT 2709>
+R<WAT 2710>
+R<WAT 2711>
+R<WAT 2712>
+R<WAT 2713>
+R<WAT 2714>
+R<WAT 2715>
+R<WAT 2716>
+R<WAT 2717>
+R<WAT 2718>
+R<WAT 2719>
+R<WAT 2720>
+R<WAT 2721>
+R<WAT 2722>
+R<WAT 2723>
+R<WAT 2724>
+R<WAT 2725>
+R<WAT 2726>
+R<WAT 2727>
+R<WAT 2728>
+R<WAT 2729>
+R<WAT 2730>
+R<WAT 2731>
+R<WAT 2732>
+R<WAT 2733>
+R<WAT 2734>
+R<WAT 2735>
+R<WAT 2736>
+R<WAT 2737>
+R<WAT 2738>
+R<WAT 2739>
+R<WAT 2740>
+R<WAT 2741>
+R<WAT 2742>
+R<WAT 2743>
+R<WAT 2744>
+R<WAT 2745>
+R<WAT 2746>
+R<WAT 2747>
+R<WAT 2748>
+R<WAT 2749>
+R<WAT 2750>
+R<WAT 2751>
+R<WAT 2752>
+R<WAT 2753>
+R<WAT 2754>
+R<WAT 2755>
+R<WAT 2756>
+R<WAT 2757>
+R<WAT 2758>
+R<WAT 2759>
+R<WAT 2760>
+R<WAT 2761>
+R<WAT 2762>
+R<WAT 2763>
+R<WAT 2764>
+R<WAT 2765>
+R<WAT 2766>
+R<WAT 2767>
+R<WAT 2768>
+R<WAT 2769>
+R<WAT 2770>
+R<WAT 2771>
+R<WAT 2772>
+R<WAT 2773>
+R<WAT 2774>
+R<WAT 2775>
+R<WAT 2776>
+R<WAT 2777>
+R<WAT 2778>
+R<WAT 2779>
+R<WAT 2780>
+R<WAT 2781>
+R<WAT 2782>
+R<WAT 2783>
+R<WAT 2784>
+R<WAT 2785>
+R<WAT 2786>
+R<WAT 2787>
+R<WAT 2788>
+R<WAT 2789>
+R<WAT 2790>
+R<WAT 2791>
+R<WAT 2792>
+R<WAT 2793>
+R<WAT 2794>
+R<WAT 2795>
+R<WAT 2796>
+R<WAT 2797>
+R<WAT 2798>
+R<WAT 2799>
+R<WAT 2800>
+R<WAT 2801>
+R<WAT 2802>
+R<WAT 2803>
+R<WAT 2804>
+R<WAT 2805>
+R<WAT 2806>
+R<WAT 2807>
+R<WAT 2808>
+R<WAT 2809>
+R<WAT 2810>
+R<WAT 2811>
+R<WAT 2812>
+R<WAT 2813>
+R<WAT 2814>
+R<WAT 2815>
+R<WAT 2816>
+R<WAT 2817>
+R<WAT 2819>
+R<WAT 2820>
+R<WAT 2821>
+R<WAT 2822>
+R<WAT 2823>
+R<WAT 2824>
+R<WAT 2825>
+R<WAT 2826>
+R<WAT 2827>
+R<WAT 2828>
+R<WAT 2829>
+R<WAT 2830>
+R<WAT 2831>
+R<WAT 2832>
+R<WAT 2833>
+R<WAT 2834>
+R<WAT 2835>
+R<WAT 2836>
+R<WAT 2837>
+R<WAT 2838>
+R<WAT 2839>
+R<WAT 2840>
+R<WAT 2841>
+R<WAT 2842>
+R<WAT 2843>
+R<WAT 2844>
+R<WAT 2845>
+R<WAT 2846>
+R<WAT 2847>
+R<WAT 2848>
+R<WAT 2849>
+R<WAT 2850>
+R<WAT 2851>
+R<WAT 2852>
+R<WAT 2853>
+R<WAT 2854>
+R<WAT 2855>
+R<WAT 2856>
+R<WAT 2857>
+R<WAT 2858>
+R<WAT 2859>
+R<WAT 2860>
+R<WAT 2861>
+R<WAT 2862>
+R<WAT 2863>
+R<WAT 2864>
+R<WAT 2865>
+R<WAT 2866>
+R<WAT 2867>
+R<WAT 2868>
+R<WAT 2869>
+R<WAT 2870>
+R<WAT 2871>
+R<WAT 2872>
+R<WAT 2873>
+R<WAT 2874>
+R<WAT 2875>
+R<WAT 2876>
+R<WAT 2877>
+R<WAT 2878>
+R<WAT 2879>
+R<WAT 2880>
+R<WAT 2881>
+R<WAT 2882>
+R<WAT 2884>
+R<WAT 2885>
+R<WAT 2886>
+R<WAT 2887>
+R<WAT 2888>
+R<WAT 2889>
+R<WAT 2890>
+R<WAT 2891>
+R<WAT 2892>
+R<WAT 2893>
+R<WAT 2894>
+R<WAT 2895>
+R<WAT 2896>
+R<WAT 2897>
+R<WAT 2898>
+R<WAT 2899>
+R<WAT 2900>
+R<WAT 2901>
+R<WAT 2902>
+R<WAT 2903>
+R<WAT 2904>
+R<WAT 2905>
+R<WAT 2906>
+R<WAT 2907>
+R<WAT 2908>
+R<WAT 2909>
+R<WAT 2910>
+R<WAT 2911>
+R<WAT 2912>
+R<WAT 2913>
+R<WAT 2914>
+R<WAT 2915>
+R<WAT 2916>
+R<WAT 2917>
+R<WAT 2918>
+R<WAT 2919>
+R<WAT 2920>
+R<WAT 2921>
+R<WAT 2922>
+R<WAT 2923>
+R<WAT 2924>
+R<WAT 2925>
+R<WAT 2926>
+R<WAT 2927>
+R<WAT 2928>
+R<WAT 2929>
+R<WAT 2930>
+R<WAT 2931>
+R<WAT 2932>
+R<WAT 2933>
+R<WAT 2934>
+R<WAT 2935>
+R<WAT 2936>
+R<WAT 2937>
+R<WAT 2938>
+R<WAT 2939>
+R<WAT 2940>
+R<WAT 2941>
+R<WAT 2942>
+R<WAT 2943>
+R<WAT 2944>
+R<WAT 2945>
+R<WAT 2946>
+R<WAT 2947>
+R<WAT 2948>
+R<WAT 2949>
+R<WAT 2950>
+R<WAT 2951>
+R<WAT 2952>
+R<WAT 2953>
+R<WAT 2954>
+R<WAT 2955>
+R<WAT 2956>
+R<WAT 2957>
+R<WAT 2958>
+R<WAT 2959>
+R<WAT 2960>
+R<WAT 2961>
+R<WAT 2962>
+R<WAT 2963>
+R<WAT 2964>
+R<WAT 2965>
+R<WAT 2966>
+R<WAT 2967>
+R<WAT 2968>
+R<WAT 2969>
+R<WAT 2970>
+R<WAT 2971>
+R<WAT 2972>
+R<WAT 2973>
+R<WAT 2974>
+R<WAT 2975>
+R<WAT 2976>
+R<WAT 2977>
+R<WAT 2978>
+R<WAT 2979>
+R<WAT 2980>
+R<WAT 2981>
+R<WAT 2982>
+R<WAT 2983>
+R<WAT 2984>
+R<WAT 2985>
+R<WAT 2986>
+R<WAT 2987>
+R<WAT 2988>
+R<WAT 2989>
+R<WAT 2990>
+R<WAT 2991>
+R<WAT 2992>
+R<WAT 2993>
+R<WAT 2994>
+R<WAT 2995>
+R<WAT 2996>
+R<WAT 2997>
+R<WAT 2998>
+R<WAT 2999>
+R<WAT 3000>
+R<WAT 3001>
+R<WAT 3002>
+R<WAT 3003>
+R<WAT 3004>
+R<WAT 3005>
+R<WAT 3006>
+R<WAT 3007>
+R<WAT 3008>
+R<WAT 3009>
+R<WAT 3010>
+R<WAT 3011>
+R<WAT 3012>
+R<WAT 3013>
+R<WAT 3014>
+R<WAT 3015>
+R<WAT 3016>
+R<WAT 3017>
+R<WAT 3018>
+R<WAT 3019>
+R<WAT 3020>
+R<WAT 3021>
+R<WAT 3022>
+R<WAT 3023>
+R<WAT 3024>
+R<WAT 3025>
+R<WAT 3026>
+R<WAT 3027>
+R<WAT 3028>
+R<WAT 3029>
+R<WAT 3031>
+R<WAT 3032>
+R<WAT 3033>
+R<WAT 3034>
+R<WAT 3035>
+R<WAT 3036>
+R<WAT 3037>
+R<WAT 3038>
+R<WAT 3039>
+R<WAT 3040>
+R<WAT 3041>
+R<WAT 3042>
+R<WAT 3043>
+R<WAT 3044>
+R<WAT 3045>
+R<WAT 3046>
+R<WAT 3047>
+R<WAT 3048>
+R<WAT 3049>
+R<WAT 3050>
+R<WAT 3051>
+R<WAT 3052>
+R<WAT 3053>
+R<WAT 3054>
+R<WAT 3055>
+R<WAT 3056>
+R<WAT 3057>
+R<WAT 3058>
+R<WAT 3059>
+R<WAT 3060>
+R<WAT 3061>
+R<WAT 3062>
+R<WAT 3063>
+R<WAT 3064>
+R<WAT 3065>
+R<WAT 3066>
+R<WAT 3067>
+R<WAT 3068>
+R<WAT 3069>
+R<WAT 3070>
+R<WAT 3071>
+R<WAT 3072>
+R<WAT 3073>
+R<WAT 3074>
+R<WAT 3075>
+R<WAT 3076>
+R<WAT 3077>
+R<WAT 3078>
+R<WAT 3079>
+R<WAT 3080>
+R<WAT 3081>
+R<WAT 3082>
+R<WAT 3083>
+R<WAT 3084>
+R<WAT 3085>
+R<WAT 3086>
+R<WAT 3087>
+R<WAT 3088>
+R<WAT 3089>
+R<WAT 3090>
+R<WAT 3091>
+R<WAT 3092>
+R<WAT 3093>
+R<WAT 3094>
+R<WAT 3095>
+R<WAT 3096>
+R<WAT 3097>
+R<WAT 3098>
+R<WAT 3099>
+R<WAT 3100>
+R<WAT 3101>
+R<WAT 3102>
+R<WAT 3103>
+R<WAT 3104>
+R<WAT 3105>
+R<WAT 3106>
+R<WAT 3107>
+R<WAT 3108>
+R<WAT 3109>
+R<WAT 3110>
+R<WAT 3111>
+R<WAT 3112>
+R<WAT 3113>
+R<WAT 3114>
+R<WAT 3115>
+R<WAT 3116>
+R<WAT 3117>
+R<WAT 3118>
+R<WAT 3119>
+R<WAT 3120>
+R<WAT 3121>
+R<WAT 3122>
+R<WAT 3123>
+R<WAT 3124>
+R<WAT 3125>
+R<WAT 3126>
+R<WAT 3127>
+R<WAT 3128>
+R<WAT 3129>
+R<WAT 3130>
+R<WAT 3131>
+R<WAT 3132>
+R<WAT 3133>
+R<WAT 3134>
+R<WAT 3135>
+R<WAT 3136>
+R<WAT 3137>
+R<WAT 3138>
+R<WAT 3139>
+R<WAT 3140>
+R<WAT 3141>
+R<WAT 3142>
+R<WAT 3143>
+R<WAT 3144>
+R<WAT 3145>
+R<WAT 3146>
+R<WAT 3147>
+R<WAT 3148>
+R<WAT 3149>
+R<WAT 3150>
+R<WAT 3151>
+R<WAT 3152>
+R<WAT 3153>
+R<WAT 3154>
+R<WAT 3155>
+R<WAT 3156>
+R<WAT 3157>
+R<WAT 3158>
+R<WAT 3159>
+R<WAT 3160>
+R<WAT 3161>
+R<WAT 3162>
+R<WAT 3163>
+R<WAT 3164>
+R<WAT 3165>
+R<WAT 3166>
+R<WAT 3167>
+R<WAT 3168>
+R<WAT 3169>
+R<WAT 3170>
+R<WAT 3171>
+R<WAT 3172>
+R<WAT 3173>
+R<WAT 3174>
+R<WAT 3175>
+R<WAT 3176>
+R<WAT 3177>
+R<WAT 3178>
+R<WAT 3179>
+R<WAT 3180>
+R<WAT 3181>
+R<WAT 3182>
+R<WAT 3183>
+R<WAT 3184>
+R<WAT 3185>
+R<WAT 3186>
+R<WAT 3187>
+R<WAT 3188>
+R<WAT 3189>
+R<WAT 3190>
+R<WAT 3191>
+R<WAT 3192>
+R<WAT 3193>
+R<WAT 3194>
+R<WAT 3195>
+R<WAT 3196>
+R<WAT 3197>
+R<WAT 3198>
+R<WAT 3199>
+R<WAT 3200>
+R<WAT 3201>
+R<WAT 3202>
+R<WAT 3203>
+R<WAT 3204>
+R<WAT 3205>
+R<WAT 3206>
+R<WAT 3207>
+R<WAT 3208>
+R<WAT 3209>
+R<WAT 3210>
+R<WAT 3211>
+R<WAT 3212>
+R<WAT 3213>
+R<WAT 3214>
+R<WAT 3215>
+R<WAT 3216>
+R<WAT 3217>
+R<WAT 3218>
+R<WAT 3219>
+R<WAT 3220>
+R<WAT 3221>
+R<WAT 3222>
+R<WAT 3223>
+R<WAT 3224>
+R<WAT 3225>
+R<WAT 3226>
+R<WAT 3227>
+R<WAT 3228>
+R<WAT 3229>
+R<WAT 3230>
+R<WAT 3231>
+R<WAT 3232>
+R<WAT 3233>
+R<WAT 3234>
+R<WAT 3235>
+R<WAT 3236>
+R<WAT 3237>
+R<WAT 3238>
+R<WAT 3239>
+R<WAT 3240>
+R<WAT 3241>
+R<WAT 3242>
+R<WAT 3243>
+R<WAT 3244>
+R<WAT 3245>
+R<WAT 3246>
+R<WAT 3247>
+R<WAT 3248>
+R<WAT 3249>
+R<WAT 3250>
+R<WAT 3251>
+R<WAT 3252>
+R<WAT 3253>
+R<WAT 3254>
+R<WAT 3255>
+R<WAT 3256>
+R<WAT 3257>
+R<WAT 3258>
+R<WAT 3259>
+R<WAT 3260>
+R<WAT 3261>
+R<WAT 3262>
+R<WAT 3263>
+R<WAT 3264>
+R<WAT 3265>
+R<WAT 3266>
+R<WAT 3267>
+R<WAT 3268>
+R<WAT 3269>
+R<WAT 3270>
+R<WAT 3271>
+R<WAT 3272>
+R<WAT 3273>
+R<WAT 3274>
+R<WAT 3275>
+R<WAT 3276>
+R<WAT 3277>
+R<WAT 3278>
+R<WAT 3279>
+R<WAT 3280>
+R<WAT 3281>
+R<WAT 3282>
+R<WAT 3283>
+R<WAT 3284>
+R<WAT 3285>
+R<WAT 3286>
+R<WAT 3287>
+R<WAT 3288>
+R<WAT 3289>
+R<WAT 3290>
+R<WAT 3291>
+R<WAT 3292>
+R<WAT 3293>
+R<WAT 3294>
+R<WAT 3295>
+R<WAT 3296>
+R<WAT 3297>
+R<WAT 3298>
+R<WAT 3299>
+R<WAT 3300>
+R<WAT 3301>
+R<WAT 3302>
+R<WAT 3303>
+R<WAT 3304>
+R<WAT 3305>
+R<WAT 3306>
+R<WAT 3307>
+R<WAT 3308>
+R<WAT 3309>
+R<WAT 3310>
+R<WAT 3311>
+R<WAT 3312>
+R<WAT 3313>
+R<WAT 3314>
+R<WAT 3315>
+R<WAT 3316>
+R<WAT 3317>
+R<WAT 3318>
+R<WAT 3319>
+R<WAT 3320>
+R<WAT 3321>
+R<WAT 3322>
+R<WAT 3323>
+R<WAT 3324>
+R<WAT 3325>
+R<WAT 3326>
+R<WAT 3327>
+R<WAT 3328>
+R<WAT 3329>
+R<WAT 3330>
+R<WAT 3331>
+R<WAT 3332>
+R<WAT 3333>
+R<WAT 3334>
+R<WAT 3335>
+R<WAT 3336>
+R<WAT 3337>
+R<WAT 3338>
+R<WAT 3339>
+R<WAT 3340>
+R<WAT 3341>
+R<WAT 3342>
+R<WAT 3343>
+R<WAT 3344>
+R<WAT 3345>
+R<WAT 3346>
+R<WAT 3347>
+R<WAT 3348>
+R<WAT 3349>
+R<WAT 3350>
+R<WAT 3351>
+R<WAT 3352>
+R<WAT 3353>
+R<WAT 3354>
+R<WAT 3355>
+R<WAT 3356>
+R<WAT 3357>
+R<WAT 3358>
+R<WAT 3359>
+R<WAT 3360>
+R<WAT 3361>
+R<WAT 3362>
+R<WAT 3363>
+R<WAT 3364>
+R<WAT 3365>
+R<WAT 3366>
+R<WAT 3367>
+R<WAT 3368>
+R<WAT 3369>
+R<WAT 3370>
+R<WAT 3371>
+R<WAT 3372>
+R<WAT 3373>
+R<WAT 3374>
+R<WAT 3375>
+R<WAT 3376>
+R<WAT 3377>
+R<WAT 3378>
+R<WAT 3379>
+R<WAT 3380>
+R<WAT 3381>
+R<WAT 3382>
+R<WAT 3383>
+R<WAT 3384>
+R<WAT 3385>
+R<WAT 3386>
+R<WAT 3387>
+R<WAT 3388>
+R<WAT 3389>
+R<WAT 3390>
+R<WAT 3391>
+R<WAT 3392>
+R<WAT 3393>
+R<WAT 3394>
+R<WAT 3395>
+R<WAT 3396>
+R<WAT 3397>
+R<WAT 3398>
+R<WAT 3399>
+R<WAT 3400>
+R<WAT 3401>
+R<WAT 3402>
+R<WAT 3403>
+R<WAT 3404>
+R<WAT 3405>
+R<WAT 3406>
+R<WAT 3407>
+R<WAT 3408>
+R<WAT 3409>
+R<WAT 3410>
+R<WAT 3411>
+R<WAT 3412>
+R<WAT 3413>
+R<WAT 3414>
+R<WAT 3415>
+R<WAT 3416>
+R<WAT 3417>
+R<WAT 3418>
+R<WAT 3419>
+R<WAT 3420>
+R<WAT 3421>
+R<WAT 3422>
+R<WAT 3423>
+R<WAT 3424>
+R<WAT 3425>
+R<WAT 3426>
+R<WAT 3427>
+R<WAT 3428>
+R<WAT 3429>
+R<WAT 3430>
+R<WAT 3431>
+R<WAT 3432>
+R<WAT 3433>
+R<WAT 3434>
+R<WAT 3435>
+R<WAT 3436>
+R<WAT 3437>
+R<WAT 3438>
+R<WAT 3439>
+R<WAT 3440>
+R<WAT 3441>
+R<WAT 3442>
+R<WAT 3443>
+R<WAT 3444>
+R<WAT 3445>
+R<WAT 3446>
+R<WAT 3447>
+R<WAT 3448>
+R<WAT 3449>
+R<WAT 3450>
+R<WAT 3451>
+R<WAT 3452>
+R<WAT 3453>
+R<WAT 3454>
+R<WAT 3455>
+R<WAT 3456>
+R<WAT 3457>
+R<WAT 3458>
+R<WAT 3459>
+R<WAT 3460>
+R<WAT 3461>
+R<WAT 3462>
+R<WAT 3463>
+R<WAT 3464>
+R<WAT 3465>
+R<WAT 3466>
+R<WAT 3467>
+R<WAT 3468>
+R<WAT 3469>
+R<WAT 3470>
+R<WAT 3471>
+R<WAT 3472>
+R<WAT 3473>
+R<WAT 3474>
+R<WAT 3475>
+R<WAT 3476>
+R<WAT 3477>
+R<WAT 3478>
+R<WAT 3479>
+R<WAT 3480>
+R<WAT 3481>
+R<WAT 3482>
+R<WAT 3483>
+R<WAT 3484>
+R<WAT 3485>
+R<WAT 3486>
+R<WAT 3487>
+R<WAT 3488>
+R<WAT 3489>
+R<WAT 3490>
+R<WAT 3491>
+R<WAT 3492>
+R<WAT 3493>
+R<WAT 3494>
+R<WAT 3495>
+R<WAT 3496>
+R<WAT 3497>
+R<WAT 3498>
+R<WAT 3499>
+R<WAT 3500>
+R<WAT 3501>
+R<WAT 3502>
+R<WAT 3503>
+R<WAT 3504>
+R<WAT 3505>
+R<WAT 3506>
+R<WAT 3507>
+R<WAT 3508>
+R<WAT 3509>
+R<WAT 3510>
+R<WAT 3511>
+R<WAT 3512>
+R<WAT 3513>
+R<WAT 3514>
+R<WAT 3515>
+R<WAT 3516>
+R<WAT 3518>
+R<WAT 3519>
+R<WAT 3520>
+R<WAT 3521>
+R<WAT 3522>
+R<WAT 3523>
+R<WAT 3524>
+R<WAT 3525>
+R<WAT 3526>
+R<WAT 3527>
+R<WAT 3528>
+R<WAT 3529>
+R<WAT 3530>
+R<WAT 3531>
+R<WAT 3532>
+R<WAT 3533>
+R<WAT 3534>
+R<WAT 3535>
+R<WAT 3536>
+R<WAT 3537>
+R<WAT 3538>
+R<WAT 3539>
+R<WAT 3540>
+R<WAT 3541>
+R<WAT 3542>
+R<WAT 3543>
+R<WAT 3544>
+R<WAT 3545>
+R<WAT 3546>
+R<WAT 3547>
+R<WAT 3548>
+R<WAT 3549>
+R<WAT 3550>
+R<WAT 3551>
+R<WAT 3552>
+R<WAT 3553>
+R<WAT 3554>
+R<WAT 3555>
+R<WAT 3556>
+R<WAT 3557>
+R<WAT 3558>
+R<WAT 3559>
+R<WAT 3560>
+R<WAT 3561>
+R<WAT 3562>
+R<WAT 3563>
+R<WAT 3564>
+R<WAT 3565>
+R<WAT 3566>
+R<WAT 3567>
+R<WAT 3568>
+R<WAT 3569>
+R<WAT 3570>
+R<WAT 3571>
+R<WAT 3572>
+R<WAT 3573>
+R<WAT 3574>
+R<WAT 3575>
+R<WAT 3576>
+R<WAT 3577>
+R<WAT 3578>
+R<WAT 3579>
+R<WAT 3580>
+R<WAT 3581>
+R<WAT 3582>
+R<WAT 3583>
+R<WAT 3584>
+R<WAT 3585>
+R<WAT 3586>
+R<WAT 3587>
+R<WAT 3588>
+R<WAT 3589>
+R<WAT 3590>
+R<WAT 3591>
+R<WAT 3592>
+R<WAT 3593>
+R<WAT 3594>
+R<WAT 3595>
+R<WAT 3596>
+R<WAT 3597>
+R<WAT 3598>
+R<WAT 3599>
+R<WAT 3600>
+R<WAT 3601>
+R<WAT 3602>
+R<WAT 3603>
+R<WAT 3604>
+R<WAT 3605>
+R<WAT 3606>
+R<WAT 3607>
+R<WAT 3608>
+R<WAT 3609>
+R<WAT 3610>
+R<WAT 3611>
+R<WAT 3612>
+R<WAT 3613>
+R<WAT 3614>
+R<WAT 3615>
+R<WAT 3616>
+R<WAT 3617>
+R<WAT 3618>
+R<WAT 3619>
+R<WAT 3620>
+R<WAT 3621>
+R<WAT 3622>
+R<WAT 3623>
+R<WAT 3624>
+R<WAT 3625>
+R<WAT 3626>
+R<WAT 3627>
+R<WAT 3628>
+R<WAT 3629>
+R<WAT 3630>
+R<WAT 3631>
+R<WAT 3632>
+R<WAT 3633>
+R<WAT 3634>
+R<WAT 3635>
+R<WAT 3636>
+R<WAT 3637>
+R<WAT 3638>
+R<WAT 3639>
+R<WAT 3640>
+R<WAT 3641>
+R<WAT 3642>
+R<WAT 3643>
+R<WAT 3644>
+R<WAT 3645>
+R<WAT 3646>
+R<WAT 3647>
+R<WAT 3648>
+R<WAT 3649>
+R<WAT 3650>
+R<WAT 3651>
+R<WAT 3652>
+R<WAT 3653>
+R<WAT 3654>
+R<WAT 3655>
+R<WAT 3656>
+R<WAT 3657>
+R<WAT 3658>
+R<WAT 3659>
+R<WAT 3660>
+R<WAT 3661>
+R<WAT 3662>
+R<WAT 3663>
+R<WAT 3665>
+R<WAT 3666>
+R<WAT 3667>
+R<WAT 3668>
+R<WAT 3669>
+R<WAT 3670>
+R<WAT 3671>
+R<WAT 3672>
+R<WAT 3673>
+R<WAT 3674>
+R<WAT 3675>
+R<WAT 3676>
+R<WAT 3677>
+R<WAT 3678>
+R<WAT 3679>
+R<WAT 3680>
+R<WAT 3681>
+R<WAT 3682>
+R<WAT 3683>
+R<WAT 3684>
+R<WAT 3685>
+R<WAT 3686>
+R<WAT 3687>
+R<WAT 3688>
+R<WAT 3689>
+R<WAT 3690>
+R<WAT 3691>
+R<WAT 3692>
+R<WAT 3694>
+R<WAT 3695>
+R<WAT 3696>
+R<WAT 3697>
+R<WAT 3698>
+R<WAT 3699>
+R<WAT 3700>
+R<WAT 3701>
+R<WAT 3702>
+R<WAT 3703>
+R<WAT 3704>
+R<WAT 3705>
+R<WAT 3706>
+R<WAT 3707>
+R<WAT 3708>
+R<WAT 3709>
+R<WAT 3710>
+R<WAT 3711>
+R<WAT 3712>
+R<WAT 3713>
+R<WAT 3714>
+R<WAT 3715>
+R<WAT 3716>
+R<WAT 3717>
+R<WAT 3718>
+R<WAT 3719>
+R<WAT 3720>
+R<WAT 3721>
+R<WAT 3722>
+R<WAT 3723>
+R<WAT 3724>
+R<WAT 3725>
+R<WAT 3726>
+R<WAT 3727>
+R<WAT 3728>
+R<WAT 3729>
+R<WAT 3730>
+R<WAT 3731>
+R<WAT 3732>
+R<WAT 3733>
+R<WAT 3734>
+R<WAT 3735>
+R<WAT 3736>
+R<WAT 3737>
+R<WAT 3738>
+R<WAT 3739>
+R<WAT 3740>
+R<WAT 3741>
+R<WAT 3742>
+R<WAT 3743>
+R<WAT 3744>
+R<WAT 3745>
+R<WAT 3746>
+R<WAT 3747>
+R<WAT 3748>
+R<WAT 3749>
+R<WAT 3750>
+R<WAT 3751>
+R<WAT 3752>
+R<WAT 3753>
+R<WAT 3754>
+R<WAT 3755>
+R<WAT 3756>
+R<WAT 3757>
+R<WAT 3758>
+R<WAT 3759>
+R<WAT 3760>
+R<WAT 3761>
+R<WAT 3762>
+R<WAT 3763>
+R<WAT 3764>
+R<WAT 3765>
+R<WAT 3766>
+R<WAT 3767>
+R<WAT 3768>
+R<WAT 3769>
+R<WAT 3770>
+R<WAT 3771>
+R<WAT 3772>
+R<WAT 3773>
+R<WAT 3774>
+R<WAT 3775>
+R<WAT 3776>
+R<WAT 3777>
+R<WAT 3778>
+R<WAT 3779>
+R<WAT 3780>
+R<WAT 3781>
+R<WAT 3782>
+R<WAT 3783>
+R<WAT 3784>
+R<WAT 3785>
+R<WAT 3786>
+R<WAT 3787>
+R<WAT 3788>
+R<WAT 3789>
+R<WAT 3790>
+R<WAT 3791>
+R<WAT 3792>
+R<WAT 3793>
+R<WAT 3794>
+R<WAT 3795>
+R<WAT 3796>
+R<WAT 3797>
+R<WAT 3798>
+R<WAT 3799>
+R<WAT 3800>
+R<WAT 3801>
+R<WAT 3802>
+R<WAT 3803>
+R<WAT 3804>
+R<WAT 3805>
+R<WAT 3806>
+R<WAT 3807>
+R<WAT 3808>
+R<WAT 3809>
+R<WAT 3810>
+R<WAT 3811>
+R<WAT 3812>
+R<WAT 3813>
+R<WAT 3814>
+R<WAT 3815>
+R<WAT 3816>
+R<WAT 3817>
+R<WAT 3818>
+R<WAT 3819>
+R<WAT 3820>
+R<WAT 3821>
+R<WAT 3822>
+R<WAT 3823>
+R<WAT 3824>
+R<WAT 3825>
+R<WAT 3826>
+R<WAT 3827>
+R<WAT 3828>
+R<WAT 3829>
+R<WAT 3830>
+R<WAT 3831>
+R<WAT 3832>
+R<WAT 3833>
+R<WAT 3834>
+R<WAT 3835>
+R<WAT 3836>
+R<WAT 3837>
+R<WAT 3838>
+R<WAT 3839>
+R<WAT 3840>
+R<WAT 3841>
+R<WAT 3842>
+R<WAT 3843>
+R<WAT 3844>
+R<WAT 3845>
+R<WAT 3846>
+R<WAT 3847>
+R<WAT 3848>
+R<WAT 3849>
+R<WAT 3850>
+R<WAT 3851>
+R<WAT 3852>
+R<WAT 3853>
+R<WAT 3854>
+R<WAT 3855>
+R<WAT 3856>
+R<WAT 3857>
+R<WAT 3858>
+R<WAT 3859>
+R<WAT 3860>
+R<WAT 3861>
+R<WAT 3862>
+R<WAT 3863>
+R<WAT 3864>
+R<WAT 3865>
+R<WAT 3866>
+R<WAT 3867>
+R<WAT 3868>
+R<WAT 3869>
+R<WAT 3870>
+R<WAT 3871>
+R<WAT 3872>
+R<WAT 3873>
+R<WAT 3874>
+R<WAT 3875>
+R<WAT 3876>
+R<WAT 3877>
+R<WAT 3878>
+R<WAT 3879>
+R<WAT 3880>
+R<WAT 3881>
+R<WAT 3882>
+R<WAT 3883>
+R<WAT 3884>
+R<WAT 3885>
+R<WAT 3886>
+R<WAT 3887>
+R<WAT 3888>
+R<WAT 3889>
+R<WAT 3890>
+R<WAT 3891>
+R<WAT 3892>
+R<WAT 3893>
+R<WAT 3894>
+R<WAT 3895>
+R<WAT 3896>
+R<WAT 3897>
+R<WAT 3898>
+R<WAT 3899>
+R<WAT 3900>
+R<WAT 3901>
+R<WAT 3902>
+R<WAT 3903>
+R<WAT 3904>
+R<WAT 3905>
+R<WAT 3906>
+R<WAT 3907>
+R<WAT 3908>
+R<WAT 3909>
+R<WAT 3910>
+R<WAT 3911>
+R<WAT 3912>
+R<WAT 3913>
+R<WAT 3914>
+R<WAT 3915>
+R<WAT 3916>
+R<WAT 3917>
+R<WAT 3918>
+R<WAT 3919>
+R<WAT 3920>
+R<WAT 3921>
+R<WAT 3922>
+R<WAT 3923>
+R<WAT 3924>
+R<WAT 3925>
+R<WAT 3926>
+R<WAT 3927>
+R<WAT 3928>
+R<WAT 3929>
+R<WAT 3930>
+R<WAT 3931>
+R<WAT 3932>
+R<WAT 3933>
+R<WAT 3934>
+R<WAT 3935>
+R<WAT 3936>
+R<WAT 3937>
+R<WAT 3938>
+R<WAT 3939>
+R<WAT 3940>
+R<WAT 3941>
+R<WAT 3942>
+R<WAT 3943>
+R<WAT 3944>
+R<WAT 3945>
+R<WAT 3946>
+R<WAT 3947>
+R<WAT 3948>
+R<WAT 3949>
+R<WAT 3950>
+R<WAT 3951>
+R<WAT 3952>
+R<WAT 3953>
+R<WAT 3954>
+R<WAT 3955>
+R<WAT 3956>
+R<WAT 3957>
+R<WAT 3958>
+R<WAT 3959>
+R<WAT 3960>
+R<WAT 3961>
+R<WAT 3962>
+R<WAT 3963>
+R<WAT 3964>
+R<WAT 3965>
+R<WAT 3966>
+R<WAT 3967>
+R<WAT 3968>
+R<WAT 3969>
+R<WAT 3970>
+R<WAT 3971>
+R<WAT 3972>
+R<WAT 3973>
+R<WAT 3974>
+R<WAT 3975>
+R<WAT 3976>
+R<WAT 3977>
+R<WAT 3978>
+R<WAT 3979>
+R<WAT 3980>
+R<WAT 3981>
+R<WAT 3982>
+R<WAT 3983>
+R<WAT 3984>
+R<WAT 3985>
+R<WAT 3986>
+R<WAT 3987>
+R<WAT 3988>
+R<WAT 3989>
+R<WAT 3990>
+R<WAT 3991>
+R<WAT 3992>
+R<WAT 3993>
+R<WAT 3994>
+R<WAT 3995>
+R<WAT 3996>
+R<WAT 3997>
+R<WAT 3998>
+R<WAT 3999>
+R<WAT 4000>
+R<WAT 4001>
+R<WAT 4002>
+R<WAT 4003>
+R<WAT 4004>
+R<WAT 4005>
+R<WAT 4006>
+R<WAT 4007>
+R<WAT 4008>
+R<WAT 4009>
+R<WAT 4010>
+R<WAT 4011>
+R<WAT 4012>
+R<WAT 4013>
+R<WAT 4014>
+R<WAT 4015>
+R<WAT 4016>
+R<WAT 4017>
+R<WAT 4018>
+R<WAT 4019>
+R<WAT 4020>
+R<WAT 4021>
+R<WAT 4022>
+R<WAT 4023>
+R<WAT 4024>
+R<WAT 4025>
+R<WAT 4026>
+R<WAT 4027>
+R<WAT 4028>
+R<WAT 4029>
+R<WAT 4030>
+R<WAT 4031>
+R<WAT 4032>
+R<WAT 4034>
+R<WAT 4035>
+R<WAT 4036>
+R<WAT 4037>
+R<WAT 4038>
+R<WAT 4039>
+R<WAT 4040>
+R<WAT 4041>
+R<WAT 4042>
+R<WAT 4043>
+R<WAT 4044>
+R<WAT 4045>
+R<WAT 4046>
+R<WAT 4047>
+R<WAT 4048>
+R<WAT 4049>
+R<WAT 4050>
+R<WAT 4051>
+R<WAT 4052>
+R<WAT 4053>
+R<WAT 4054>
+R<WAT 4055>
+R<WAT 4056>
+R<WAT 4057>
+R<WAT 4058>
+R<WAT 4059>
+R<WAT 4060>
+R<WAT 4061>
+R<WAT 4062>
+R<WAT 4063>
+R<WAT 4064>
+R<WAT 4065>
+R<WAT 4066>
+R<WAT 4067>
+R<WAT 4068>
+R<WAT 4069>
+R<WAT 4070>
+R<WAT 4071>
+R<WAT 4072>
+R<WAT 4073>
+R<WAT 4074>
+R<WAT 4075>
+R<WAT 4076>
+R<WAT 4077>
+R<WAT 4078>
+R<WAT 4079>
+R<WAT 4080>
+R<WAT 4081>
+R<WAT 4082>
+R<WAT 4083>
+R<WAT 4084>
+R<WAT 4085>
+R<WAT 4086>
+R<WAT 4087>
+R<WAT 4088>
+R<WAT 4089>
+R<WAT 4090>
+R<WAT 4091>
+R<WAT 4092>
+R<WAT 4093>
+R<WAT 4094>
+R<WAT 4095>
+R<WAT 4096>
+R<WAT 4097>
+R<WAT 4098>
+R<WAT 4099>
+R<WAT 4100>
+R<WAT 4101>
+R<WAT 4102>
+R<WAT 4103>
+R<WAT 4104>
+R<WAT 4105>
+R<WAT 4106>
+R<WAT 4107>
+R<WAT 4108>
+R<WAT 4109>
+R<WAT 4110>
+R<WAT 4111>
+R<WAT 4112>
+R<WAT 4113>
+R<WAT 4114>
+R<WAT 4115>
+R<WAT 4116>
+R<WAT 4117>
+R<WAT 4118>
+R<WAT 4119>
+R<WAT 4120>
+R<WAT 4121>
+R<WAT 4122>
+R<WAT 4123>
+R<WAT 4124>
+R<WAT 4125>
+R<WAT 4126>
+R<WAT 4127>
+R<WAT 4128>
+R<WAT 4129>
+R<WAT 4130>
+R<WAT 4131>
+R<WAT 4132>
+R<WAT 4133>
+R<WAT 4134>
+R<WAT 4135>
+R<WAT 4136>
+R<WAT 4137>
+R<WAT 4138>
+R<WAT 4139>
+R<WAT 4140>
+R<WAT 4141>
+R<WAT 4142>
+R<WAT 4143>
+R<WAT 4144>
+R<WAT 4145>
+R<WAT 4146>
+R<WAT 4147>
+R<WAT 4148>
+R<WAT 4149>
+R<WAT 4150>
+R<WAT 4151>
+R<WAT 4152>
+R<WAT 4153>
+R<WAT 4154>
+R<WAT 4155>
+R<WAT 4156>
+R<WAT 4157>
+R<WAT 4159>
+R<WAT 4160>
+R<WAT 4161>
+R<WAT 4162>
+R<WAT 4163>
+R<WAT 4164>
+R<WAT 4165>
+R<WAT 4166>
+R<WAT 4167>
+R<WAT 4168>
+R<WAT 4169>
+R<WAT 4170>
+R<WAT 4171>
+R<WAT 4172>
+R<WAT 4173>
+R<WAT 4174>
+R<WAT 4175>
+R<WAT 4176>
+R<WAT 4177>
+R<WAT 4178>
+R<WAT 4179>
+R<WAT 4180>
+R<WAT 4181>
+R<WAT 4182>
+R<WAT 4183>
+R<WAT 4184>
+R<WAT 4185>
+R<WAT 4186>
+R<WAT 4187>
+R<WAT 4188>
+R<WAT 4189>
+R<WAT 4190>
+R<WAT 4191>
+R<WAT 4192>
+R<WAT 4193>
+R<WAT 4194>
+R<WAT 4195>
+R<WAT 4196>
+R<WAT 4197>
+R<WAT 4198>
+R<WAT 4199>
+R<WAT 4200>
+R<WAT 4201>
+R<WAT 4202>
+R<WAT 4203>
+R<WAT 4204>
+R<WAT 4205>
+R<WAT 4206>
+R<WAT 4207>
+R<WAT 4208>
+R<WAT 4209>
+R<WAT 4210>
+R<WAT 4211>
+R<WAT 4212>
+R<WAT 4213>
+R<WAT 4214>
+R<WAT 4215>
+R<WAT 4216>
+R<WAT 4217>
+R<WAT 4218>
+R<WAT 4219>
+R<WAT 4220>
+R<WAT 4221>
+R<WAT 4222>
+R<WAT 4223>
+R<WAT 4224>
+R<WAT 4225>
+R<WAT 4226>
+R<WAT 4227>
+R<WAT 4228>
+R<WAT 4229>
+R<WAT 4230>
+R<WAT 4231>
+R<WAT 4232>
+R<WAT 4233>
+R<WAT 4234>
+R<WAT 4235>
+R<WAT 4236>
+R<WAT 4237>
+R<WAT 4238>
+R<WAT 4239>
+R<WAT 4240>
+R<WAT 4241>
+R<WAT 4242>
+R<WAT 4243>
+R<WAT 4244>
+R<WAT 4245>
+R<WAT 4246>
+R<WAT 4247>
+R<WAT 4248>
+R<WAT 4249>
+R<WAT 4250>
+R<WAT 4251>
+R<WAT 4252>
+R<WAT 4253>
+R<WAT 4254>
+R<WAT 4255>
+R<WAT 4256>
+R<WAT 4257>
+R<WAT 4258>
+R<WAT 4259>
+R<WAT 4260>
+R<WAT 4261>
+R<WAT 4262>
+R<WAT 4263>
+R<WAT 4264>
+R<WAT 4265>
+R<WAT 4266>
+R<WAT 4267>
+R<WAT 4268>
+R<WAT 4269>
+R<WAT 4270>
+R<WAT 4271>
+R<WAT 4272>
+R<WAT 4273>
+R<WAT 4274>
+R<WAT 4275>
+R<WAT 4276>
+R<WAT 4277>
+R<WAT 4278>
+R<WAT 4279>
+R<WAT 4280>
+R<WAT 4281>
+R<WAT 4282>
+R<WAT 4283>
+R<WAT 4284>
+R<WAT 4285>
+R<WAT 4286>
+R<WAT 4287>
+R<WAT 4288>
+R<WAT 4289>
+R<WAT 4290>
+R<WAT 4291>
+R<WAT 4292>
+R<WAT 4293>
+R<WAT 4294>
+R<WAT 4295>
+R<WAT 4296>
+R<WAT 4297>
+R<WAT 4298>
+R<WAT 4299>
+R<WAT 4300>
+R<WAT 4301>
+R<WAT 4302>
+R<WAT 4303>
+R<WAT 4304>
+R<WAT 4305>
+R<WAT 4306>
+R<WAT 4307>
+R<WAT 4308>
+R<WAT 4309>
+R<WAT 4310>
+R<WAT 4311>
+R<WAT 4312>
+R<WAT 4313>
+R<WAT 4314>
+R<WAT 4315>
+R<WAT 4316>
+R<WAT 4317>
+R<WAT 4318>
+R<WAT 4319>
+R<WAT 4320>
+R<WAT 4321>
+R<WAT 4322>
+R<WAT 4323>
+R<WAT 4324>
+R<WAT 4325>
+R<WAT 4326>
+R<WAT 4327>
+R<WAT 4328>
+R<WAT 4329>
+R<WAT 4330>
+R<WAT 4331>
+R<WAT 4332>
+R<WAT 4333>
+R<WAT 4334>
+R<WAT 4335>
+R<WAT 4336>
+R<WAT 4337>
+R<WAT 4338>
+R<WAT 4339>
+R<WAT 4340>
+R<WAT 4341>
+R<WAT 4342>
+R<WAT 4343>
+R<WAT 4344>
+R<WAT 4345>
+R<WAT 4346>
+R<WAT 4347>
+R<WAT 4348>
+R<WAT 4349>
+R<WAT 4350>
+R<WAT 4351>
+R<WAT 4352>
+R<WAT 4353>
+R<WAT 4354>
+R<WAT 4355>
+R<WAT 4356>
+R<WAT 4357>
+R<WAT 4358>
+R<WAT 4360>
+R<WAT 4361>
+R<WAT 4362>
+R<WAT 4363>
+R<WAT 4364>
+R<WAT 4365>
+R<WAT 4366>
+R<WAT 4367>
+R<WAT 4368>
+R<WAT 4369>
+R<WAT 4370>
+R<WAT 4371>
+R<WAT 4372>
+R<WAT 4373>
+R<WAT 4374>
+R<WAT 4375>
+R<WAT 4376>
+R<WAT 4377>
+R<WAT 4378>
+R<WAT 4379>
+R<WAT 4380>
+R<WAT 4381>
+R<WAT 4382>
+R<WAT 4383>
+R<WAT 4384>
+R<WAT 4385>
+R<WAT 4386>
+R<WAT 4387>
+R<WAT 4388>
+R<WAT 4389>
+R<WAT 4390>
+R<WAT 4391>
+R<WAT 4392>
+R<WAT 4393>
+R<WAT 4394>
+R<WAT 4395>
+R<WAT 4396>
+R<WAT 4397>
+R<WAT 4398>
+R<WAT 4399>
+R<WAT 4400>
+R<WAT 4401>
+R<WAT 4402>
+R<WAT 4403>
+R<WAT 4404>
+R<WAT 4405>
+R<WAT 4406>
+R<WAT 4407>
+R<WAT 4408>
+R<WAT 4409>
+R<WAT 4410>
+R<WAT 4411>
+R<WAT 4412>
+R<WAT 4413>
+R<WAT 4414>
+R<WAT 4415>
+R<WAT 4416>
+R<WAT 4417>
+R<WAT 4418>
+R<WAT 4419>
+R<WAT 4420>
+R<WAT 4421>
+R<WAT 4422>
+R<WAT 4423>
+R<WAT 4424>
+R<WAT 4425>
+R<WAT 4426>
+R<WAT 4427>
+R<WAT 4428>
+R<WAT 4429>
+R<WAT 4430>
+R<WAT 4431>
+R<WAT 4432>
+R<WAT 4433>
+R<WAT 4434>
+R<WAT 4435>
+R<WAT 4436>
+R<WAT 4437>
+R<WAT 4438>
+R<WAT 4439>
+R<WAT 4440>
+R<WAT 4441>
+R<WAT 4442>
+R<WAT 4443>
+R<WAT 4444>
+R<WAT 4445>
+R<WAT 4446>
+R<WAT 4447>
+R<WAT 4448>
+R<WAT 4449>
+R<WAT 4450>
+R<WAT 4451>
+R<WAT 4452>
+R<WAT 4453>
+R<WAT 4454>
+R<WAT 4455>
+R<WAT 4456>
+R<WAT 4457>
+R<WAT 4458>
+R<WAT 4459>
+R<WAT 4460>
+R<WAT 4461>
+R<WAT 4462>
+R<WAT 4463>
+R<WAT 4464>
+R<WAT 4465>
+R<WAT 4466>
+R<WAT 4467>
+R<WAT 4468>
+R<WAT 4469>
+R<WAT 4470>
+R<WAT 4471>
+R<WAT 4472>
+R<WAT 4473>
+R<WAT 4474>
+R<WAT 4475>
+R<WAT 4476>
+R<WAT 4477>
+R<WAT 4478>
+R<WAT 4479>
+R<WAT 4480>
+R<WAT 4481>
+R<WAT 4482>
+R<WAT 4483>
+R<WAT 4484>
+R<WAT 4485>
+R<WAT 4486>
+R<WAT 4487>
+R<WAT 4488>
+R<WAT 4489>
+R<WAT 4490>
+R<WAT 4491>
+R<WAT 4492>
+R<WAT 4493>
+R<WAT 4494>
+R<WAT 4495>
+R<WAT 4496>
+R<WAT 4497>
+R<WAT 4498>
+R<WAT 4499>
+R<WAT 4500>
+R<WAT 4501>
+R<WAT 4502>
+R<WAT 4503>
+R<WAT 4504>
+R<WAT 4505>
+R<WAT 4506>
+R<WAT 4507>
+R<WAT 4508>
+R<WAT 4509>
+R<WAT 4510>
+R<WAT 4511>
+R<WAT 4512>
+R<WAT 4513>
+R<WAT 4514>
+R<WAT 4515>
+R<WAT 4516>
+R<WAT 4517>
+R<WAT 4518>
+R<WAT 4519>
+R<WAT 4520>
+R<WAT 4521>
+R<WAT 4522>
+R<WAT 4523>
+R<WAT 4524>
+R<WAT 4525>
+R<WAT 4526>
+R<WAT 4527>
+R<WAT 4528>
+R<WAT 4529>
+R<WAT 4530>
+R<WAT 4531>
+R<WAT 4532>
+R<WAT 4533>
+R<WAT 4534>
+R<WAT 4535>
+R<WAT 4536>
+R<WAT 4537>
+R<WAT 4538>
+R<WAT 4539>
+R<WAT 4540>
+R<WAT 4541>
+R<WAT 4542>
+R<WAT 4543>
+R<WAT 4544>
+R<WAT 4545>
+R<WAT 4546>
+R<WAT 4547>
+R<WAT 4548>
+R<WAT 4549>
+R<WAT 4550>
+R<WAT 4551>
+R<WAT 4552>
+R<WAT 4553>
+R<WAT 4554>
+R<WAT 4555>
+R<WAT 4556>
+R<WAT 4557>
+R<WAT 4558>
+R<WAT 4559>
+R<WAT 4560>
+R<WAT 4561>
+R<WAT 4562>
+R<WAT 4563>
+R<WAT 4564>
+R<WAT 4565>
+R<WAT 4566>
+R<WAT 4567>
+R<WAT 4568>
+R<WAT 4569>
+R<WAT 4570>
+R<WAT 4571>
+R<WAT 4572>
+R<WAT 4573>
+R<WAT 4574>
+R<WAT 4575>
+R<WAT 4576>
+R<WAT 4577>
+R<WAT 4578>
+R<WAT 4579>
+R<WAT 4580>
+R<WAT 4581>
+R<WAT 4582>
+R<WAT 4583>
+R<WAT 4584>
+R<WAT 4585>
+R<WAT 4586>
+R<WAT 4587>
+R<WAT 4588>
+R<WAT 4589>
+R<WAT 4590>
+R<WAT 4591>
+R<WAT 4592>
+R<WAT 4593>
+R<WAT 4594>
+R<WAT 4595>
+R<WAT 4596>
+R<WAT 4597>
+R<WAT 4598>
+R<WAT 4599>
+R<WAT 4600>
+R<WAT 4601>
+R<WAT 4602>
+R<WAT 4603>
+R<WAT 4604>
+R<WAT 4605>
+R<WAT 4606>
+R<WAT 4607>
+R<WAT 4608>
+R<WAT 4609>
+R<WAT 4610>
+R<WAT 4611>
+R<WAT 4612>
+R<WAT 4613>
+R<WAT 4614>
+R<WAT 4615>
+R<WAT 4616>
+R<WAT 4617>
+R<WAT 4618>
+R<WAT 4619>
+R<WAT 4620>
+R<WAT 4621>
+R<WAT 4622>
+R<WAT 4623>
+R<WAT 4624>
+R<WAT 4625>
+R<WAT 4626>
+R<WAT 4627>
+R<WAT 4629>
+R<WAT 4630>
+R<WAT 4631>
+R<WAT 4632>
+R<WAT 4633>
+R<WAT 4634>
+R<WAT 4635>
+R<WAT 4636>
+R<WAT 4637>
+R<WAT 4638>
+R<WAT 4639>
+R<WAT 4640>
+R<WAT 4641>
+R<WAT 4642>
+R<WAT 4643>
+R<WAT 4644>
+R<WAT 4645>
+R<WAT 4646>
+R<WAT 4647>
+R<WAT 4648>
+R<WAT 4649>
+R<WAT 4650>
+R<WAT 4651>
+R<WAT 4652>
+R<WAT 4653>
+R<WAT 4654>
+R<WAT 4655>
+R<WAT 4656>
+R<WAT 4657>
+R<WAT 4658>
+R<WAT 4659>
+R<WAT 4660>
+R<WAT 4661>
+R<WAT 4662>
+R<WAT 4663>
+R<WAT 4664>
+R<WAT 4665>
+R<WAT 4666>
+R<WAT 4667>
+R<WAT 4668>
+R<WAT 4669>
+R<WAT 4670>
+R<WAT 4671>
+R<WAT 4672>
+R<WAT 4673>
+R<WAT 4674>
+R<WAT 4675>
+R<WAT 4676>
+R<WAT 4677>
+R<WAT 4678>
+R<WAT 4679>
+R<WAT 4680>
+R<WAT 4681>
+R<WAT 4683>
+R<WAT 4684>
+R<WAT 4685>
+R<WAT 4686>
+R<WAT 4687>
+R<WAT 4688>
+R<WAT 4689>
+R<WAT 4690>
+R<WAT 4691>
+R<WAT 4692>
+R<WAT 4693>
+R<WAT 4694>
+R<WAT 4695>
+R<WAT 4696>
+R<WAT 4697>
+R<WAT 4698>
+R<WAT 4699>
+R<WAT 4700>
+R<WAT 4701>
+R<WAT 4702>
+R<WAT 4703>
+R<WAT 4704>
+R<WAT 4705>
+R<WAT 4706>
+R<WAT 4707>
+R<WAT 4708>
+R<WAT 4709>
+R<WAT 4710>
+R<WAT 4711>
+R<WAT 4712>
+R<WAT 4713>
+R<WAT 4714>
+R<WAT 4715>
+R<WAT 4716>
+R<WAT 4717>
+R<WAT 4718>
+R<WAT 4719>
+R<WAT 4720>
+R<WAT 4721>
+R<WAT 4722>
+R<WAT 4723>
+R<WAT 4724>
+R<WAT 4725>
+R<WAT 4726>
+R<WAT 4727>
+R<WAT 4728>
+R<WAT 4729>
+R<WAT 4730>
+R<WAT 4731>
+R<WAT 4732>
+R<WAT 4733>
+R<WAT 4734>
+R<WAT 4735>
+R<WAT 4736>
+R<WAT 4737>
+R<WAT 4738>
+R<WAT 4739>
+R<WAT 4740>
+R<WAT 4741>
+R<WAT 4742>
+R<WAT 4743>
+R<WAT 4744>
+R<WAT 4745>
+R<WAT 4746>
+R<WAT 4747>
+R<WAT 4748>
+R<WAT 4749>
+R<WAT 4750>
+R<WAT 4751>
+R<WAT 4752>
+R<WAT 4753>
+R<WAT 4754>
+R<WAT 4755>
+R<WAT 4756>
+R<WAT 4757>
+R<WAT 4758>
+R<WAT 4759>
+R<WAT 4760>
+R<WAT 4761>
+R<WAT 4762>
+R<WAT 4763>
+R<WAT 4764>
+R<WAT 4765>
+R<WAT 4766>
+R<WAT 4767>
+R<WAT 4768>
+R<WAT 4769>
+R<WAT 4770>
+R<WAT 4771>
+R<WAT 4772>
+R<WAT 4773>
+R<WAT 4774>
+R<WAT 4775>
+R<WAT 4776>
+R<WAT 4777>
+R<WAT 4778>
+R<WAT 4779>
+R<WAT 4780>
+R<WAT 4781>
+R<WAT 4782>
+R<WAT 4783>
+R<WAT 4784>
+R<WAT 4785>
+R<WAT 4786>
+R<WAT 4787>
+R<WAT 4788>
+R<WAT 4789>
+R<WAT 4790>
+R<WAT 4791>
+R<WAT 4792>
+R<WAT 4793>
+R<WAT 4794>
+R<WAT 4795>
+R<WAT 4796>
+R<WAT 4797>
+R<WAT 4798>
+R<WAT 4799>
+R<WAT 4800>
+R<WAT 4801>
+R<WAT 4802>
+R<WAT 4803>
+R<WAT 4804>
+R<WAT 4805>
+R<WAT 4806>
+R<WAT 4807>
+R<WAT 4808>
+R<WAT 4809>
+R<WAT 4810>
+R<WAT 4811>
+R<WAT 4812>
+R<WAT 4813>
+R<WAT 4814>
+R<WAT 4815>
+R<WAT 4816>
+R<WAT 4817>
+R<WAT 4818>
+R<WAT 4819>
+R<WAT 4820>
+R<WAT 4821>
+R<WAT 4822>
+R<WAT 4823>
+R<WAT 4824>
+R<WAT 4825>
+R<WAT 4826>
+R<WAT 4827>
+R<WAT 4828>
+R<WAT 4829>
+R<WAT 4830>
+R<WAT 4831>
+R<WAT 4832>
+R<WAT 4833>
+R<WAT 4834>
+R<WAT 4835>
+R<WAT 4836>
+R<WAT 4837>
+R<WAT 4838>
+R<WAT 4839>
+R<WAT 4840>
+R<WAT 4841>
+R<WAT 4842>
+R<WAT 4843>
+R<WAT 4844>
+R<WAT 4845>
+R<WAT 4846>
+R<WAT 4847>
+R<WAT 4848>
+R<WAT 4849>
+R<WAT 4850>
+R<WAT 4851>
+R<WAT 4852>
+R<WAT 4853>
+R<WAT 4854>
+R<WAT 4855>
+R<WAT 4856>
+R<WAT 4857>
+R<WAT 4858>
+R<WAT 4859>
+R<WAT 4860>
+R<WAT 4861>
+R<WAT 4862>
+R<WAT 4863>
+R<WAT 4864>
+R<WAT 4865>
+R<WAT 4866>
+R<WAT 4867>
+R<WAT 4868>
+R<WAT 4869>
+R<WAT 4870>
+R<WAT 4871>
+R<WAT 4872>
+R<WAT 4873>
+R<WAT 4874>
+R<WAT 4875>
+R<WAT 4876>
+R<WAT 4877>
+R<WAT 4878>
+R<WAT 4879>
+R<WAT 4880>
+R<WAT 4881>
+R<WAT 4882>
+R<WAT 4883>
+R<WAT 4884>
+R<WAT 4885>
+R<WAT 4886>
+R<WAT 4887>
+R<WAT 4888>
+R<WAT 4889>
+R<WAT 4890>
+R<WAT 4891>
+R<WAT 4892>
+R<WAT 4893>
+R<WAT 4894>
+R<WAT 4895>
+R<WAT 4896>
+R<WAT 4897>
+R<WAT 4898>
+R<WAT 4899>
+R<WAT 4900>
+R<WAT 4901>
+R<WAT 4902>
+R<WAT 4903>
+R<WAT 4904>
+R<WAT 4905>
+R<WAT 4906>
+R<WAT 4907>
+R<WAT 4908>
+R<WAT 4910>
+R<WAT 4911>
+R<WAT 4912>
+R<WAT 4913>
+R<WAT 4914>
+R<WAT 4915>
+R<WAT 4916>
+R<WAT 4917>
+R<WAT 4918>
+R<WAT 4919>
+R<WAT 4920>
+R<WAT 4921>
+R<WAT 4922>
+R<WAT 4923>
+R<WAT 4924>
+R<WAT 4925>
+R<WAT 4926>
+R<WAT 4927>
+R<WAT 4928>
+R<WAT 4929>
+R<WAT 4930>
+R<WAT 4931>
+R<WAT 4932>
+R<WAT 4933>
+R<WAT 4934>
+R<WAT 4935>
+R<WAT 4936>
+R<WAT 4937>
+R<WAT 4938>
+R<WAT 4939>
+R<WAT 4940>
+R<WAT 4941>
+R<WAT 4942>
+R<WAT 4943>
+R<WAT 4944>
+R<WAT 4945>
+R<WAT 4946>
+R<WAT 4947>
+R<WAT 4948>
+R<WAT 4949>
+R<WAT 4950>
+R<WAT 4951>
+R<WAT 4952>
+R<WAT 4953>
+R<WAT 4954>
+R<WAT 4955>
+R<WAT 4956>
+R<WAT 4957>
+R<WAT 4958>
+R<WAT 4959>
+R<WAT 4960>
+R<WAT 4961>
+R<WAT 4962>
+R<WAT 4963>
+R<WAT 4964>
+R<WAT 4965>
+R<WAT 4966>
+R<WAT 4967>
+R<WAT 4968>
+R<WAT 4969>
+R<WAT 4970>
+R<WAT 4971>
+R<WAT 4972>
+R<WAT 4973>
+R<WAT 4974>
+R<WAT 4975>
+R<WAT 4976>
+R<WAT 4977>
+R<WAT 4978>
+R<WAT 4979>
+R<WAT 4980>
+R<WAT 4981>
+R<WAT 4982>
+R<WAT 4983>
+R<WAT 4984>
+R<WAT 4985>
+R<WAT 4986>
+R<WAT 4987>
+R<WAT 4988>
+R<WAT 4989>
+R<WAT 4990>
+R<WAT 4992>
+R<WAT 4993>
+R<WAT 4994>
+R<WAT 4995>
+R<WAT 4996>
+R<WAT 4997>
+R<WAT 4998>
+R<WAT 4999>
+R<WAT 5000>
+R<WAT 5001>
+R<WAT 5002>
+R<WAT 5003>
+R<WAT 5004>
+R<WAT 5005>
+R<WAT 5006>
+R<WAT 5007>
+R<WAT 5008>
+R<WAT 5009>
+R<WAT 5010>
+R<WAT 5011>
+R<WAT 5012>
+R<WAT 5013>
+R<WAT 5014>
+R<WAT 5015>
+R<WAT 5016>
+R<WAT 5017>
+R<WAT 5018>
+R<WAT 5019>
+R<WAT 5020>
+R<WAT 5021>
+R<WAT 5022>
+R<WAT 5023>
+R<WAT 5024>
+R<WAT 5025>
+R<WAT 5026>
+R<WAT 5027>
+R<WAT 5028>
+R<WAT 5029>
+R<WAT 5030>
+R<WAT 5031>
+R<WAT 5032>
+R<WAT 5033>
+R<WAT 5034>
+R<WAT 5035>
+R<WAT 5036>
+R<WAT 5037>
+R<WAT 5038>
+R<WAT 5039>
+R<WAT 5040>
+R<WAT 5041>
+R<WAT 5042>
+R<WAT 5043>
+R<WAT 5044>
+R<WAT 5045>
+R<WAT 5046>
+R<WAT 5047>
+R<WAT 5048>
+R<WAT 5049>
+R<WAT 5050>
+R<WAT 5051>
+R<WAT 5052>
+R<WAT 5053>
+R<WAT 5054>
+R<WAT 5055>
+R<WAT 5056>
+R<WAT 5057>
+R<WAT 5058>
+R<WAT 5059>
+R<WAT 5060>
+R<WAT 5061>
+R<WAT 5062>
+R<WAT 5063>
+R<WAT 5064>
+R<WAT 5065>
+R<WAT 5066>
+R<WAT 5067>
+R<WAT 5068>
+R<WAT 5069>
+R<WAT 5070>
+R<WAT 5071>
+R<WAT 5072>
+R<WAT 5073>
+R<WAT 5074>
+R<WAT 5075>
+R<WAT 5076>
+R<WAT 5077>
+R<WAT 5078>
+R<WAT 5079>
+R<WAT 5080>
+R<WAT 5081>
+R<WAT 5082>
+R<WAT 5083>
+R<WAT 5084>
+R<WAT 5085>
+R<WAT 5086>
+R<WAT 5087>
+R<WAT 5088>
+R<WAT 5089>
+R<WAT 5090>
+R<WAT 5091>
+R<WAT 5092>
+R<WAT 5093>
+R<WAT 5094>
+R<WAT 5095>
+R<WAT 5096>
+R<WAT 5097>
+R<WAT 5098>
+R<WAT 5099>
+R<WAT 5100>
+R<WAT 5101>
+R<WAT 5102>
+R<WAT 5103>
+R<WAT 5104>
+R<WAT 5105>
+R<WAT 5106>
+R<WAT 5107>
+R<WAT 5108>
+R<WAT 5110>
+R<WAT 5111>
+R<WAT 5112>
+R<WAT 5113>
+R<WAT 5114>
+R<WAT 5115>
+R<WAT 5116>
+R<WAT 5117>
+R<WAT 5118>
+R<WAT 5119>
+R<WAT 5120>
+R<WAT 5121>
+R<WAT 5122>
+R<WAT 5123>
+R<WAT 5124>
+R<WAT 5125>
+R<WAT 5126>
+R<WAT 5127>
+R<WAT 5128>
+R<WAT 5129>
+R<WAT 5130>
+R<WAT 5131>
+R<WAT 5132>
+R<WAT 5133>
+R<WAT 5134>
+R<WAT 5135>
+R<WAT 5136>
+R<WAT 5137>
+R<WAT 5138>
+R<WAT 5139>
+R<WAT 5140>
+R<WAT 5141>
+R<WAT 5142>
+R<WAT 5143>
+R<WAT 5144>
+R<WAT 5145>
+R<WAT 5146>
+R<WAT 5147>
+R<WAT 5148>
+R<WAT 5149>
+R<WAT 5150>
+R<WAT 5151>
+R<WAT 5152>
+R<WAT 5153>
+R<WAT 5154>
+R<WAT 5155>
+R<WAT 5156>
+R<WAT 5157>
+R<WAT 5158>
+R<WAT 5159>
+R<WAT 5160>
+R<WAT 5161>
+R<WAT 5162>
+R<WAT 5163>
+R<WAT 5164>
+R<WAT 5165>
+R<WAT 5166>
+R<WAT 5167>
+R<WAT 5168>
+R<WAT 5169>
+R<WAT 5170>
+R<WAT 5171>
+R<WAT 5172>
+R<WAT 5173>
+R<WAT 5174>
+R<WAT 5175>
+R<WAT 5176>
+R<WAT 5177>
+R<WAT 5178>
+R<WAT 5179>
+R<WAT 5180>
+R<WAT 5181>
+R<WAT 5182>
+R<WAT 5183>
+R<WAT 5184>
+R<WAT 5185>
+R<WAT 5186>
+R<WAT 5187>
+R<WAT 5188>
+R<WAT 5189>
+R<WAT 5190>
+R<WAT 5191>
+R<WAT 5192>
+R<WAT 5193>
+R<WAT 5194>
+R<WAT 5195>
+R<WAT 5196>
+R<WAT 5197>
+R<WAT 5198>
+R<WAT 5199>
+R<WAT 5200>
+R<WAT 5201>
+R<WAT 5202>
+R<WAT 5203>
+R<WAT 5204>
+R<WAT 5205>
+R<WAT 5206>
+R<WAT 5207>
+R<WAT 5208>
+R<WAT 5209>
+R<WAT 5210>
+R<WAT 5211>
+R<WAT 5212>
+R<WAT 5213>
+R<WAT 5214>
+R<WAT 5215>
+R<WAT 5216>
+R<WAT 5217>
+R<WAT 5218>
+R<WAT 5219>
+R<WAT 5220>
+R<WAT 5221>
+R<WAT 5222>
+R<WAT 5223>
+R<WAT 5224>
+R<WAT 5225>
+R<WAT 5226>
+R<WAT 5227>
+R<WAT 5228>
+R<WAT 5229>
+R<WAT 5230>
+R<WAT 5231>
+R<WAT 5232>
+R<WAT 5233>
+R<WAT 5234>
+R<WAT 5235>
+R<WAT 5236>
+R<WAT 5237>
+R<WAT 5238>
+R<WAT 5239>
+R<WAT 5240>
+R<WAT 5241>
+R<WAT 5242>
+R<WAT 5243>
+R<WAT 5244>
+R<WAT 5245>
+R<WAT 5246>
+R<WAT 5247>
+R<WAT 5248>
+R<WAT 5249>
+R<WAT 5250>
+R<WAT 5251>
+R<WAT 5252>
+R<WAT 5253>
+R<WAT 5254>
+R<WAT 5255>
+R<WAT 5256>
+R<WAT 5257>
+R<WAT 5258>
+R<WAT 5259>
+R<WAT 5260>
+R<WAT 5261>
+R<WAT 5262>
+R<WAT 5263>
+R<WAT 5264>
+R<WAT 5265>
+R<WAT 5266>
+R<WAT 5267>
+R<WAT 5268>
+R<WAT 5269>
+R<WAT 5270>
+R<WAT 5271>
+R<WAT 5272>
+R<WAT 5273>
+R<WAT 5274>
+R<WAT 5275>
+R<WAT 5276>
+R<WAT 5277>
+R<WAT 5278>
+R<WAT 5279>
+R<WAT 5280>
+R<WAT 5281>
+R<WAT 5282>
+R<WAT 5283>
+R<WAT 5284>
+R<WAT 5285>
+R<WAT 5286>
+R<WAT 5287>
+R<WAT 5288>
+R<WAT 5289>
+R<WAT 5290>
+R<WAT 5291>
+R<WAT 5292>
+R<WAT 5293>
+R<WAT 5294>
+R<WAT 5295>
+R<WAT 5296>
+R<WAT 5297>
+R<WAT 5298>
+R<WAT 5299>
+R<WAT 5300>
+R<WAT 5301>
+R<WAT 5302>
+R<WAT 5303>
+R<WAT 5304>
+R<WAT 5305>
+R<WAT 5306>
+R<WAT 5307>
+R<WAT 5308>
+R<WAT 5309>
+R<WAT 5310>
+R<WAT 5311>
+R<WAT 5312>
+R<WAT 5313>
+R<WAT 5314>
+R<WAT 5315>
+R<WAT 5316>
+R<WAT 5317>
+R<WAT 5318>
+R<WAT 5319>
+R<WAT 5320>
+R<WAT 5321>
+R<WAT 5322>
+R<WAT 5323>
+R<WAT 5324>
+R<WAT 5325>
+R<WAT 5326>
+R<WAT 5327>
+R<WAT 5328>
+R<WAT 5329>
+R<WAT 5330>
+R<WAT 5331>
+R<WAT 5332>
+R<WAT 5333>
+R<WAT 5334>
+R<WAT 5335>
+R<WAT 5336>
+R<WAT 5337>
+R<WAT 5338>
+R<WAT 5339>
+R<WAT 5340>
+R<WAT 5341>
+R<WAT 5342>
+R<WAT 5343>
+R<WAT 5344>
+R<WAT 5345>
+R<WAT 5346>
+R<WAT 5347>
+R<WAT 5348>
+R<WAT 5349>
+R<WAT 5350>
+R<WAT 5351>
+R<WAT 5352>
+R<WAT 5353>
+R<WAT 5354>
+R<WAT 5355>
+R<WAT 5356>
+R<WAT 5357>
+R<WAT 5358>
+R<WAT 5359>
+R<WAT 5360>
+R<WAT 5361>
+R<WAT 5362>
+R<WAT 5363>
+R<WAT 5365>
+R<WAT 5366>
+R<WAT 5367>
+R<WAT 5368>
+R<WAT 5369>
+R<WAT 5370>
+R<WAT 5371>
+R<WAT 5372>
+R<WAT 5373>
+R<WAT 5374>
+R<WAT 5375>
+R<WAT 5376>
+R<WAT 5377>
+R<WAT 5378>
+R<WAT 5379>
+R<WAT 5380>
+R<WAT 5381>
+R<WAT 5382>
+R<WAT 5383>
+R<WAT 5384>
+R<WAT 5385>
+R<WAT 5386>
+R<WAT 5387>
+R<WAT 5388>
+R<WAT 5389>
+R<WAT 5390>
+R<WAT 5391>
+R<WAT 5392>
+R<WAT 5393>
+R<WAT 5394>
+R<WAT 5395>
+R<WAT 5396>
+R<WAT 5397>
+R<WAT 5398>
+R<WAT 5399>
+R<WAT 5400>
+R<WAT 5401>
+R<WAT 5402>
+R<WAT 5403>
+R<WAT 5404>
+R<WAT 5405>
+R<WAT 5406>
+R<WAT 5407>
+R<WAT 5408>
+R<WAT 5409>
+R<WAT 5410>
+R<WAT 5411>
+R<WAT 5412>
+R<WAT 5413>
+R<WAT 5414>
+R<WAT 5415>
+R<WAT 5416>
+R<WAT 5417>
+R<WAT 5418>
+R<WAT 5419>
+R<WAT 5420>
+R<WAT 5421>
+R<WAT 5422>
+R<WAT 5423>
+R<WAT 5424>
+R<WAT 5425>
+R<WAT 5426>
+R<WAT 5427>
+R<WAT 5428>
+R<WAT 5429>
+R<WAT 5430>
+R<WAT 5431>
+R<WAT 5432>
+R<WAT 5433>
+R<WAT 5434>
+R<WAT 5435>
+R<WAT 5436>
+R<WAT 5437>
+R<WAT 5438>
+R<WAT 5439>
+R<WAT 5440>
+R<WAT 5441>
+R<WAT 5442>
+R<WAT 5443>
+R<WAT 5444>
+R<WAT 5445>
+R<WAT 5446>
+R<WAT 5447>
+R<WAT 5448>
+R<WAT 5449>
+R<WAT 5450>
+R<WAT 5451>
+R<WAT 5452>
+R<WAT 5453>
+R<WAT 5454>
+R<WAT 5455>
+R<WAT 5456>
+R<WAT 5457>
+R<WAT 5458>
+R<WAT 5459>
+R<WAT 5460>
+R<WAT 5461>
+R<WAT 5462>
+R<WAT 5463>
+R<WAT 5464>
+R<WAT 5465>
+R<WAT 5466>
+R<WAT 5467>
+R<WAT 5468>
+R<WAT 5469>
+R<WAT 5470>
+R<WAT 5471>
+R<WAT 5472>
+R<WAT 5473>
+R<WAT 5474>
+R<WAT 5475>
+R<WAT 5476>
+R<WAT 5477>
+R<WAT 5478>
+R<WAT 5479>
+R<WAT 5480>
+R<WAT 5481>
+R<WAT 5482>
+R<WAT 5483>
+R<WAT 5484>
+R<WAT 5485>
+R<WAT 5486>
+R<WAT 5487>
+R<WAT 5488>
+R<WAT 5489>
+R<WAT 5490>
+R<WAT 5491>
+R<WAT 5492>
+R<WAT 5493>
+R<WAT 5494>
+R<WAT 5495>
+R<WAT 5496>
+R<WAT 5497>
+R<WAT 5498>
+R<WAT 5499>
+R<WAT 5500>
+R<WAT 5501>
+R<WAT 5502>
+R<WAT 5503>
+R<WAT 5504>
+R<WAT 5505>
+R<WAT 5506>
+R<WAT 5507>
+R<WAT 5508>
+R<WAT 5509>
+R<WAT 5510>
+R<WAT 5511>
+R<WAT 5512>
+R<WAT 5513>
+R<WAT 5514>
+R<WAT 5515>
+R<WAT 5516>
+R<WAT 5517>
+R<WAT 5518>
+R<WAT 5519>
+R<WAT 5520>
+R<WAT 5521>
+R<WAT 5522>
+R<WAT 5523>
+R<WAT 5524>
+R<WAT 5525>
+R<WAT 5526>
+R<WAT 5527>
+R<WAT 5528>
+R<WAT 5529>
+R<WAT 5530>
+R<WAT 5531>
+R<WAT 5532>
+R<WAT 5533>
+R<WAT 5534>
+R<WAT 5535>
+R<WAT 5536>
+R<WAT 5537>
+R<WAT 5538>
+R<WAT 5539>
+R<WAT 5540>
+R<WAT 5541>
+R<WAT 5542>
+R<WAT 5543>
+R<WAT 5544>
+R<WAT 5545>
+R<WAT 5546>
+R<WAT 5547>
+R<WAT 5548>
+R<WAT 5549>
+R<WAT 5550>
+R<WAT 5551>
+R<WAT 5552>
+R<WAT 5553>
+R<WAT 5554>
+R<WAT 5555>
+R<WAT 5556>
+R<WAT 5557>
+R<WAT 5558>
+R<WAT 5559>
+R<WAT 5560>
+R<WAT 5561>
+R<WAT 5562>
+R<WAT 5563>
+R<WAT 5564>
+R<WAT 5565>
+R<WAT 5566>
+R<WAT 5567>
+R<WAT 5568>
+R<WAT 5569>
+R<WAT 5570>
+R<WAT 5571>
+R<WAT 5572>
+R<WAT 5573>
+R<WAT 5574>
+R<WAT 5575>
+R<WAT 5576>
+R<WAT 5577>
+R<WAT 5578>
+R<WAT 5579>
+R<WAT 5580>
+R<WAT 5581>
+R<WAT 5582>
+R<WAT 5583>
+R<WAT 5584>
+R<WAT 5585>
+R<WAT 5586>
+R<WAT 5587>
+R<WAT 5588>
+R<WAT 5589>
+R<WAT 5590>
+R<WAT 5591>
+R<WAT 5592>
+R<WAT 5593>
+R<WAT 5594>
+R<WAT 5595>
+R<WAT 5596>
+R<WAT 5597>
+R<WAT 5598>
+R<WAT 5599>
+R<WAT 5600>
+R<WAT 5601>
+R<WAT 5602>
+R<WAT 5603>
+R<WAT 5604>
+R<WAT 5605>
+R<WAT 5606>
+R<WAT 5607>
+R<WAT 5608>
+R<WAT 5609>
+R<WAT 5610>
+R<WAT 5611>
+R<WAT 5612>
+R<WAT 5613>
+R<WAT 5614>
+R<WAT 5615>
+R<WAT 5616>
+R<WAT 5617>
+R<WAT 5618>
+R<WAT 5619>
+R<WAT 5620>
+R<WAT 5621>
+R<WAT 5622>
+R<WAT 5623>
+R<WAT 5624>
+R<WAT 5625>
+R<WAT 5626>
+R<WAT 5627>
+R<WAT 5628>
+R<WAT 5629>
+R<WAT 5630>
+R<WAT 5631>
+R<WAT 5632>
+R<WAT 5633>
+R<WAT 5634>
+R<WAT 5635>
+R<WAT 5636>
+R<WAT 5638>
+R<WAT 5639>
+R<WAT 5640>
+R<WAT 5641>
+R<WAT 5642>
+R<WAT 5643>
+R<WAT 5644>
+R<WAT 5645>
+R<WAT 5646>
+R<WAT 5647>
+R<WAT 5648>
+R<WAT 5649>
+R<WAT 5650>
+R<WAT 5651>
+R<WAT 5652>
+R<WAT 5653>
+R<WAT 5654>
+R<WAT 5655>
+R<WAT 5656>
+R<WAT 5657>
+R<WAT 5658>
+R<WAT 5659>
+R<WAT 5660>
+R<WAT 5661>
+R<WAT 5662>
+R<WAT 5663>
+R<WAT 5664>
+R<WAT 5665>
+R<WAT 5666>
+R<WAT 5667>
+R<WAT 5668>
+R<WAT 5669>
+R<WAT 5670>
+R<WAT 5671>
+R<WAT 5672>
+R<WAT 5673>
+R<WAT 5674>
+R<WAT 5675>
+R<WAT 5676>
+R<WAT 5677>
+R<WAT 5678>
+R<WAT 5679>
+R<WAT 5680>
+R<WAT 5681>
+R<WAT 5682>
+R<WAT 5683>
+R<WAT 5684>
+R<WAT 5685>
+R<WAT 5686>
+R<WAT 5687>
+R<WAT 5688>
+R<WAT 5689>
+R<WAT 5690>
+R<WAT 5691>
+R<WAT 5692>
+R<WAT 5693>
+R<WAT 5694>
+R<WAT 5695>
+R<WAT 5696>
+R<WAT 5697>
+R<WAT 5698>
+R<WAT 5699>
+R<WAT 5700>
+R<WAT 5701>
+R<WAT 5702>
+R<WAT 5703>
+R<WAT 5704>
+R<WAT 5705>
+R<WAT 5706>
+R<WAT 5707>
+R<WAT 5708>
+R<WAT 5709>
+R<WAT 5710>
+R<WAT 5711>
+R<WAT 5712>
+R<WAT 5713>
+R<WAT 5714>
+R<WAT 5715>
+R<WAT 5716>
+R<WAT 5717>
+R<WAT 5718>
+R<WAT 5719>
+R<WAT 5720>
+R<WAT 5721>
+R<WAT 5722>
+R<WAT 5723>
+R<WAT 5724>
+R<WAT 5725>
+R<WAT 5726>
+R<WAT 5727>
+R<WAT 5728>
+R<WAT 5729>
+R<WAT 5730>
+R<WAT 5731>
+R<WAT 5732>
+R<WAT 5733>
+R<WAT 5734>
+R<WAT 5735>
+R<WAT 5736>
+R<WAT 5737>
+R<WAT 5738>
+R<WAT 5739>
+R<WAT 5740>
+R<WAT 5741>
+R<WAT 5742>
+R<WAT 5743>
+R<WAT 5744>
+R<WAT 5745>
+R<WAT 5746>
+R<WAT 5747>
+R<WAT 5748>
+R<WAT 5749>
+R<WAT 5750>
+R<WAT 5751>
+R<WAT 5752>
+R<WAT 5753>
+R<WAT 5754>
+R<WAT 5755>
+R<WAT 5756>
+R<WAT 5757>
+R<WAT 5758>
+R<WAT 5759>
+R<WAT 5760>
+R<WAT 5761>
+R<WAT 5762>
+R<WAT 5763>
+R<WAT 5764>
+R<WAT 5765>
+R<WAT 5766>
+R<WAT 5767>
+R<WAT 5768>
+R<WAT 5769>
+R<WAT 5770>
+R<WAT 5771>
+R<WAT 5772>
+R<WAT 5773>
+R<WAT 5774>
+R<WAT 5775>
+R<WAT 5776>
+R<WAT 5777>
+R<WAT 5778>
+R<WAT 5779>
+R<WAT 5780>
+R<WAT 5781>
+R<WAT 5782>
+R<WAT 5783>
+R<WAT 5784>
+R<WAT 5785>
+R<WAT 5786>
+R<WAT 5787>
+R<WAT 5788>
+R<WAT 5789>
+R<WAT 5790>
+R<WAT 5791>
+R<WAT 5792>
+R<WAT 5793>
+R<WAT 5794>
+R<WAT 5795>
+R<WAT 5796>
+R<WAT 5797>
+R<WAT 5798>
+R<WAT 5799>
+R<WAT 5800>
+R<WAT 5801>
+R<WAT 5802>
+R<WAT 5803>
+R<WAT 5804>
+R<WAT 5805>
+R<WAT 5806>
+R<WAT 5807>
+R<WAT 5808>
+R<WAT 5809>
+R<WAT 5810>
+R<WAT 5811>
+R<WAT 5812>
+R<WAT 5813>
+R<WAT 5815>
+R<WAT 5816>
+R<WAT 5817>
+R<WAT 5818>
+R<WAT 5819>
+R<WAT 5820>
+R<WAT 5821>
+R<WAT 5822>
+R<WAT 5823>
+R<WAT 5824>
+R<WAT 5825>
+R<WAT 5826>
+R<WAT 5827>
+R<WAT 5828>
+R<WAT 5829>
+R<WAT 5830>
+R<WAT 5831>
+R<WAT 5832>
+R<WAT 5833>
+R<WAT 5834>
+R<WAT 5835>
+R<WAT 5836>
+R<WAT 5837>
+R<WAT 5838>
+R<WAT 5839>
+R<WAT 5840>
+R<WAT 5841>
+R<WAT 5842>
+R<WAT 5843>
+R<WAT 5844>
+R<WAT 5845>
+R<WAT 5846>
+R<WAT 5847>
+R<WAT 5848>
+R<WAT 5849>
+R<WAT 5850>
+R<WAT 5851>
+R<WAT 5852>
+R<WAT 5853>
+R<WAT 5854>
+R<WAT 5855>
+R<WAT 5856>
+R<WAT 5857>
+R<WAT 5858>
+R<WAT 5859>
+R<WAT 5860>
+R<WAT 5861>
+R<WAT 5862>
+R<WAT 5863>
+R<WAT 5864>
+R<WAT 5865>
+R<WAT 5866>
+R<WAT 5867>
+R<WAT 5868>
+R<WAT 5869>
+R<WAT 5870>
+R<WAT 5871>
+R<WAT 5872>
+R<WAT 5873>
+R<WAT 5874>
+R<WAT 5875>
+R<WAT 5876>
+R<WAT 5877>
+R<WAT 5878>
+R<WAT 5879>
+R<WAT 5880>
+R<WAT 5881>
+R<WAT 5882>
+R<WAT 5883>
+R<WAT 5884>
+R<WAT 5885>
+R<WAT 5886>
+R<WAT 5887>
+R<WAT 5888>
+R<WAT 5889>
+R<WAT 5890>
+R<WAT 5891>
+R<WAT 5892>
+R<WAT 5893>
+R<WAT 5894>
+R<WAT 5895>
+R<WAT 5896>
+R<WAT 5897>
+R<WAT 5898>
+R<WAT 5899>
+R<WAT 5900>
+R<WAT 5901>
+R<WAT 5902>
+R<WAT 5903>
+R<WAT 5904>
+R<WAT 5905>
+R<WAT 5906>
+R<WAT 5907>
+R<WAT 5908>
+R<WAT 5909>
+R<WAT 5910>
+R<WAT 5911>
+R<WAT 5912>
+R<WAT 5913>
+R<WAT 5914>
+R<WAT 5915>
+R<WAT 5916>
+R<WAT 5917>
+R<WAT 5918>
+R<WAT 5919>
+R<WAT 5920>
+R<WAT 5921>
+R<WAT 5922>
+R<WAT 5923>
+R<WAT 5924>
+R<WAT 5925>
+R<WAT 5926>
+R<WAT 5927>
+R<WAT 5928>
+R<WAT 5929>
+R<WAT 5930>
+R<WAT 5931>
+R<WAT 5932>
+R<WAT 5933>
+R<WAT 5934>
+R<WAT 5935>
+R<WAT 5936>
+R<WAT 5937>
+R<WAT 5938>
+R<WAT 5939>
+R<WAT 5940>
+R<WAT 5942>
+R<WAT 5943>
+R<WAT 5944>
+R<WAT 5945>
+R<WAT 5946>
+R<WAT 5947>
+R<WAT 5948>
+R<WAT 5949>
+R<WAT 5950>
+R<WAT 5951>
+R<WAT 5952>
+R<WAT 5953>
+R<WAT 5954>
+R<WAT 5955>
+R<WAT 5956>
+R<WAT 5957>
+R<WAT 5958>
+R<WAT 5959>
+R<WAT 5960>
+R<WAT 5961>
+R<WAT 5962>
+R<WAT 5963>
+R<WAT 5964>
+R<WAT 5965>
+R<WAT 5966>
+R<WAT 5967>
+R<WAT 5968>
+R<WAT 5969>
+R<WAT 5970>
+R<WAT 5971>
+R<WAT 5972>
+R<WAT 5973>
+R<WAT 5974>
+R<WAT 5975>
+R<WAT 5976>
+R<WAT 5977>
+R<WAT 5978>
+R<WAT 5979>
+R<WAT 5980>
+R<WAT 5981>
+R<WAT 5982>
+R<WAT 5983>
+R<WAT 5985>
+R<WAT 5986>
+R<WAT 5987>
+R<WAT 5988>
+R<WAT 5989>
+R<WAT 5990>
+R<WAT 5991>
+R<WAT 5992>
+R<WAT 5993>
+R<WAT 5994>
+R<WAT 5995>
+R<WAT 5996>
+R<WAT 5997>
+R<WAT 5998>
+R<WAT 5999>
+R<WAT 6000>
+R<WAT 6001>
+R<WAT 6002>
+R<WAT 6003>
+R<WAT 6004>
+R<WAT 6005>
+R<WAT 6006>
+R<WAT 6007>
+R<WAT 6008>
+R<WAT 6009>
+R<WAT 6010>
+R<WAT 6011>
+R<WAT 6012>
+R<WAT 6013>
+R<WAT 6014>
+R<WAT 6015>
+R<WAT 6016>
+R<WAT 6017>
+R<WAT 6018>
+R<WAT 6019>
+R<WAT 6020>
+R<WAT 6021>
+R<WAT 6022>
+R<WAT 6023>
+R<WAT 6024>
+R<WAT 6025>
+R<WAT 6026>
+R<WAT 6027>
+R<WAT 6028>
+R<WAT 6029>
+R<WAT 6030>
+R<WAT 6031>
+R<WAT 6032>
+R<WAT 6033>
+R<WAT 6034>
+R<WAT 6035>
+R<WAT 6036>
+R<WAT 6037>
+R<WAT 6038>
+R<WAT 6039>
+R<WAT 6040>
+R<WAT 6041>
+R<WAT 6042>
+R<WAT 6043>
+R<WAT 6044>
+R<WAT 6045>
+R<WAT 6046>
+R<WAT 6047>
+R<WAT 6048>
+R<WAT 6049>
+R<WAT 6050>
+R<WAT 6051>
+R<WAT 6052>
+R<WAT 6053>
+R<WAT 6054>
+R<WAT 6055>
+R<WAT 6056>
+R<WAT 6057>
+R<WAT 6058>
+R<WAT 6059>
+R<WAT 6060>
+R<WAT 6061>
+R<WAT 6062>
+R<WAT 6063>
+R<WAT 6064>
+R<WAT 6065>
+R<WAT 6066>
+R<WAT 6067>
+R<WAT 6068>
+R<WAT 6069>
+R<WAT 6070>
+R<WAT 6071>
+R<WAT 6072>
+R<WAT 6073>
+R<WAT 6074>
+R<WAT 6075>
+R<WAT 6077>
+R<WAT 6078>
+R<WAT 6079>
+R<WAT 6080>
+R<WAT 6081>
+R<WAT 6082>
+R<WAT 6083>
+R<WAT 6084>
+R<WAT 6085>
+R<WAT 6086>
+R<WAT 6087>
+R<WAT 6088>
+R<WAT 6089>
+R<WAT 6090>
+R<WAT 6091>
+R<WAT 6092>
+R<WAT 6093>
+R<WAT 6094>
+R<WAT 6095>
+R<WAT 6096>
+R<WAT 6097>
+R<WAT 6098>
+R<WAT 6099>
+R<WAT 6100>
+R<WAT 6101>
+R<WAT 6102>
+R<WAT 6103>
+R<WAT 6104>
+R<WAT 6105>
+R<WAT 6106>
+R<WAT 6107>
+R<WAT 6108>
+R<WAT 6109>
+R<WAT 6110>
+R<WAT 6111>
+R<WAT 6112>
+R<WAT 6113>
+R<WAT 6114>
+R<WAT 6115>
+R<WAT 6116>
+R<WAT 6117>
+R<WAT 6118>
+R<WAT 6119>
+R<WAT 6120>
+R<WAT 6121>
+R<WAT 6122>
+R<WAT 6123>
+R<WAT 6124>
+R<WAT 6125>
+R<WAT 6126>
+R<WAT 6127>
+R<WAT 6128>
+R<WAT 6129>
+R<WAT 6130>
+R<WAT 6131>
+R<WAT 6132>
+R<WAT 6133>
+R<WAT 6134>
+R<WAT 6135>
+R<WAT 6136>
+R<WAT 6137>
+R<WAT 6138>
+R<WAT 6139>
+R<WAT 6140>
+R<WAT 6141>
+R<WAT 6142>
+R<WAT 6143>
+R<WAT 6144>
+R<WAT 6145>
+R<WAT 6146>
+R<WAT 6147>
+R<WAT 6148>
+R<WAT 6149>
+R<WAT 6150>
+R<WAT 6151>
+R<WAT 6152>
+R<WAT 6153>
+R<WAT 6154>
+R<WAT 6155>
+R<WAT 6156>
+R<WAT 6157>
+R<WAT 6158>
+R<WAT 6159>
+R<WAT 6160>
+R<WAT 6161>
+R<WAT 6162>
+R<WAT 6163>
+R<WAT 6164>
+R<WAT 6165>
+R<WAT 6166>
+R<WAT 6167>
+R<WAT 6168>
+R<WAT 6169>
+R<WAT 6170>
+R<WAT 6171>
+R<WAT 6172>
+R<WAT 6173>
+R<WAT 6174>
+R<WAT 6175>
+R<WAT 6176>
+R<WAT 6177>
+R<WAT 6178>
+R<WAT 6179>
+R<WAT 6180>
+R<WAT 6181>
+R<WAT 6182>
+R<WAT 6183>
+R<WAT 6184>
+R<WAT 6185>
+R<WAT 6186>
+R<WAT 6187>
+R<WAT 6188>
+R<WAT 6189>
+R<WAT 6190>
+R<WAT 6191>
+R<WAT 6193>
+R<WAT 6194>
+R<WAT 6195>
+R<WAT 6196>
+R<WAT 6197>
+R<WAT 6198>
+R<WAT 6199>
+R<WAT 6200>
+R<WAT 6201>
+R<WAT 6202>
+R<WAT 6203>
+R<WAT 6204>
+R<WAT 6205>
+R<WAT 6206>
+R<WAT 6207>
+R<WAT 6208>
+R<WAT 6209>
+R<WAT 6210>
+R<WAT 6211>
+R<WAT 6212>
+R<WAT 6213>
+R<WAT 6214>
+R<WAT 6215>
+R<WAT 6216>
+R<WAT 6217>
+R<WAT 6218>
+R<WAT 6219>
+R<WAT 6220>
+R<WAT 6221>
+R<WAT 6222>
+R<WAT 6223>
+R<WAT 6224>
+R<WAT 6225>
+R<WAT 6226>
+R<WAT 6227>
+R<WAT 6228>
+R<WAT 6229>
+R<WAT 6230>
+R<WAT 6231>
+R<WAT 6232>
+R<WAT 6233>
+R<WAT 6234>
+R<WAT 6235>
+R<WAT 6236>
+R<WAT 6237>
+R<WAT 6238>
+R<WAT 6239>
+R<WAT 6240>
+R<WAT 6241>
+R<WAT 6242>
+R<WAT 6243>
+R<WAT 6244>
+R<WAT 6245>
+R<WAT 6246>
+R<WAT 6247>
+R<WAT 6248>
+R<WAT 6249>
+R<WAT 6250>
+R<WAT 6251>
+R<WAT 6252>
+R<WAT 6253>
+R<WAT 6254>
+R<WAT 6255>
+R<WAT 6256>
+R<WAT 6257>
+R<WAT 6258>
+R<WAT 6259>
+R<WAT 6260>
+R<WAT 6261>
+R<WAT 6262>
+R<WAT 6263>
+R<WAT 6264>
+R<WAT 6265>
+R<WAT 6266>
+R<WAT 6267>
+R<WAT 6268>
+R<WAT 6269>
+R<WAT 6270>
+R<WAT 6271>
+R<WAT 6272>
+R<WAT 6273>
+R<WAT 6274>
+R<WAT 6275>
+R<WAT 6276>
+R<WAT 6277>
+R<WAT 6278>
+R<WAT 6279>
+R<WAT 6280>
+R<WAT 6281>
+R<WAT 6282>
+R<WAT 6283>
+R<WAT 6284>
+R<WAT 6285>
+R<WAT 6286>
+R<WAT 6287>
+R<WAT 6288>
+R<WAT 6289>
+R<WAT 6290>
+R<WAT 6291>
+R<WAT 6292>
+R<WAT 6293>
+R<WAT 6294>
+R<WAT 6295>
+R<WAT 6296>
+R<WAT 6297>
+R<WAT 6298>
+R<WAT 6299>
+R<WAT 6300>
+R<WAT 6301>
+R<WAT 6302>
+R<WAT 6303>
+R<WAT 6304>
+R<WAT 6305>
+R<WAT 6306>
+R<WAT 6307>
+R<WAT 6308>
+R<WAT 6309>
+R<WAT 6310>
+R<WAT 6311>
+R<WAT 6312>
+R<WAT 6313>
+R<WAT 6314>
+R<WAT 6315>
+R<WAT 6316>
+R<WAT 6317>
+R<WAT 6318>
+R<WAT 6319>
+R<WAT 6320>
+R<WAT 6321>
+R<WAT 6322>
+R<WAT 6323>
+R<WAT 6324>
+R<WAT 6325>
+R<WAT 6326>
+R<WAT 6327>
+R<WAT 6328>
+R<WAT 6329>
+R<WAT 6330>
+R<WAT 6331>
+R<WAT 6332>
+R<WAT 6333>
+R<WAT 6334>
+R<WAT 6335>
+R<WAT 6336>
+R<WAT 6337>
+R<WAT 6338>
+R<WAT 6339>
+R<WAT 6340>
+R<WAT 6341>
+R<WAT 6342>
+R<WAT 6343>
+R<WAT 6344>
+R<WAT 6345>
+R<WAT 6346>
+R<WAT 6347>
+R<WAT 6348>
+R<WAT 6349>
+R<WAT 6350>
+R<WAT 6351>
+R<WAT 6352>
+R<WAT 6353>
+R<WAT 6354>
+R<WAT 6355>
+R<WAT 6356>
+R<WAT 6357>
+R<WAT 6358>
+R<WAT 6359>
+R<WAT 6360>
+R<WAT 6361>
+R<WAT 6362>
+R<WAT 6363>
+R<WAT 6364>
+R<WAT 6365>
+R<WAT 6366>
+R<WAT 6367>
+R<WAT 6368>
+R<WAT 6369>
+R<WAT 6370>
+R<WAT 6371>
+R<WAT 6372>
+R<WAT 6373>
+R<WAT 6374>
+R<WAT 6375>
+R<WAT 6376>
+R<WAT 6377>
+R<WAT 6378>
+R<WAT 6379>
+R<WAT 6380>
+R<WAT 6381>
+R<WAT 6382>
+R<WAT 6383>
+R<WAT 6384>
+R<WAT 6385>
+R<WAT 6386>
+R<WAT 6387>
+R<WAT 6388>
+R<WAT 6389>
+R<WAT 6390>
+R<WAT 6391>
+R<WAT 6392>
+R<WAT 6393>
+R<WAT 6394>
+R<WAT 6395>
+R<WAT 6396>
+R<WAT 6397>
+R<WAT 6398>
+R<WAT 6399>
+R<WAT 6400>
+R<WAT 6401>
+R<WAT 6402>
+R<WAT 6403>
+R<WAT 6404>
+R<WAT 6405>
+R<WAT 6406>
+R<WAT 6407>
+R<WAT 6408>
+R<WAT 6409>
+R<WAT 6410>
+R<WAT 6411>
+R<WAT 6412>
+R<WAT 6413>
+R<WAT 6414>
+R<WAT 6415>
+R<WAT 6416>
+R<WAT 6417>
+R<WAT 6418>
+R<WAT 6419>
+R<WAT 6420>
+R<WAT 6421>
+R<WAT 6422>
+R<WAT 6423>
+R<WAT 6424>
+R<WAT 6425>
+R<WAT 6426>
+R<WAT 6427>
+R<WAT 6428>
+R<WAT 6429>
+R<WAT 6430>
+R<WAT 6431>
+R<WAT 6432>
+R<WAT 6433>
+R<WAT 6434>
+R<WAT 6435>
+R<WAT 6436>
+R<WAT 6437>
+R<WAT 6438>
+R<WAT 6439>
+R<WAT 6440>
+R<WAT 6441>
+R<WAT 6442>
+R<WAT 6443>
+R<WAT 6444>
+R<WAT 6445>
+R<WAT 6446>
+R<WAT 6447>
+R<WAT 6448>
+R<WAT 6449>
+R<WAT 6450>
+R<WAT 6451>
+R<WAT 6452>
+R<WAT 6453>
+R<WAT 6454>
+R<WAT 6455>
+R<WAT 6456>
+R<WAT 6457>
+R<WAT 6458>
+R<WAT 6459>
+R<WAT 6460>
+R<WAT 6461>
+R<WAT 6462>
+R<WAT 6463>
+R<WAT 6464>
+R<WAT 6465>
+R<WAT 6466>
+R<WAT 6467>
+R<WAT 6468>
+R<WAT 6469>
+R<WAT 6470>
+R<WAT 6471>
+R<WAT 6472>
+R<WAT 6473>
+R<WAT 6474>
+R<WAT 6475>
+R<WAT 6476>
+R<WAT 6477>
+R<WAT 6478>
+R<WAT 6479>
+R<WAT 6480>
+R<WAT 6481>
+R<WAT 6482>
+R<WAT 6483>
+R<WAT 6484>
+R<WAT 6485>
+R<WAT 6487>
+R<WAT 6488>
+R<WAT 6489>
+R<WAT 6490>
+R<WAT 6491>
+R<WAT 6492>
+R<WAT 6493>
+R<WAT 6494>
+R<WAT 6495>
+R<WAT 6496>
+R<WAT 6497>
+R<WAT 6498>
+R<WAT 6499>
+R<WAT 6500>
+R<WAT 6501>
+R<WAT 6502>
+R<WAT 6503>
+R<WAT 6504>
+R<WAT 6505>
+R<WAT 6506>
+R<WAT 6507>
+R<WAT 6508>
+R<WAT 6509>
+R<WAT 6510>
+R<WAT 6511>
+R<WAT 6512>
+R<WAT 6513>
+R<WAT 6514>
+R<WAT 6515>
+R<WAT 6516>
+R<WAT 6517>
+R<WAT 6518>
+R<WAT 6519>
+R<WAT 6520>
+R<WAT 6521>
+R<WAT 6522>
+R<WAT 6523>
+R<WAT 6524>
+R<WAT 6525>
+R<WAT 6526>
+R<WAT 6527>
+R<WAT 6528>
+R<WAT 6529>
+R<WAT 6530>
+R<WAT 6531>
+R<WAT 6532>
+R<WAT 6533>
+R<WAT 6534>
+R<WAT 6535>
+R<WAT 6536>
+R<WAT 6537>
+R<WAT 6538>
+R<WAT 6539>
+R<WAT 6540>
+R<WAT 6541>
+R<WAT 6542>
+R<WAT 6543>
+R<WAT 6544>
+R<WAT 6545>
+R<WAT 6546>
+R<WAT 6547>
+R<WAT 6548>
+R<WAT 6549>
+R<WAT 6550>
+R<WAT 6551>
+R<WAT 6552>
+R<WAT 6553>
+R<WAT 6554>
+R<WAT 6555>
+R<WAT 6556>
+R<WAT 6557>
+R<WAT 6558>
+R<WAT 6559>
+R<WAT 6560>
+R<WAT 6561>
+R<WAT 6562>
+R<WAT 6563>
+R<WAT 6564>
+R<WAT 6566>
+R<WAT 6567>
+R<WAT 6568>
+R<WAT 6569>
+R<WAT 6570>
+R<WAT 6571>
+R<WAT 6572>
+R<WAT 6573>
+R<WAT 6574>
+R<WAT 6575>
+R<WAT 6576>
+R<WAT 6577>
+R<WAT 6578>
+R<WAT 6579>
+R<WAT 6580>
+R<WAT 6581>
+R<WAT 6582>
+R<WAT 6583>
+R<WAT 6584>
+R<WAT 6585>
+R<WAT 6586>
+R<WAT 6587>
+R<WAT 6588>
+R<WAT 6589>
+R<WAT 6590>
+R<WAT 6591>
+R<WAT 6592>
+R<WAT 6593>
+R<WAT 6594>
+R<WAT 6595>
+R<WAT 6596>
+R<WAT 6597>
+R<WAT 6598>
+R<WAT 6599>
+R<WAT 6600>
+R<WAT 6601>
+R<WAT 6602>
+R<WAT 6603>
+R<WAT 6604>
+R<WAT 6605>
+R<WAT 6606>
+R<WAT 6607>
+R<WAT 6608>
+R<WAT 6609>
+R<WAT 6610>
+R<WAT 6611>
+R<WAT 6612>
+R<WAT 6613>
+R<WAT 6614>
+R<WAT 6615>
+R<WAT 6616>
+R<WAT 6617>
+R<WAT 6618>
+R<WAT 6619>
+R<WAT 6620>
+R<WAT 6621>
+R<WAT 6622>
+R<WAT 6623>
+R<WAT 6624>
+R<WAT 6625>
+R<WAT 6626>
+R<WAT 6627>
+R<WAT 6628>
+R<WAT 6629>
+R<WAT 6630>
+R<WAT 6631>
+R<WAT 6632>
+R<WAT 6633>
+R<WAT 6634>
+R<WAT 6635>
+R<WAT 6636>
+R<WAT 6637>
+R<WAT 6638>
+R<WAT 6639>
+R<WAT 6640>
+R<WAT 6641>
+R<WAT 6642>
+R<WAT 6643>
+R<WAT 6644>
+R<WAT 6645>
+R<WAT 6646>
+R<WAT 6647>
+R<WAT 6649>
+R<WAT 6650>
+R<WAT 6651>
+R<WAT 6652>
+R<WAT 6653>
+R<WAT 6654>
+R<WAT 6655>
+R<WAT 6656>
+R<WAT 6657>
+R<WAT 6658>
+R<WAT 6659>
+R<WAT 6660>
+R<WAT 6661>
+R<WAT 6662>
+R<WAT 6663>
+R<WAT 6664>
+R<WAT 6665>
+R<WAT 6666>
+R<WAT 6667>
+R<WAT 6668>
+R<WAT 6669>
+R<WAT 6670>
+R<WAT 6671>
+R<WAT 6672>
+R<WAT 6673>
+R<WAT 6675>
+R<WAT 6676>
+R<WAT 6677>
+R<WAT 6678>
+R<WAT 6679>
+R<WAT 6680>
+R<WAT 6681>
+R<WAT 6682>
+R<WAT 6683>
+R<WAT 6684>
+R<WAT 6685>
+R<WAT 6686>
+R<WAT 6688>
+R<WAT 6689>
+R<WAT 6690>
+R<WAT 6691>
+R<WAT 6692>
+R<WAT 6693>
+R<WAT 6694>
+R<WAT 6695>
+R<WAT 6696>
+R<WAT 6697>
+R<WAT 6698>
+R<WAT 6699>
+R<WAT 6700>
+R<WAT 6701>
+R<WAT 6702>
+R<WAT 6703>
+R<WAT 6704>
+R<WAT 6705>
+R<WAT 6706>
+R<WAT 6707>
+R<WAT 6708>
+R<WAT 6709>
+R<WAT 6710>
+R<WAT 6711>
+R<WAT 6712>
+R<WAT 6713>
+R<WAT 6714>
+R<WAT 6715>
+R<WAT 6716>
+R<WAT 6717>
+R<WAT 6718>
+R<WAT 6719>
+R<WAT 6720>
+R<WAT 6721>
+R<WAT 6722>
+R<WAT 6723>
+R<WAT 6724>
+R<WAT 6725>
+R<WAT 6726>
+R<WAT 6727>
+R<WAT 6728>
+R<WAT 6729>
+R<WAT 6730>
+R<WAT 6731>
+R<WAT 6732>
+R<WAT 6733>
+R<WAT 6734>
+R<WAT 6735>
+R<WAT 6736>
+R<WAT 6737>
+R<WAT 6738>
+R<WAT 6739>
+R<WAT 6740>
+R<WAT 6741>
+R<WAT 6742>
+R<WAT 6743>
+R<WAT 6744>
+R<WAT 6745>
+R<WAT 6746>
+R<WAT 6747>
+R<WAT 6748>
+R<WAT 6749>
+R<WAT 6750>
+R<WAT 6751>
+R<WAT 6752>
+R<WAT 6753>
+R<WAT 6754>
+R<WAT 6755>
+R<WAT 6756>
+R<WAT 6757>
+R<WAT 6758>
+R<WAT 6759>
+R<WAT 6760>
+R<WAT 6761>
+R<WAT 6762>
+R<WAT 6763>
+R<WAT 6764>
+R<WAT 6765>
+R<WAT 6766>
+R<WAT 6767>
+R<WAT 6768>
+R<WAT 6769>
+R<WAT 6770>
+R<WAT 6771>
+R<WAT 6772>
+R<WAT 6773>
+R<WAT 6774>
+R<WAT 6775>
+R<WAT 6776>
+R<WAT 6777>
+R<WAT 6778>
+R<WAT 6779>
+R<WAT 6780>
+R<WAT 6781>
+R<WAT 6782>
+R<WAT 6783>
+R<WAT 6784>
+R<WAT 6785>
+R<WAT 6786>
+R<WAT 6787>
+R<WAT 6788>
+R<WAT 6789>
+R<WAT 6790>
+R<WAT 6791>
+R<WAT 6792>
+R<WAT 6793>
+R<WAT 6794>
+R<WAT 6795>
+R<WAT 6796>
+R<WAT 6797>
+R<WAT 6798>
+R<WAT 6800>
+R<WAT 6801>
+R<WAT 6802>
+R<WAT 6803>
+R<WAT 6804>
+R<WAT 6805>
+R<WAT 6806>
+R<WAT 6807>
+R<WAT 6808>
+R<WAT 6809>
+R<WAT 6810>
+R<WAT 6811>
+R<WAT 6812>
+R<WAT 6813>
+R<WAT 6814>
+R<WAT 6815>
+R<WAT 6816>
+R<WAT 6817>
+R<WAT 6818>
+R<WAT 6819>
+R<WAT 6820>
+R<WAT 6821>
+R<WAT 6822>
+R<WAT 6823>
+R<WAT 6824>
+R<WAT 6825>
+R<WAT 6826>
+R<WAT 6827>
+R<WAT 6828>
+R<WAT 6829>
+R<WAT 6830>
+R<WAT 6831>
+R<WAT 6832>
+R<WAT 6833>
+R<WAT 6834>
+R<WAT 6835>
+R<WAT 6836>
+R<WAT 6837>
+R<WAT 6838>
+R<WAT 6839>
+R<WAT 6840>
+R<WAT 6841>
+R<WAT 6842>
+R<WAT 6843>
+R<WAT 6844>
+R<WAT 6845>
+R<WAT 6846>
+R<WAT 6847>
+R<WAT 6848>
+R<WAT 6849>
+R<WAT 6850>
+R<WAT 6851>
+R<WAT 6852>
+R<WAT 6853>
+R<WAT 6854>
+R<WAT 6855>
+R<WAT 6856>
+R<WAT 6857>
+R<WAT 6858>
+R<WAT 6859>
+R<WAT 6860>
+R<WAT 6861>
+R<WAT 6862>
+R<WAT 6863>
+R<WAT 6864>
+R<WAT 6865>
+R<WAT 6866>
+R<WAT 6867>
+R<WAT 6868>
+R<WAT 6869>
+R<WAT 6870>
+R<WAT 6871>
+R<WAT 6872>
+R<WAT 6873>
+R<WAT 6874>
+R<WAT 6875>
+R<WAT 6876>
+R<WAT 6877>
+R<WAT 6878>
+R<WAT 6879>
+R<WAT 6880>
+R<WAT 6881>
+R<WAT 6882>
+R<WAT 6883>
+R<WAT 6884>
+R<WAT 6885>
+R<WAT 6886>
+R<WAT 6887>
+R<WAT 6888>
+R<WAT 6889>
+R<WAT 6890>
+R<WAT 6891>
+R<WAT 6892>
+R<WAT 6893>
+R<WAT 6894>
+R<WAT 6895>
+R<WAT 6896>
+R<WAT 6897>
+R<WAT 6898>
+R<WAT 6899>
+R<WAT 6900>
+R<WAT 6901>
+R<WAT 6902>
+R<WAT 6903>
+R<WAT 6904>
+R<WAT 6905>
+R<WAT 6906>
+R<WAT 6907>
+R<WAT 6908>
+R<WAT 6909>
+R<WAT 6910>
+R<WAT 6911>
+R<WAT 6912>
+R<WAT 6913>
+R<WAT 6914>
+R<WAT 6915>
+R<WAT 6916>
+R<WAT 6917>
+R<WAT 6918>
+R<WAT 6919>
+R<WAT 6920>
+R<WAT 6921>
+R<WAT 6922>
+R<WAT 6923>
+R<WAT 6924>
+R<WAT 6925>
+R<WAT 6926>
+R<WAT 6927>
+R<WAT 6928>
+R<WAT 6929>
+R<WAT 6930>
+R<WAT 6931>
+R<WAT 6932>
+R<WAT 6933>
+R<WAT 6934>
+R<WAT 6935>
+R<WAT 6936>
+R<WAT 6937>
+R<WAT 6938>
+R<WAT 6939>
+R<WAT 6940>
+R<WAT 6941>
+R<WAT 6942>
+R<WAT 6943>
+R<WAT 6944>
+R<WAT 6945>
+R<WAT 6946>
+R<WAT 6947>
+R<WAT 6948>
+R<WAT 6949>
+R<WAT 6950>
+R<WAT 6951>
+R<WAT 6952>
+R<WAT 6953>
+R<WAT 6954>
+R<WAT 6955>
+R<WAT 6956>
+R<WAT 6957>
+R<WAT 6958>
+R<WAT 6959>
+R<WAT 6960>
+R<WAT 6961>
+R<WAT 6962>
+R<WAT 6963>
+R<WAT 6964>
+R<WAT 6965>
+R<WAT 6966>
+R<WAT 6967>
+R<WAT 6968>
+R<WAT 6969>
+R<WAT 6970>
+R<WAT 6971>
+R<WAT 6972>
+R<WAT 6973>
+R<WAT 6974>
+R<WAT 6975>
+R<WAT 6976>
+R<WAT 6977>
+R<WAT 6978>
+R<WAT 6979>
+R<WAT 6980>
+R<WAT 6981>
+R<WAT 6982>
+R<WAT 6983>
+R<WAT 6984>
+R<WAT 6985>
+R<WAT 6986>
+R<WAT 6987>
+R<WAT 6988>
+R<WAT 6989>
+R<WAT 6990>
+R<WAT 6991>
+R<WAT 6992>
+R<WAT 6993>
+R<WAT 6994>
+R<WAT 6995>
+R<WAT 6996>
+R<WAT 6997>
+R<WAT 6998>
+R<WAT 6999>
+R<WAT 7000>
+R<WAT 7001>
+R<WAT 7002>
+R<WAT 7003>
+R<WAT 7004>
+R<WAT 7005>
+R<WAT 7006>
+R<WAT 7007>
+R<WAT 7008>
+R<WAT 7009>
+R<WAT 7010>
+R<WAT 7011>
+R<WAT 7012>
+R<WAT 7013>
+R<WAT 7014>
+R<WAT 7015>
+R<WAT 7016>
+R<WAT 7017>
+R<WAT 7018>
+R<WAT 7019>
+R<WAT 7020>
+R<WAT 7021>
+R<WAT 7022>
+R<WAT 7023>
+R<WAT 7024>
+R<WAT 7025>
+R<WAT 7026>
+R<WAT 7027>
+R<WAT 7028>
+R<WAT 7029>
+R<WAT 7030>
+R<WAT 7031>
+R<WAT 7032>
+R<WAT 7033>
+R<WAT 7034>
+R<WAT 7035>
+R<WAT 7036>
+R<WAT 7037>
+R<WAT 7038>
+R<WAT 7039>
+R<WAT 7040>
+R<WAT 7041>
+R<WAT 7042>
+R<WAT 7043>
+R<WAT 7044>
+R<WAT 7045>
+R<WAT 7046>
+R<WAT 7047>
+R<WAT 7048>
+R<WAT 7049>
+R<WAT 7050>
+R<WAT 7051>
+R<WAT 7052>
+R<WAT 7053>
+R<WAT 7054>
+R<WAT 7055>
+R<WAT 7056>
+R<WAT 7057>
+R<WAT 7058>
+R<WAT 7059>
+R<WAT 7060>
+R<WAT 7061>
+R<WAT 7062>
+R<WAT 7063>
+R<WAT 7064>
+R<WAT 7065>
+R<WAT 7066>
+R<WAT 7067>
+R<WAT 7068>
+R<WAT 7069>
+R<WAT 7070>
+R<WAT 7071>
+R<WAT 7072>
+R<WAT 7073>
+R<WAT 7074>
+R<WAT 7075>
+R<WAT 7076>
+R<WAT 7077>
+R<WAT 7078>
+R<WAT 7079>
+R<WAT 7080>
+R<WAT 7081>
+R<WAT 7082>
+R<WAT 7083>
+R<WAT 7084>
+R<WAT 7085>
+R<WAT 7086>
+R<WAT 7087>
+R<WAT 7088>
+R<WAT 7089>
+R<WAT 7090>
+R<WAT 7091>
+R<WAT 7092>
+R<WAT 7093>
+R<WAT 7094>
+R<WAT 7095>
+R<WAT 7096>
+R<WAT 7097>
+R<WAT 7098>
+R<WAT 7099>
+R<WAT 7100>
+R<WAT 7101>
+R<WAT 7102>
+R<WAT 7103>
+R<WAT 7104>
+R<WAT 7105>
+R<WAT 7106>
+R<WAT 7107>
+R<WAT 7108>
+R<WAT 7109>
+R<WAT 7110>
+R<WAT 7111>
+R<WAT 7112>
+R<WAT 7113>
+R<WAT 7114>
+R<WAT 7115>
+R<WAT 7116>
+R<WAT 7117>
+R<WAT 7118>
+R<WAT 7119>
+R<WAT 7120>
+R<WAT 7121>
+R<WAT 7122>
+R<WAT 7123>
+R<WAT 7124>
+R<WAT 7125>
+R<WAT 7126>
+R<WAT 7127>
+R<WAT 7128>
+R<WAT 7129>
+R<WAT 7130>
+R<WAT 7131>
+R<WAT 7132>
+R<WAT 7133>
+R<WAT 7134>
+R<WAT 7135>
+R<WAT 7136>
+R<WAT 7137>
+R<WAT 7138>
+R<WAT 7139>
+R<WAT 7140>
+R<WAT 7141>
+R<WAT 7142>
+R<WAT 7143>
+R<WAT 7144>
+R<WAT 7145>
+R<WAT 7146>
+R<WAT 7147>
+R<WAT 7148>
+R<WAT 7149>
+R<WAT 7150>
+R<WAT 7151>
+R<WAT 7152>
+R<WAT 7153>
+R<WAT 7154>
+R<WAT 7155>
+R<WAT 7156>
+R<WAT 7157>
+R<WAT 7158>
+R<WAT 7159>
+R<WAT 7160>
+R<WAT 7161>
+R<WAT 7162>
+R<WAT 7163>
+R<WAT 7164>
+R<WAT 7165>
+R<WAT 7166>
+R<WAT 7167>
+R<WAT 7168>
+R<WAT 7169>
+R<WAT 7170>
+R<WAT 7171>
+R<WAT 7172>
+R<WAT 7173>
+R<WAT 7174>
+R<WAT 7175>
+R<WAT 7176>
+R<WAT 7177>
+R<WAT 7178>
+R<WAT 7179>
+R<WAT 7180>
+R<WAT 7181>
+R<WAT 7182>
+R<WAT 7183>
+R<WAT 7184>
+R<WAT 7185>
+R<WAT 7186>
+R<WAT 7187>
+R<WAT 7188>
+R<WAT 7189>
+R<WAT 7190>
+R<WAT 7191>
+R<WAT 7192>
+R<WAT 7193>
+R<WAT 7194>
+R<WAT 7195>
+R<WAT 7196>
+R<WAT 7197>
+R<WAT 7198>
+R<WAT 7199>
+R<WAT 7200>
+R<WAT 7201>
+R<WAT 7202>
+R<WAT 7203>
+R<WAT 7204>
+R<WAT 7205>
+R<WAT 7206>
+R<WAT 7207>
+R<WAT 7208>
+R<WAT 7209>
+R<WAT 7210>
+R<WAT 7211>
+R<WAT 7212>
+R<WAT 7213>
+R<WAT 7214>
+R<WAT 7215>
+R<WAT 7216>
+R<WAT 7217>
+R<WAT 7218>
+R<WAT 7219>
+R<WAT 7220>
+R<WAT 7221>
+R<WAT 7222>
+R<WAT 7223>
+R<WAT 7224>
+R<WAT 7225>
+R<WAT 7226>
+R<WAT 7227>
+R<WAT 7228>
+R<WAT 7229>
+R<WAT 7230>
+R<WAT 7231>
+R<WAT 7232>
+R<WAT 7233>
+R<WAT 7234>
+R<WAT 7235>
+R<WAT 7236>
+R<WAT 7237>
+R<WAT 7238>
+R<WAT 7239>
+R<WAT 7240>
+R<WAT 7241>
+R<WAT 7242>
+R<WAT 7243>
+R<WAT 7244>
+R<WAT 7245>
+R<WAT 7246>
+R<WAT 7247>
+R<WAT 7248>
+R<WAT 7249>
+R<WAT 7250>
+R<WAT 7251>
+R<WAT 7252>
+R<WAT 7253>
+R<WAT 7254>
+R<WAT 7255>
+R<WAT 7256>
+R<WAT 7257>
+R<WAT 7258>
+R<WAT 7259>
+R<WAT 7261>
+R<WAT 7262>
+R<WAT 7263>
+R<WAT 7264>
+R<WAT 7265>
+R<WAT 7266>
+R<WAT 7267>
+R<WAT 7268>
+R<WAT 7269>
+R<WAT 7270>
+R<WAT 7271>
+R<WAT 7272>
+R<WAT 7273>
+R<WAT 7274>
+R<WAT 7275>
+R<WAT 7276>
+R<WAT 7277>
+R<WAT 7278>
+R<WAT 7279>
+R<WAT 7280>
+R<WAT 7281>
+R<WAT 7282>
+R<WAT 7283>
+R<WAT 7284>
+R<WAT 7285>
+R<WAT 7286>
+R<WAT 7287>
+R<WAT 7288>
+R<WAT 7289>
+R<WAT 7290>
+R<WAT 7291>
+R<WAT 7292>
+R<WAT 7293>
+R<WAT 7294>
+R<WAT 7295>
+R<WAT 7296>
+R<WAT 7297>
+R<WAT 7298>
+R<WAT 7299>
+R<WAT 7300>
+R<WAT 7301>
+R<WAT 7302>
+R<WAT 7303>
+R<WAT 7304>
+R<WAT 7305>
+R<WAT 7306>
+R<WAT 7307>
+R<WAT 7308>
+R<WAT 7309>
+R<WAT 7310>
+R<WAT 7311>
+R<WAT 7312>
+R<WAT 7313>
+R<WAT 7314>
+R<WAT 7315>
+R<WAT 7316>
+R<WAT 7317>
+R<WAT 7318>
+R<WAT 7319>
+R<WAT 7320>
+R<WAT 7321>
+R<WAT 7322>
+R<WAT 7323>
+R<WAT 7324>
+R<WAT 7325>
+R<WAT 7326>
+R<WAT 7327>
+R<WAT 7328>
+R<WAT 7329>
+R<WAT 7330>
+R<WAT 7331>
+R<WAT 7332>
+R<WAT 7333>
+R<WAT 7334>
+R<WAT 7335>
+R<WAT 7336>
+R<WAT 7337>
+R<WAT 7338>
+R<WAT 7339>
+R<WAT 7340>
+R<WAT 7341>
+R<WAT 7342>
+R<WAT 7343>
+R<WAT 7344>
+R<WAT 7345>
+R<WAT 7346>
+R<WAT 7347>
+R<WAT 7348>
+R<WAT 7349>
+R<WAT 7350>
+R<WAT 7351>
+R<WAT 7352>
+R<WAT 7353>
+R<WAT 7354>
+R<WAT 7355>
+R<WAT 7356>
+R<WAT 7357>
+R<WAT 7358>
+R<WAT 7359>
+R<WAT 7360>
+R<WAT 7361>
+R<WAT 7362>
+R<WAT 7363>
+R<WAT 7364>
+R<WAT 7365>
+R<WAT 7366>
+R<WAT 7367>
+R<WAT 7368>
+R<WAT 7369>
+R<WAT 7370>
+R<WAT 7371>
+R<WAT 7372>
+R<WAT 7373>
+R<WAT 7374>
+R<WAT 7375>
+R<WAT 7376>
+R<WAT 7377>
+R<WAT 7378>
+R<WAT 7379>
+R<WAT 7380>
+R<WAT 7381>
+R<WAT 7382>
+R<WAT 7383>
+R<WAT 7384>
+R<WAT 7385>
+R<WAT 7386>
+R<WAT 7387>
+R<WAT 7388>
+R<WAT 7389>
+R<WAT 7390>
+R<WAT 7391>
+R<WAT 7392>
+R<WAT 7393>
+R<WAT 7394>
+R<WAT 7395>
+R<WAT 7396>
+R<WAT 7397>
+R<WAT 7398>
+R<WAT 7399>
+R<WAT 7400>
+R<WAT 7401>
+R<WAT 7402>
+R<WAT 7403>
+R<WAT 7404>
+R<WAT 7405>
+R<WAT 7406>
+R<WAT 7407>
+R<WAT 7408>
+R<WAT 7409>
+R<WAT 7410>
+R<WAT 7411>
+R<WAT 7412>
+R<WAT 7413>
+R<WAT 7414>
+R<WAT 7415>
+R<WAT 7416>
+R<WAT 7417>
+R<WAT 7418>
+R<WAT 7419>
+R<WAT 7420>
+R<WAT 7421>
+R<WAT 7422>
+R<WAT 7423>
+R<WAT 7424>
+R<WAT 7425>
+R<WAT 7426>
+R<WAT 7427>
+R<WAT 7428>
+R<WAT 7429>
+R<WAT 7430>
+R<WAT 7431>
+R<WAT 7432>
+R<WAT 7433>
+R<WAT 7434>
+R<WAT 7435>
+R<WAT 7436>
+R<WAT 7437>
+R<WAT 7438>
+R<WAT 7439>
+R<WAT 7440>
+R<WAT 7441>
+R<WAT 7442>
+R<WAT 7443>
+R<WAT 7444>
+R<WAT 7445>
+R<WAT 7446>
+R<WAT 7447>
+R<WAT 7448>
+R<WAT 7449>
+R<WAT 7450>
+R<WAT 7451>
+R<WAT 7452>
+R<WAT 7453>
+R<WAT 7454>
+R<WAT 7455>
+R<WAT 7456>
+R<WAT 7457>
+R<WAT 7458>
+R<WAT 7459>
+R<WAT 7460>
+R<WAT 7461>
+R<WAT 7462>
+R<WAT 7463>
+R<WAT 7464>
+R<WAT 7465>
+R<WAT 7466>
+R<WAT 7467>
+R<WAT 7468>
+R<WAT 7469>
+R<WAT 7470>
+R<WAT 7471>
+R<WAT 7472>
+R<WAT 7473>
+R<WAT 7474>
+R<WAT 7475>
+R<WAT 7476>
+R<WAT 7477>
+R<WAT 7478>
+R<WAT 7479>
+R<WAT 7480>
+R<WAT 7481>
+R<WAT 7482>
+R<WAT 7483>
+R<WAT 7484>
+R<WAT 7485>
+R<WAT 7486>
+R<WAT 7487>
+R<WAT 7488>
+R<WAT 7489>
+R<WAT 7490>
+R<WAT 7491>
+R<WAT 7492>
+R<WAT 7494>
+R<WAT 7495>
+R<WAT 7496>
+R<WAT 7497>
+R<WAT 7498>
+R<WAT 7499>
+R<WAT 7500>
+R<WAT 7501>
+R<WAT 7502>
+R<WAT 7503>
+R<WAT 7504>
+R<WAT 7505>
+R<WAT 7506>
+R<WAT 7507>
+R<WAT 7508>
+R<WAT 7509>
+R<WAT 7510>
+R<WAT 7511>
+R<WAT 7512>
+R<WAT 7513>
+R<WAT 7514>
+R<WAT 7515>
+R<WAT 7516>
+R<WAT 7517>
+R<WAT 7518>
+R<WAT 7519>
+R<WAT 7520>
+R<WAT 7521>
+R<WAT 7522>
+R<WAT 7523>
+R<WAT 7524>
+R<WAT 7525>
+R<WAT 7526>
+R<WAT 7527>
+R<WAT 7528>
+R<WAT 7529>
+R<WAT 7530>
+R<WAT 7531>
+R<WAT 7532>
+R<WAT 7533>
+R<WAT 7534>
+R<WAT 7535>
+R<WAT 7536>
+R<WAT 7537>
+R<WAT 7538>
+R<WAT 7539>
+R<WAT 7540>
+R<WAT 7541>
+R<WAT 7542>
+R<WAT 7543>
+R<WAT 7544>
+R<WAT 7545>
+R<WAT 7546>
+R<WAT 7547>
+R<WAT 7548>
+R<WAT 7549>
+R<WAT 7550>
+R<WAT 7551>
+R<WAT 7552>
+R<WAT 7553>
+R<WAT 7554>
+R<WAT 7555>
+R<WAT 7556>
+R<WAT 7557>
+R<WAT 7558>
+R<WAT 7559>
+R<WAT 7560>
+R<WAT 7561>
+R<WAT 7562>
+R<WAT 7563>
+R<WAT 7564>
+R<WAT 7565>
+R<WAT 7566>
+R<WAT 7567>
+R<WAT 7568>
+R<WAT 7569>
+R<WAT 7570>
+R<WAT 7571>
+R<WAT 7572>
+R<WAT 7573>
+R<WAT 7574>
+R<WAT 7575>
+R<WAT 7576>
+R<WAT 7577>
+R<WAT 7578>
+R<WAT 7579>
+R<WAT 7580>
+R<WAT 7581>
+R<WAT 7582>
+R<WAT 7583>
+R<WAT 7584>
+R<WAT 7585>
+R<WAT 7586>
+R<WAT 7587>
+R<WAT 7588>
+R<WAT 7589>
+R<WAT 7590>
+R<WAT 7591>
+R<WAT 7592>
+R<WAT 7593>
+R<WAT 7594>
+R<WAT 7595>
+R<WAT 7596>
+R<WAT 7597>
+R<WAT 7598>
+R<WAT 7599>
+R<WAT 7600>
+R<WAT 7601>
+R<WAT 7602>
+R<WAT 7603>
+R<WAT 7604>
+R<WAT 7605>
+R<WAT 7606>
+R<WAT 7607>
+R<WAT 7608>
+R<WAT 7609>
+R<WAT 7610>
+R<WAT 7611>
+R<WAT 7612>
+R<WAT 7613>
+R<WAT 7614>
+R<WAT 7615>
+R<WAT 7616>
+R<WAT 7617>
+R<WAT 7618>
+R<WAT 7619>
+R<WAT 7620>
+R<WAT 7621>
+R<WAT 7622>
+R<WAT 7623>
+R<WAT 7624>
+R<WAT 7626>
+R<WAT 7627>
+R<WAT 7628>
+R<WAT 7629>
+R<WAT 7630>
+R<WAT 7631>
+R<WAT 7632>
+R<WAT 7633>
+R<WAT 7634>
+R<WAT 7635>
+R<WAT 7636>
+R<WAT 7637>
+R<WAT 7638>
+R<WAT 7639>
+R<WAT 7640>
+R<WAT 7641>
+R<WAT 7642>
+R<WAT 7643>
+R<WAT 7644>
+R<WAT 7645>
+R<WAT 7646>
+R<WAT 7647>
+R<WAT 7648>
+R<WAT 7649>
+R<WAT 7650>
+R<WAT 7651>
+R<WAT 7652>
+R<WAT 7653>
+R<WAT 7654>
+R<WAT 7655>
+R<WAT 7656>
+R<WAT 7657>
+R<WAT 7658>
+R<WAT 7659>
+R<WAT 7660>
+R<WAT 7661>
+R<WAT 7662>
+R<WAT 7663>
+R<WAT 7664>
+R<WAT 7665>
+R<WAT 7666>
+R<WAT 7667>
+R<WAT 7668>
+R<WAT 7669>
+R<WAT 7670>
+R<WAT 7672>
+R<WAT 7673>
+R<WAT 7674>
+R<WAT 7675>
+R<WAT 7676>
+R<WAT 7677>
+R<WAT 7678>
+R<WAT 7679>
+R<WAT 7680>
+R<WAT 7681>
+R<WAT 7682>
+R<WAT 7683>
+R<WAT 7684>
+R<WAT 7685>
+R<WAT 7686>
+R<WAT 7687>
+R<WAT 7688>
+R<WAT 7689>
+R<WAT 7690>
+R<WAT 7691>
+R<WAT 7692>
+R<WAT 7693>
+R<WAT 7694>
+R<WAT 7695>
+R<WAT 7696>
+R<WAT 7697>
+R<WAT 7698>
+R<WAT 7699>
+R<WAT 7700>
+R<WAT 7701>
+R<WAT 7702>
+R<WAT 7703>
+R<WAT 7704>
+R<WAT 7705>
+R<WAT 7706>
+R<WAT 7707>
+R<WAT 7708>
+R<WAT 7709>
+R<WAT 7710>
+R<WAT 7711>
+R<WAT 7712>
+R<WAT 7713>
+R<WAT 7714>
+R<WAT 7715>
+R<WAT 7716>
+R<WAT 7717>
+R<WAT 7718>
+R<WAT 7719>
+R<WAT 7720>
+R<WAT 7721>
+R<WAT 7722>
+R<WAT 7723>
+R<WAT 7724>
+R<WAT 7725>
+R<WAT 7726>
+R<WAT 7727>
+R<WAT 7728>
+R<WAT 7729>
+R<WAT 7730>
+R<WAT 7731>
+R<WAT 7732>
+R<WAT 7733>
+R<WAT 7734>
+R<WAT 7735>
+R<WAT 7736>
+R<WAT 7737>
+R<WAT 7738>
+R<WAT 7739>
+R<WAT 7740>
+R<WAT 7741>
+R<WAT 7742>
+R<WAT 7743>
+R<WAT 7744>
+R<WAT 7745>
+R<WAT 7746>
+R<WAT 7747>
+R<WAT 7748>
+R<WAT 7749>
+R<WAT 7750>
+R<WAT 7751>
+R<WAT 7752>
+R<WAT 7753>
+R<WAT 7754>
+R<WAT 7755>
+R<WAT 7756>
+R<WAT 7757>
+R<WAT 7758>
+R<WAT 7759>
+R<WAT 7760>
+R<WAT 7761>
+R<WAT 7762>
+R<WAT 7763>
+R<WAT 7764>
+R<WAT 7765>
+R<WAT 7766>
+R<WAT 7767>
+R<WAT 7768>
+R<WAT 7769>
+R<WAT 7770>
+R<WAT 7771>
+R<WAT 7772>
+R<WAT 7773>
+R<WAT 7774>
+R<WAT 7775>
+R<WAT 7776>
+R<WAT 7777>
+R<WAT 7778>
+R<WAT 7779>
+R<WAT 7780>
+R<WAT 7781>
+R<WAT 7782>
+R<WAT 7783>
+R<WAT 7784>
+R<WAT 7785>
+R<WAT 7786>
+R<WAT 7787>
+R<WAT 7788>
+R<WAT 7789>
+R<WAT 7790>
+R<WAT 7791>
+R<WAT 7792>
+R<WAT 7793>
+R<WAT 7794>
+R<WAT 7795>
+R<WAT 7796>
+R<WAT 7797>
+R<WAT 7798>
+R<WAT 7799>
+R<WAT 7800>
+R<WAT 7801>
+R<WAT 7802>
+R<WAT 7803>
+R<WAT 7804>
+R<WAT 7805>
+R<WAT 7806>
+R<WAT 7807>
+R<WAT 7808>
+R<WAT 7809>
+R<WAT 7810>
+R<WAT 7811>
+R<WAT 7812>
+R<WAT 7813>
+R<WAT 7814>
+R<WAT 7815>
+R<WAT 7816>
+R<WAT 7817>
+R<WAT 7818>
+R<WAT 7819>
+R<WAT 7820>
+R<WAT 7821>
+R<WAT 7822>
+R<WAT 7823>
+R<WAT 7824>
+R<WAT 7825>
+R<WAT 7826>
+R<WAT 7827>
+R<WAT 7828>
+R<WAT 7829>
+R<WAT 7830>
+R<WAT 7831>
+R<WAT 7832>
+R<WAT 7833>
+R<WAT 7834>
+R<WAT 7835>
+R<WAT 7836>
+R<WAT 7837>
+R<WAT 7838>
+R<WAT 7839>
+R<WAT 7840>
+R<WAT 7841>
+R<WAT 7842>
+R<WAT 7843>
+R<WAT 7844>
+R<WAT 7845>
+R<WAT 7846>
+R<WAT 7847>
+R<WAT 7848>
+R<WAT 7849>
+R<WAT 7850>
+R<WAT 7851>
+R<WAT 7852>
+R<WAT 7853>
+R<WAT 7854>
+R<WAT 7855>
+R<WAT 7856>
+R<WAT 7857>
+R<WAT 7858>
+R<WAT 7859>
+R<WAT 7860>
+R<WAT 7861>
+R<WAT 7862>
+R<WAT 7863>
+R<WAT 7864>
+R<WAT 7865>
+R<WAT 7866>
+R<WAT 7867>
+R<WAT 7868>
+R<WAT 7869>
+R<WAT 7870>
+R<WAT 7871>
+R<WAT 7872>
+R<WAT 7873>
+R<WAT 7874>
+R<WAT 7875>
+R<WAT 7876>
+R<WAT 7877>
+R<WAT 7878>
+R<WAT 7879>
+R<WAT 7880>
+R<WAT 7881>
+R<WAT 7882>
+R<WAT 7883>
+R<WAT 7884>
+R<WAT 7885>
+R<WAT 7886>
+R<WAT 7887>
+R<WAT 7888>
+R<WAT 7889>
+R<WAT 7890>
+R<WAT 7891>
+R<WAT 7892>
+R<WAT 7893>
+R<WAT 7894>
+R<WAT 7895>
+R<WAT 7896>
+R<WAT 7897>
+R<WAT 7898>
+R<WAT 7899>
+R<WAT 7900>
+R<WAT 7901>
+R<WAT 7902>
+R<WAT 7903>
+R<WAT 7904>
+R<WAT 7905>
+R<WAT 7906>
+R<WAT 7907>
+R<WAT 7908>
+R<WAT 7909>
+R<WAT 7910>
+R<WAT 7911>
+R<WAT 7912>
+R<WAT 7913>
+R<WAT 7914>
+R<WAT 7915>
+R<WAT 7916>
+R<WAT 7917>
+R<WAT 7918>
+R<WAT 7919>
+R<WAT 7920>
+R<WAT 7921>
+R<WAT 7923>
+R<WAT 7924>
+R<WAT 7925>
+R<WAT 7926>
+R<WAT 7927>
+R<WAT 7928>
+R<WAT 7929>
+R<WAT 7930>
+R<WAT 7931>
+R<WAT 7932>
+R<WAT 7933>
+R<WAT 7934>
+R<WAT 7935>
+R<WAT 7936>
+R<WAT 7937>
+R<WAT 7938>
+R<WAT 7939>
+R<WAT 7940>
+R<WAT 7941>
+R<WAT 7942>
+R<WAT 7943>
+R<WAT 7944>
+R<WAT 7945>
+R<WAT 7946>
+R<WAT 7947>
+R<WAT 7948>
+R<WAT 7949>
+R<WAT 7950>
+R<WAT 7951>
+R<WAT 7952>
+R<WAT 7953>
+R<WAT 7954>
+R<WAT 7955>
+R<WAT 7956>
+R<WAT 7957>
+R<WAT 7958>
+R<WAT 7959>
+R<WAT 7960>
+R<WAT 7961>
+R<WAT 7962>
+R<WAT 7963>
+R<WAT 7964>
+R<WAT 7965>
+R<WAT 7966>
+R<WAT 7967>
+R<WAT 7968>
+R<WAT 7969>
+R<WAT 7970>
+R<WAT 7971>
+R<WAT 7972>
+R<WAT 7973>
+R<WAT 7974>
+R<WAT 7975>
+R<WAT 7976>
+R<WAT 7977>
+R<WAT 7978>
+R<WAT 7979>
+R<WAT 7980>
+R<WAT 7981>
+R<WAT 7982>
+R<WAT 7983>
+R<WAT 7984>
+R<WAT 7985>
+R<WAT 7986>
+R<WAT 7987>
+R<WAT 7988>
+R<WAT 7989>
+R<WAT 7990>
+R<WAT 7991>
+R<WAT 7992>
+R<WAT 7993>
+R<WAT 7994>
+R<WAT 7995>
+R<WAT 7996>
+R<WAT 7997>
+R<WAT 7998>
+R<WAT 7999>
+R<WAT 8000>
+R<WAT 8001>
+R<WAT 8002>
+R<WAT 8003>
+R<WAT 8004>
+R<WAT 8005>
+R<WAT 8006>
+R<WAT 8007>
+R<WAT 8008>
+R<WAT 8009>
+R<WAT 8010>
+R<WAT 8011>
+R<WAT 8012>
+R<WAT 8013>
+R<WAT 8014>
+R<WAT 8015>
+R<WAT 8016>
+R<WAT 8017>
+R<WAT 8018>
+R<WAT 8019>
+R<WAT 8020>
+R<WAT 8021>
+R<WAT 8022>
+R<WAT 8023>
+R<WAT 8024>
+R<WAT 8025>
+R<WAT 8026>
+R<WAT 8027>
+R<WAT 8028>
+R<WAT 8029>
+R<WAT 8030>
+R<WAT 8031>
+R<WAT 8032>
+R<WAT 8033>
+R<WAT 8034>
+R<WAT 8035>
+R<WAT 8036>
+R<WAT 8037>
+R<WAT 8038>
+R<WAT 8039>
+R<WAT 8040>
+R<WAT 8041>
+R<WAT 8042>
+R<WAT 8043>
+R<WAT 8044>
+R<WAT 8045>
+R<WAT 8046>
+R<WAT 8047>
+R<WAT 8048>
+R<WAT 8049>
+R<WAT 8050>
+R<WAT 8051>
+R<WAT 8052>
+R<WAT 8053>
+R<WAT 8054>
+R<WAT 8055>
+R<WAT 8056>
+R<WAT 8057>
+R<WAT 8058>
+R<WAT 8059>
+R<WAT 8060>
+R<WAT 8061>
+R<WAT 8062>
+R<WAT 8063>
+R<WAT 8064>
+R<WAT 8065>
+R<WAT 8066>
+R<WAT 8067>
+R<WAT 8068>
+R<WAT 8069>
+R<WAT 8070>
+R<WAT 8071>
+R<WAT 8072>
+R<WAT 8073>
+R<WAT 8074>
+R<WAT 8075>
+R<WAT 8076>
+R<WAT 8077>
+R<WAT 8078>
+R<WAT 8079>
+R<WAT 8080>
+R<WAT 8081>
+R<WAT 8082>
+R<WAT 8083>
+R<WAT 8084>
+R<WAT 8085>
+R<WAT 8086>
+R<WAT 8087>
+R<WAT 8088>
+R<WAT 8089>
+R<WAT 8090>
+R<WAT 8091>
+R<WAT 8092>
+R<WAT 8093>
+R<WAT 8094>
+R<WAT 8095>
+R<WAT 8096>
+R<WAT 8097>
+R<WAT 8098>
+R<WAT 8099>
+R<WAT 8100>
+R<WAT 8101>
+R<WAT 8102>
+R<WAT 8103>
+R<WAT 8104>
+R<WAT 8105>
+R<WAT 8106>
+R<WAT 8107>
+R<WAT 8108>
+R<WAT 8109>
+R<WAT 8110>
+R<WAT 8111>
+R<WAT 8112>
+R<WAT 8113>
+R<WAT 8114>
+R<WAT 8115>
+R<WAT 8116>
+R<WAT 8117>
+R<WAT 8118>
+R<WAT 8119>
+R<WAT 8120>
+R<WAT 8121>
+R<WAT 8122>
+R<WAT 8123>
+R<WAT 8124>
+R<WAT 8125>
+R<WAT 8126>
+R<WAT 8127>
+R<WAT 8128>
+R<WAT 8129>
+R<WAT 8130>
+R<WAT 8131>
+R<WAT 8132>
+R<WAT 8133>
+R<WAT 8134>
+R<WAT 8135>
+R<WAT 8136>
+R<WAT 8137>
+R<WAT 8138>
+R<WAT 8139>
+R<WAT 8140>
+R<WAT 8141>
+R<WAT 8142>
+R<WAT 8143>
+R<WAT 8144>
+R<WAT 8145>
+R<WAT 8146>
+R<WAT 8147>
+R<WAT 8148>
+R<WAT 8149>
+R<WAT 8150>
+R<WAT 8151>
+R<WAT 8152>
+R<WAT 8153>
+R<WAT 8154>
+R<WAT 8155>
+R<WAT 8156>
+R<WAT 8157>
+R<WAT 8158>
+R<WAT 8159>
+R<WAT 8160>
+R<WAT 8161>
+R<WAT 8162>
+R<WAT 8163>
+R<WAT 8164>
+R<WAT 8165>
+R<WAT 8166>
+R<WAT 8167>
+R<WAT 8168>
+R<WAT 8169>
+R<WAT 8170>
+R<WAT 8171>
+R<WAT 8172>
+R<WAT 8173>
+R<WAT 8174>
+R<WAT 8175>
+R<WAT 8176>
+R<WAT 8177>
+R<WAT 8178>
+R<WAT 8179>
+R<WAT 8180>
+R<WAT 8181>
+R<WAT 8182>
+R<WAT 8183>
+R<WAT 8184>
+R<WAT 8185>
+R<WAT 8186>
+R<WAT 8187>
+R<WAT 8188>
+R<WAT 8189>
+R<WAT 8190>
+R<WAT 8191>
+R<WAT 8192>
+R<WAT 8193>
+R<WAT 8194>
+R<WAT 8195>
+R<WAT 8196>
+R<WAT 8197>
+R<WAT 8198>
+R<WAT 8199>
+R<WAT 8200>
+R<WAT 8201>
+R<WAT 8202>
+R<WAT 8203>
+R<WAT 8204>
+R<WAT 8205>
+R<WAT 8206>
+R<WAT 8207>
+R<WAT 8208>
+R<WAT 8209>
+R<WAT 8210>
+R<WAT 8211>
+R<WAT 8212>
+R<WAT 8213>
+R<WAT 8214>
+R<WAT 8215>
+R<WAT 8216>
+R<WAT 8217>
+R<WAT 8218>
+R<WAT 8219>
+R<WAT 8221>
+R<WAT 8222>
+R<WAT 8223>
+R<WAT 8224>
+R<WAT 8225>
+R<WAT 8226>
+R<WAT 8227>
+R<WAT 8228>
+R<WAT 8229>
+R<WAT 8230>
+R<WAT 8231>
+R<WAT 8232>
+R<WAT 8233>
+R<WAT 8234>
+R<WAT 8235>
+R<WAT 8236>
+R<WAT 8237>
+R<WAT 8238>
+R<WAT 8239>
+R<WAT 8240>
+R<Na+ 8241>
+R<Na+ 8242>
+R<Na+ 8243>
+R<Na+ 8244>
+R<Na+ 8245>
+R<Na+ 8246>
+R<Na+ 8247>
+R<Na+ 8248>
+R<Na+ 8249>
+R<Na+ 8250>
+R<Na+ 8251>
+R<Na+ 8252>
+R<Na+ 8253>
+R<Na+ 8254>
+R<Na+ 8255>
+R<Na+ 8256>
+R<Na+ 8257>
+R<Na+ 8258>
+R<Na+ 8259>
+R<Na+ 8260>
+R<Na+ 8261>
+R<Na+ 8262>
+R<Na+ 8263>
+R<Na+ 8264>
+R<Cl- 8265>
+R<Cl- 8266>
+R<Cl- 8267>
+R<Cl- 8268>
+R<Cl- 8269>
+R<Cl- 8270>
+R<Cl- 8271>
+R<Cl- 8272>
+R<Cl- 8273>
+R<Cl- 8274>
+R<Cl- 8275>
+R<Cl- 8276>
+R<Cl- 8277>
+R<Cl- 8278>
+R<Cl- 8279>
+R<Cl- 8280>
+R<Cl- 8281>
+R<Cl- 8282>
+R<Cl- 8283>
+R<Cl- 8284>
+R<Cl- 8285>
+R<Cl- 8286>
+R<Cl- 8287>
+R<Cl- 8288>
+> savepdb model full.pdb
+Writing pdb file: full.pdb
+   printing CRYST1 record to PDB file with box info
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NSER -> SER
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CMET -> MET
+> saveamberparm model full.prmtop full.inpcrd
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 372 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CMET	1
+	LIG	1
+	NSER	1
+	WAT	8081
+  )
+ (no restraints)
+ quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 2; Notes = 0.

@@ -1,0 +1,57 @@
+REMARK  Name = 5uvs_lig.pdb
+REMARK  8 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C7_4  and  C12_16
+REMARK    2  A    between atoms: C8_5  and  N23_23
+REMARK    3  A    between atoms: C17_9  and  C20_10
+REMARK    4  A    between atoms: C20_10  and  S27_27
+REMARK    5  A    between atoms: C9_14  and  S27_27
+REMARK    6  A    between atoms: C16_18  and  C19_20
+REMARK    7  A    between atoms: C18_19  and  N22_22
+REMARK    8  A    between atoms: C19_20  and  N23_23
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  C4  8O1 A 501      16.288 -10.891   0.857  0.00  0.00    +0.037 A 
+ATOM      2  C7  8O1 A 501      15.281 -10.938   1.808  0.00  0.00    +0.007 A 
+ATOM      3  C8  8O1 A 501      15.597 -10.786   3.157  0.00  0.00    +0.035 A 
+ATOM      4  C1  8O1 A 501      16.924 -10.605   3.509  0.00  0.00    +0.025 A 
+ATOM      5  C2  8O1 A 501      17.927 -10.565   2.569  0.00  0.00    +0.029 A 
+ATOM      6  C9  8O1 A 501      17.600 -10.692   1.241  0.00  0.00    +0.089 A 
+ENDROOT
+BRANCH   2  13
+ATOM      7  C5  8O1 A 501      12.191 -14.117   2.456  0.00  0.00    +0.084 A 
+ATOM      8  C6  8O1 A 501      13.114 -12.270   1.628  0.00  0.00    +0.014 A 
+ATOM      9  C10 8O1 A 501      11.866 -12.396   1.060  0.00  0.00    +0.113 A 
+ATOM     10  C13 8O1 A 501      11.288 -11.479   0.101  0.00  0.00    +0.275 A 
+ATOM     11  C3  8O1 A 501      13.324 -13.350   2.519  0.00  0.00    +0.028 A 
+ATOM     12  C11 8O1 A 501      13.380 -10.296   0.421  0.00  0.00    +0.098 A 
+ATOM     13  C12 8O1 A 501      13.921 -11.162   1.288  0.00  0.00    +0.009 A 
+ATOM     14  C18 8O1 A 501      11.688  -9.377  -1.056  0.00  0.00    +0.152 C 
+ATOM     15  N21 8O1 A 501      11.323 -13.543   1.566  0.00  0.00    -0.356 N 
+ATOM     16  N22 8O1 A 501      12.127 -10.423  -0.152  0.00  0.00    -0.316 N 
+ATOM     17  O24 8O1 A 501      10.186 -11.632  -0.424  0.00  0.00    -0.265 OA
+ATOM     18  H21 8O1 A 501      10.417 -13.916   1.321  0.00  0.00    +0.166 HD
+ENDBRANCH   2  13
+BRANCH   6  21
+ATOM     19  O25 8O1 A 501      20.149 -10.308   0.687  0.00  0.00    -0.169 OA
+ATOM     20  O26 8O1 A 501      18.739 -11.861  -0.745  0.00  0.00    -0.169 OA
+ATOM     21  S27 8O1 A 501      18.905 -10.637   0.022  0.00  0.00    -0.003 S 
+BRANCH  21  23
+ATOM     22  C17 8O1 A 501      18.785  -7.894  -0.320  0.00  0.00    +0.028 C 
+ATOM     23  C20 8O1 A 501      18.479  -9.223  -0.988  0.00  0.00    +0.168 C 
+ENDBRANCH  21  23
+ENDBRANCH   6  21
+BRANCH   3  24
+ATOM     24  N23 8O1 A 501      14.602 -10.813   4.166  0.00  0.00    -0.343 N 
+ATOM     25  H23 8O1 A 501      13.626 -10.918   3.908  0.00  0.00    +0.146 HD
+BRANCH  24  26
+ATOM     26  C19 8O1 A 501      14.931 -10.642   5.568  0.00  0.00    +0.105 C 
+BRANCH  26  29
+ATOM     27  C15 8O1 A 501      12.767  -9.747   6.637  0.00  0.00    +0.005 C 
+ATOM     28  C14 8O1 A 501      13.673 -10.191   7.738  0.00  0.00    +0.005 C 
+ATOM     29  C16 8O1 A 501      13.727 -10.872   6.404  0.00  0.00    +0.006 C 
+ENDBRANCH  26  29
+ENDBRANCH  24  26
+ENDBRANCH   3  24
+TORSDOF 6

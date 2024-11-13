@@ -1,0 +1,33 @@
+REMARK  Name = 5uep_lig.pdb
+REMARK  3 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C7_4  and  C9_8
+REMARK    2  A    between atoms: C10_6  and  O15_16
+REMARK    3  A    between atoms: C9_8  and  O15_16
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  C4  88P A 501     -12.768  11.158   0.112  0.00  0.00    +0.032 C 
+ATOM      2  C5  88P A 501     -11.615  11.969  -0.125  0.00  0.00    +0.171 C 
+ATOM      3  C6  88P A 501     -11.812  13.433   0.191  0.00  0.00    +0.069 C 
+ATOM      4  C7  88P A 501     -14.830  10.540   0.839  0.00  0.00    +0.138 C 
+ATOM      5  C8  88P A 501     -12.970   9.860  -0.289  0.00  0.00    +0.058 C 
+ATOM      6  C3  88P A 501     -13.925  11.590   0.822  0.00  0.00    +0.073 C 
+ATOM      7  C2  88P A 501     -14.009  12.959   1.397  0.00  0.00    +0.011 C 
+ATOM      8  C1  88P A 501     -12.620  13.587   1.480  0.00  0.00    +0.009 C 
+ATOM      9  C12 88P A 501     -12.115   8.931  -1.046  0.00  0.00    +0.052 C 
+ATOM     10  N13 88P A 501     -14.219   9.517   0.159  0.00  0.00    -0.247 NA
+ATOM     11  O14 88P A 501     -10.549  11.540  -0.540  0.00  0.00    -0.292 OA
+ENDROOT
+BRANCH   4  12
+ATOM     12  C9  88P A 501     -16.135  10.369   1.429  0.00  0.00    +0.355 C 
+ATOM     13  O16 88P A 501     -16.785   9.332   1.337  0.00  0.00    -0.243 OA
+BRANCH  12  14
+ATOM     14  O15 88P A 501     -16.537  11.468   2.143  0.00  0.00    -0.445 OA
+BRANCH  14  15
+ATOM     15  C10 88P A 501     -17.904  11.397   2.559  0.00  0.00    +0.209 C 
+ATOM     16  C11 88P A 501     -18.004  11.828   4.000  0.00  0.00    +0.051 C 
+ENDBRANCH  14  15
+ENDBRANCH  12  14
+ENDBRANCH   4  12
+TORSDOF 3

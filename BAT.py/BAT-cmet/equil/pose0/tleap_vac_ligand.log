@@ -1,0 +1,73 @@
+-I: Adding /home/ubuntu/amber22/dat/leap/prep to search path.
+-I: Adding /home/ubuntu/amber22/dat/leap/lib to search path.
+-I: Adding /home/ubuntu/amber22/dat/leap/parm to search path.
+-I: Adding /home/ubuntu/amber22/dat/leap/cmd to search path.
+-s: Ignoring all leaprc startup files.
+-f: Source tleap_vac_ligand.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap_vac_ligand.in
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /home/ubuntu/amber22/dat/leap/lib/amino12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminoct12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminont12.lib
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+Loading parameters: ./dum.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for a "Lead-like" Dummy Atom
+Loading Mol2 file: ./dum.mol2
+Reading MOLECULE named DUM
+Loading parameters: ./lig.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading Mol2 file: ./lig.mol2
+Reading MOLECULE named LIG
+Loading PDB file: ./lig.pdb
+  total atoms in file: 17
+  Leap added 10 missing atoms according to residue templates:
+       10 H / lone pairs
+Checking 'model'....
+Checking parameters for unit 'model'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Writing pdb file: vac_ligand.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 8 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

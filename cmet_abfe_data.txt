@@ -1,0 +1,5 @@
+result 2.39 CCOC(=O)C1=C(NC2=C([C@H]1c3ccccc3[N+](=O)[O-])C(=O)CC(C2)(C)C)C
+result -6.69 CCOc1c(ccc(c1[N+](=O)[O-])/C=C/2\C(=NN(C2=O)c3cccc(c3)C)C)O
+result -7.07 c1ccc2c(c1)CN3c4ccccc4C(=O)NC3=C2C(=O)c5ccc(cc5)[N+](=O)[O-]
+result -4.62 Cc1cccc(c1)n2c(c3c(n2)CSC3)NC(=O)c4ccccc4[N+](=O)[O-]
+result 1.53 Cc1ccc2c(c1NC(=O)c3cc(ccc3Br)[N+](=O)[O-])nsn2

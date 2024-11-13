@@ -1,0 +1,62 @@
+REMARK  Name = 4dei_lig.pdb
+REMARK  7 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: CBA_6  and  NAZ_7
+REMARK    2  A    between atoms: NAR_16  and  CAP_17
+REMARK    3  A    between atoms: CAP_17  and  CAO_19
+REMARK    4  A    between atoms: CAF_28  and  OAE_29
+REMARK    5  A    between atoms: OAE_29  and  CAD_30
+REMARK    6  A    between atoms: CAD_30  and  CAC_31
+REMARK    7  A    between atoms: CAC_31  and  OAB_32
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+ROOT
+ATOM      1  CAP 0JL A1401      20.992  30.718  55.448  0.00  0.00    +0.129 C 
+ATOM      2  CAQ 0JL A1401      20.317  30.401  54.106  0.00  0.00    +0.031 C 
+ENDROOT
+BRANCH   1  12
+ATOM      3  NAZ 0JL A1401      24.253  29.784  58.494  0.00  0.00    -0.265 N 
+ATOM      4  CAT 0JL A1401      23.324  30.249  57.535  0.00  0.00    +0.284 A 
+ATOM      5  CAS 0JL A1401      22.318  29.394  57.076  0.00  0.00    +0.155 A 
+ATOM      6  OBG 0JL A1401      23.394  31.402  57.116  0.00  0.00    -0.265 OA
+ATOM      7  CAY 0JL A1401      24.148  28.453  58.955  0.00  0.00    +0.085 A 
+ATOM      8  CAX 0JL A1401      23.139  27.613  58.482  0.00  0.00    +0.042 A 
+ATOM      9  CAW 0JL A1401      22.227  28.096  57.542  0.00  0.00    +0.128 A 
+ATOM     10  NAV 0JL A1401      21.179  27.569  56.901  0.00  0.00    -0.129 NA
+ATOM     11  NAU 0JL A1401      20.684  28.424  56.149  0.00  0.00    -0.064 NA
+ATOM     12  NAR 0JL A1401      21.312  29.491  56.210  0.00  0.00    -0.225 N 
+BRANCH   3  18
+ATOM     13  CBF 0JL A1401      28.343  31.088  60.954  0.00  0.00    +0.053 C 
+ATOM     14  CBE 0JL A1401      27.136  31.278  60.033  0.00  0.00    +0.069 A 
+ATOM     15  CBB 0JL A1401      26.279  30.270  59.776  0.00  0.00    +0.041 A 
+ATOM     16  NBD 0JL A1401      26.879  32.456  59.446  0.00  0.00    -0.212 NA
+ATOM     17  S   0JL A1401      25.522  32.244  58.551  0.00  0.00    +0.031 S 
+ATOM     18  CBA 0JL A1401      25.284  30.625  58.959  0.00  0.00    +0.116 A 
+ENDBRANCH   3  18
+ENDBRANCH   1  12
+BRANCH   1  19
+ATOM     19  CAO 0JL A1401      20.111  31.602  56.339  0.00  0.00    +0.000 A 
+ATOM     20  CAI 0JL A1401      20.662  32.761  56.876  0.00  0.00    -0.001 A 
+ATOM     21  CAH 0JL A1401      19.892  33.570  57.699  0.00  0.00    +0.021 A 
+ATOM     22  CAG 0JL A1401      20.440  34.729  58.230  0.00  0.00    +0.040 A 
+ATOM     23  CAN 0JL A1401      18.792  31.251  56.638  0.00  0.00    -0.001 A 
+ATOM     24  CAM 0JL A1401      18.019  32.068  57.462  0.00  0.00    +0.019 A 
+ATOM     25  CAL 0JL A1401      18.572  33.230  57.995  0.00  0.00    +0.082 A 
+ATOM     26  NAK 0JL A1401      17.835  34.022  58.792  0.00  0.00    -0.241 NA
+ATOM     27  CAJ 0JL A1401      18.336  35.136  59.314  0.00  0.00    +0.136 A 
+ATOM     28  CAF 0JL A1401      19.652  35.520  59.057  0.00  0.00    +0.158 A 
+BRANCH  28  29
+ATOM     29  OAE 0JL A1401      20.175  36.661  59.587  0.00  0.00    -0.471 OA
+BRANCH  29  30
+ATOM     30  CAD 0JL A1401      20.447  36.499  60.998  0.00  0.00    +0.237 C 
+BRANCH  30  31
+ATOM     31  CAC 0JL A1401      20.173  37.808  61.711  0.00  0.00    +0.189 C 
+BRANCH  31  32
+ATOM     32  OAB 0JL A1401      21.392  38.556  61.782  0.00  0.00    -0.347 OA
+ATOM     33  CAA 0JL A1401      21.109  39.961  61.662  0.00  0.00    +0.174 C 
+ENDBRANCH  31  32
+ENDBRANCH  30  31
+ENDBRANCH  29  30
+ENDBRANCH  28  29
+ENDBRANCH   1  19
+TORSDOF 7

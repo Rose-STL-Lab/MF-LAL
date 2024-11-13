@@ -1,0 +1,7 @@
+['parmed-hmr.in']
+Reading actions from parmed-hmr.in
+
+Adding prmtop full.prmtop to parm list. full.prmtop is the active parm.
+Repartitioning hydrogen masses to 3.024 daltons. Not changing water hydrogen masses.
+Outputting Amber topology file full.hmr.prmtop
+Done!

@@ -1,0 +1,51 @@
+# Anchor atoms  :78@CA  :100@CA  :16@CA  :111@C13  :111@O11  :111@C3
+parm full.hmr.prmtop
+trajin full.inpcrd
+distance r0 :78@CA :100@CA noimage out assign.dat
+distance r1 :100@CA :16@CA noimage out assign.dat
+distance r2 :16@CA :78@CA noimage out assign.dat
+dihedral r3 :32@N :32@CA :32@C :33@N out assign.dat
+dihedral r4 :32@C :33@N :33@CA :33@C out assign.dat
+dihedral r5 :33@N :33@CA :33@C :34@N out assign.dat
+dihedral r6 :33@C :34@N :34@CA :34@C out assign.dat
+dihedral r7 :34@N :34@CA :34@C :35@N out assign.dat
+dihedral r8 :34@C :35@N :35@CA :35@C out assign.dat
+dihedral r9 :35@N :35@CA :35@C :36@N out assign.dat
+dihedral r10 :35@C :36@N :36@CA :36@C out assign.dat
+dihedral r11 :36@N :36@CA :36@C :37@N out assign.dat
+dihedral r12 :36@C :37@N :37@CA :37@C out assign.dat
+dihedral r13 :37@N :37@CA :37@C :38@N out assign.dat
+dihedral r14 :37@C :38@N :38@CA :38@C out assign.dat
+dihedral r15 :38@N :38@CA :38@C :39@N out assign.dat
+dihedral r16 :38@C :39@N :39@CA :39@C out assign.dat
+dihedral r17 :39@N :39@CA :39@C :40@N out assign.dat
+dihedral r18 :39@C :40@N :40@CA :40@C out assign.dat
+dihedral r19 :40@N :40@CA :40@C :41@N out assign.dat
+dihedral r20 :40@C :41@N :41@CA :41@C out assign.dat
+dihedral r21 :41@N :41@CA :41@C :42@N out assign.dat
+dihedral r22 :41@C :42@N :42@CA :42@C out assign.dat
+dihedral r23 :42@N :42@CA :42@C :43@N out assign.dat
+dihedral r24 :42@C :43@N :43@CA :43@C out assign.dat
+distance r25 :78@CA :111@C13 noimage out assign.dat
+angle r26 :100@CA :78@CA :111@C13 out assign.dat
+dihedral r27 :16@CA :100@CA :78@CA :111@C13 out assign.dat
+angle r28 :78@CA :111@C13 :111@O11 out assign.dat
+dihedral r29 :100@CA :78@CA :111@C13 :111@O11 out assign.dat
+dihedral r30 :78@CA :111@C13 :111@O11 :111@C3 out assign.dat
+dihedral r31 :111@N12 :111@C13 :111@C14 :111@O15 out assign.dat
+dihedral r32 :111@C8 :111@N12 :111@C13 :111@C14 out assign.dat
+dihedral r33 :111@C2 :111@C3 :111@S4 :111@C5 out assign.dat
+dihedral r34 :111@Br1 :111@C2 :111@C3 :111@S4 out assign.dat
+dihedral r35 :111@C14 :111@O15 :111@C16 :111@C17 out assign.dat
+dihedral r36 :111@C13 :111@C14 :111@O15 :111@C16 out assign.dat
+dihedral r37 :111@N12 :111@C17 :111@C16 :111@O15 out assign.dat
+dihedral r38 :111@C8 :111@N12 :111@C17 :111@C16 out assign.dat
+dihedral r39 :111@O7 :111@C8 :111@C9 :111@C10 out assign.dat
+dihedral r40 :111@O7 :111@C8 :111@N12 :111@C17 out assign.dat
+dihedral r41 :111@C6 :111@O7 :111@C8 :111@N12 out assign.dat
+dihedral r42 :111@C5 :111@C10 :111@C9 :111@C8 out assign.dat
+dihedral r43 :111@S4 :111@C5 :111@C10 :111@O11 out assign.dat
+dihedral r44 :111@C3 :111@S4 :111@C5 :111@C10 out assign.dat
+dihedral r45 :111@C2 :111@C6 :111@C5 :111@S4 out assign.dat
+dihedral r46 :111@C2 :111@C6 :111@O7 :111@C8 out assign.dat
+dihedral r47 :111@Br1 :111@C2 :111@C6 :111@C5 out assign.dat

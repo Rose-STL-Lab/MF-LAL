@@ -1,0 +1,120 @@
+-I: Adding /home/ubuntu/amber22/dat/leap/prep to search path.
+-I: Adding /home/ubuntu/amber22/dat/leap/lib to search path.
+-I: Adding /home/ubuntu/amber22/dat/leap/parm to search path.
+-I: Adding /home/ubuntu/amber22/dat/leap/cmd to search path.
+-s: Ignoring all leaprc startup files.
+-f: Source tleap_vac.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap_vac.in
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /home/ubuntu/amber22/dat/leap/lib/amino12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminoct12.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/aminont12.lib
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.gaff done
+Log file: ./leap.log
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.81, May 2017)
+Loading parameters: ./dum.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Parameters for a "Lead-like" Dummy Atom
+Loading Mol2 file: ./dum.mol2
+Reading MOLECULE named DUM
+Loading parameters: ./lig.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading Mol2 file: ./lig.mol2
+Reading MOLECULE named LIG
+----- Source: /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/ubuntu/amber22/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /home/ubuntu/amber22/dat/leap/lib/atomic_ions.lib
+Loading library: /home/ubuntu/amber22/dat/leap/lib/solvents.lib
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /home/ubuntu/amber22/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading PDB file: ./build-dry.pdb
+  Added missing heavy atom: .R<CMET 110>.A<OXT 18>
+  total atoms in file: 910
+  Leap added 888 missing atoms according to residue templates:
+       1 Heavy
+       887 H / lone pairs
+Checking 'model'....
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.146 angstroms between nonbonded atoms Pb and HE3
+-------  .R<DUM 1>.A<Pb 1> and .R<MET 78>.A<HE3 15>
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.139 angstroms between nonbonded atoms Pb and CE
+-------  .R<DUM 1>.A<Pb 1> and .R<MET 78>.A<CE 12>
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.262 angstroms between nonbonded atoms HG and HB2
+-------  .R<CYS 9>.A<HG 9> and .R<CMET 110>.A<HB2 6>
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+Close contact of 1.093 angstroms between nonbonded atoms HB3 and H5
+-------  .R<PRO 28>.A<HB3 10> and .R<LIG 111>.A<H5 23>
+Checking parameters for unit 'model'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 4
+Unit is OK.
+Writing pdb file: vac.pdb
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NSER -> SER
+
+/home/ubuntu/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CMET -> MET
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 372 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CMET	1
+	LIG	1
+	NSER	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 6; Notes = 0.
